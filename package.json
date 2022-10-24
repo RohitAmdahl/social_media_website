@@ -1,0 +1,32 @@
+{
+  "name": "social-media-website",
+  "version": "0.0.1",
+  "description": "class Ca project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "sass src/scss:dist/css",
+    "watch": "sass --watch src/scss:dist/css & live server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RohitAmdahl/social_media_website.git"
+  },
+  "keywords": [
+    "bootstrap",
+    "Sass"
+  ],
+  "author": "rohit_kumar <rohit_designer@outlook.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RohitAmdahl/social_media_website/issues"
+  },
+  "homepage": "https://github.com/RohitAmdahl/social_media_website#readme",
+  "dependencies": {
+    "bootstrap": "^5.2.2"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "sass": "^1.55.0"
+  }
+}
