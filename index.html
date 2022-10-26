@@ -53,6 +53,55 @@
                   <a class="nav-link" href="#">Log In</a>
                 </li>
               </ul>
+              <!-- Button trigger modal -->
+              <button
+                type="button"
+                class="cta_search"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
+                Create post
+              </button>
+
+              <!-- Modal -->
+              <div
+                class="modal fade"
+                id="exampleModal"
+                tabindex="-1"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">
+                        Post your Massage
+                      </h1>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body">
+                      Write a post and find a partner for bike tour
+                    </div>
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="cta_search"
+                        data-bs-dismiss="modal"
+                      >
+                        Close
+                      </button>
+                      <button type="button" class="cta_search">Post</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- model finish -->
+
               <form
                 class="d-flex align-items-center justify-content-center"
                 role="search"
