@@ -32,7 +32,7 @@ $line-height-base: 1.5;
 $line-height-sm: 1.25;
 $line-height-lg: 2;
 
-$h1-font-size: $font-size-base * 3.5;
+$h1-font-size: $font-size-base * 3;
 $h2-font-size: $font-size-base * 2;
 $h3-font-size: $font-size-base * 1.75;
 $h4-font-size: $font-size-base * 1.5;
@@ -88,6 +88,8 @@ $yellow: #ffc107;
 $teal: #20c997;
 $cyan: #0dcaf0;
 $text-color: #373737;
+$background_btn: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+
 // scss-docs-end color-variables
 
 // scss-docs-start colors-map
@@ -119,7 +121,7 @@ $spacers: (
 );
 
 // scss-docs-start border-radius-variables
-$border-radius: 0rem;
+$border-radius: 0.5rem;
 $border-radius-sm: 0rem;
 $border-radius-lg: 0rem;
 $border-radius-xl: 1rem;

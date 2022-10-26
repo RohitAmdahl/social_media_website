@@ -1,7 +1,8 @@
 $text-color: #373737;
 
 .hero_img {
-  max-width: 412px;
+  max-width: 410px;
+  padding-top: 20px;
 }
 
 .hero_heading {
@@ -9,4 +10,14 @@ $text-color: #373737;
   color: $text-color;
   text-shadow: 1px 1px 0px;
   line-height: 1.5;
+}
+
+.back {
+  background: yellowgreen;
+}
+.item-one {
+  background-color: burlywood;
+}
+.item-two {
+  background-color: rgb(81, 214, 181);
 }

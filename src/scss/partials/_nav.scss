@@ -1,14 +1,16 @@
 $green: #9cdad7;
+$background_btn: #9cdad7;
+$text-color: #373737;
 
 nav {
   font-weight: bold;
   .bike_logo {
     width: 100%;
-    max-width: 65px;
+    max-width: 80px;
   }
   .form-control {
     width: 100%;
-    max-width: 10rem;
+    max-width: 14rem;
   }
   .navbar-toggler-icon {
     width: 1em;
@@ -18,4 +20,10 @@ nav {
 
 .logo {
   width: 120px;
+}
+.cta_search {
+  color: $text-color;
+  background: $background_btn;
+  padding: 4px 12px;
+  font-weight: bold;
 }
