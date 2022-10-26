@@ -32,7 +32,7 @@ $line-height-base: 1.5;
 $line-height-sm: 1.25;
 $line-height-lg: 2;
 
-$h1-font-size: $font-size-base * 2.5;
+$h1-font-size: $font-size-base * 3.5;
 $h2-font-size: $font-size-base * 2;
 $h3-font-size: $font-size-base * 1.75;
 $h4-font-size: $font-size-base * 1.5;
@@ -85,7 +85,6 @@ $pink: #d63384;
 $red: #dc3545;
 $orange: #fd7e14;
 $yellow: #ffc107;
-$green: #198754;
 $teal: #20c997;
 $cyan: #0dcaf0;
 $text-color: #373737;
@@ -120,7 +119,7 @@ $spacers: (
 );
 
 // scss-docs-start border-radius-variables
-$border-radius: 1rem;
+$border-radius: 0rem;
 $border-radius-sm: 0rem;
 $border-radius-lg: 0rem;
 $border-radius-xl: 1rem;
