@@ -1,6 +1,12 @@
 $green: #9cdad7;
 $background_btn: #9cdad7;
 $text-color: #373737;
+$blue: #ace7ef;
+
+.wrapper {
+  display: flex;
+  list-style: none;
+}
 
 nav {
   font-weight: bold;
@@ -35,11 +41,41 @@ nav {
       100px 100px 80px rgba(0, 0, 0, 0.07);
     border-radius: 0.5rem;
   }
-  .cta_search:hover {
-    color: blue;
+  .cta_model {
+    color: $text-color;
+    background: $blue;
+    padding: 10px;
+    font-weight: bold;
+    border: none;
+    font-size: 1.1rem;
+    text-decoration: none;
+    box-shadow: 16px 16px 10px rgba(0, 0, 0, 0.038),
+      100px 100px 80px rgba(0, 0, 0, 0.07);
+    border-radius: 0.5rem;
   }
+}
+
+.cta-senter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 100px;
+  margin: 20 auto;
 }
 
 .logo {
   width: 120px;
+}
+
+.icons {
+  width: 100%;
+  max-width: 29px;
+  padding: 2px;
+  margin: 10px;
+}
+
+.modal-body {
+  outline: 1px solid yellowgreen;
+  margin: 10px;
 }

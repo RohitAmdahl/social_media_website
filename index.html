@@ -18,11 +18,11 @@
     <title>Homepage</title>
   </head>
   <body>
-    <header>
+    <header class="header_wrap">
       <div class="header_section">
         <nav class="navbar navbar-expand-lg">
           <div class="container">
-            <a class="navbar-brand" href="#"
+            <a class="navbar-brand" href="index.html"
               ><img src="/image/logo/logo.png" alt="logo" class="bike_logo"
             /></a>
             <button
@@ -53,14 +53,27 @@
                   <a class="nav-link" href="#">Log In</a>
                 </li>
               </ul>
+              <!-- <div class="wrapper">
+                <li class="nav-item">
+                  <img
+                    src="/image/logo/notification_logo.png"
+                    alt=""
+                    class="icons"
+                  />
+                </li>
+              </div> -->
               <!-- Button trigger modal -->
               <button
                 type="button"
-                class="cta_search"
+                class="cta_model cta-senter"
                 data-bs-toggle="modal"
                 data-bs-target="#exampleModal"
               >
-                Create post
+                <img
+                  src="/image/logo/text_logo.png"
+                  alt="button post picture"
+                  class="icons"
+                />
               </button>
 
               <!-- Modal -->
@@ -85,17 +98,20 @@
                       ></button>
                     </div>
                     <div class="modal-body">
-                      Write a post and find a partner for bike tour
+                      <input
+                        placeholder="Write a post and find a partner for bike tour"
+                        aria-label="text"
+                      />
                     </div>
                     <div class="modal-footer">
                       <button
                         type="button"
-                        class="cta_search"
+                        class="cta_model"
                         data-bs-dismiss="modal"
                       >
                         Close
                       </button>
-                      <button type="button" class="cta_search">Post</button>
+                      <button type="button" class="cta_model">Post</button>
                     </div>
                   </div>
                 </div>
