@@ -10,48 +10,92 @@ nav .bike_logo {
   width: 100%;
   max-width: 80px;
 }
+nav .main_header {
+  align-items: end;
+  font-size: 1.3rem;
+}
 nav .form-control {
   width: 100%;
   max-width: 14rem;
+  height: 3.1rem;
+  margin: 5px;
+  padding: 12px;
 }
 nav .navbar-toggler-icon {
   width: 1em;
   height: 1em;
+}
+nav .cta_search {
+  color: #373737;
+  background: #9cdad7;
+  padding: 12px 12px;
+  font-weight: bold;
+  border: none;
+  text-decoration: none;
+  box-shadow: 16px 16px 10px rgba(0, 0, 0, 0.038), 100px 100px 80px rgba(0, 0, 0, 0.07);
+  border-radius: 0.5rem;
+}
+nav .cta_search:hover {
+  color: blue;
 }
 
 .logo {
   width: 120px;
 }
 
-.cta_search {
-  color: #373737;
-  background: #9cdad7;
-  padding: 4px 12px;
-  font-weight: bold;
+.hero_section {
+  background-image: url(/image/logo/background_logo.png);
+  background-repeat: no-repeat;
+  margin-top: 25px;
 }
-
-.hero_img {
+.hero_section .hero_img {
   max-width: 410px;
   padding-top: 20px;
+  border-radius: 246px 54px;
+  box-shadow: 2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02), 6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028), 12.5px 12.5px 10px rgba(0, 0, 0, 0.035), 22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042), 41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05), 100px 100px 80px rgba(0, 0, 0, 0.07);
 }
-
-.hero_heading {
+.hero_section .hero_heading {
   font-weight: bold;
   color: #373737;
   text-shadow: 1px 1px 0px;
   line-height: 1.5;
 }
+.hero_section .back {
+  background: #ced4da;
+}
+
+.profile {
+  width: 100%;
+  max-width: 100px;
+}
+
+.name {
+  display: flex;
+  flex-direction: column;
+}
+.name span {
+  color: #373737;
+  font-weight: bold;
+}
 
 .back {
-  background: yellowgreen;
+  border-radius: 14px;
+  text-align: center;
+  padding: 5px;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+}
+.back p {
+  padding: 8px;
+  box-shadow: 2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02), 6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028), 12.5px 12.5px 10px rgba(0, 0, 0, 0.035), 22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042), 41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05), 100px 100px 80px rgba(0, 0, 0, 0.07);
+  border-radius: 15px;
 }
 
-.item-one {
-  background-color: burlywood;
-}
-
-.item-two {
-  background-color: rgb(81, 214, 181);
+.side {
+  display: flex;
+  justify-content: center;
+  align-items: last baseline;
 }
 
 /*!
@@ -106,7 +150,7 @@ nav .navbar-toggler-icon {
   --bs-body-bg-rgb: 255, 255, 255;
   --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  --bs-gradient: linear-gradient(180deg, #fdfcfb, 0%, #e2d1c3, 100%);
+  --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
   --bs-body-font-family: Poppins, sans-serif, Arial;
   --bs-body-font-size: 1.1rem;
   --bs-body-font-weight: 400;

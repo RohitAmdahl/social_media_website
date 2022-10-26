@@ -4,18 +4,6 @@ $font-family-code: "Poppins", sans-serif, Arial;
 $background-color-mix: #fdfcfb;
 $background-color-mix-with: #e2d1c3;
 
-$gradient: linear-gradient(
-  180deg,
-  ($background-color-mix, 0%),
-  ($background-color-mix-with, 100%)
-);
-
 body {
-  // background-image: linear-gradient(
-  //   135deg,
-  //   $background-color-mix 0%,
-  //   $background-color-mix-with 100%
-  // );
-  // background-size: cover;
   font-family: $font-family-base;
 }
