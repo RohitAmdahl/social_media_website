@@ -166,6 +166,10 @@ h3,
   border-radius: 22rem;
 }
 
+.post {
+  background-color: #e7e9ea;
+}
+
 .profile_stories {
   width: 100%;
   max-width: 70px;
@@ -188,10 +192,18 @@ h3,
   font-weight: bold;
 }
 
-.card.card-body {
-  width: 100%;
-  max-width: 500px;
-  margin: 0 auto;
+.card_img {
+  max-width: 55px;
+  border-radius: 80%;
+}
+
+.post_box {
+  margin-top: 25px;
+  max-width: 600px;
+}
+
+.item_one {
+  background-color: blanchedalmond;
 }
 
 /*!
