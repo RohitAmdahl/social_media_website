@@ -192,18 +192,14 @@ h3,
   font-weight: bold;
 }
 
-.card_img {
-  max-width: 55px;
-  border-radius: 80%;
-}
-
 .post_box {
   margin-top: 25px;
   max-width: 600px;
+  padding: 15px;
 }
-
-.item_one {
-  background-color: blanchedalmond;
+.post_box .card_img {
+  max-width: 55px;
+  border-radius: 80%;
 }
 
 /*!
