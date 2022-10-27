@@ -1,0 +1,44 @@
+$gray-normal: #e7e9ea;
+
+h2,
+h3 {
+  text-align: center;
+  padding: 10px;
+}
+
+.profile_section {
+  margin-top: 25px;
+  .wrap_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 22px;
+    margin-top: 20px;
+    .profile_page_img {
+      width: 100%;
+      max-width: 120px;
+      border-radius: 22rem;
+    }
+  }
+}
+
+.profile_stories {
+  width: 100%;
+  max-width: 70px;
+}
+.profile_friends {
+  width: 100%;
+  max-width: 120px;
+  padding: 10px;
+}
+
+.Stories {
+  background: $gray-normal;
+  padding: 10px;
+  border-radius: 39px 29px;
+  margin-top: 25px;
+}
+
+.details {
+  font-weight: bold;
+}

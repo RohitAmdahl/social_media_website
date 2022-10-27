@@ -143,6 +143,51 @@ nav .cta_model:hover {
   align-items: last baseline;
 }
 
+h2, .h2,
+h3,
+.h3 {
+  text-align: center;
+  padding: 10px;
+}
+
+.profile_section {
+  margin-top: 25px;
+}
+.profile_section .wrap_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 22px;
+  margin-top: 20px;
+}
+.profile_section .wrap_box .profile_page_img {
+  width: 100%;
+  max-width: 120px;
+  border-radius: 22rem;
+}
+
+.profile_stories {
+  width: 100%;
+  max-width: 70px;
+}
+
+.profile_friends {
+  width: 100%;
+  max-width: 120px;
+  padding: 10px;
+}
+
+.Stories {
+  background: #e7e9ea;
+  padding: 10px;
+  border-radius: 39px 29px;
+  margin-top: 25px;
+}
+
+.details {
+  font-weight: bold;
+}
+
 /*!
  * Bootstrap  v5.2.2 (https://getbootstrap.com/)
  * Copyright 2011-2022 The Bootstrap Authors
@@ -268,11 +313,11 @@ h1, .h1 {
 }
 
 h2, .h2 {
-  font-size: calc(1.345rem + 1.14vw);
+  font-size: calc(1.29rem + 0.48vw);
 }
 @media (min-width: 1200px) {
   h2, .h2 {
-    font-size: 2.2rem;
+    font-size: 1.65rem;
   }
 }
 
@@ -8060,7 +8105,7 @@ textarea.form-control-lg {
 }
 
 .fs-2 {
-  font-size: calc(1.345rem + 1.14vw) !important;
+  font-size: calc(1.29rem + 0.48vw) !important;
 }
 
 .fs-3 {
@@ -10922,7 +10967,7 @@ textarea.form-control-lg {
     font-size: 3.3rem !important;
   }
   .fs-2 {
-    font-size: 2.2rem !important;
+    font-size: 1.65rem !important;
   }
   .fs-3 {
     font-size: 1.925rem !important;
