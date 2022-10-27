@@ -150,6 +150,23 @@ h3,
   padding: 10px;
 }
 
+.cta_search {
+  color: #373737;
+  background: #9cdad7;
+  padding: 12px 12px;
+  font-weight: bold;
+  border: none;
+  text-decoration: none;
+  box-shadow: 16px 16px 10px rgba(0, 0, 0, 0.038), 100px 100px 80px rgba(0, 0, 0, 0.07);
+  border-radius: 0.5rem;
+}
+
+.cta_search:hover {
+  background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+  box-shadow: 16px 16px 10px rgba(0, 0, 0, 0.038), 100px 100px 80px rgba(0, 0, 0, 0.07);
+  border-radius: 0.5rem;
+}
+
 .profile_section {
   margin-top: 25px;
 }
@@ -200,6 +217,14 @@ h3,
 .post_box .card_img {
   max-width: 55px;
   border-radius: 80%;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
 }
 
 /*!
