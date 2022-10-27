@@ -43,3 +43,9 @@ h3 {
 .details {
   font-weight: bold;
 }
+
+.card.card-body {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
