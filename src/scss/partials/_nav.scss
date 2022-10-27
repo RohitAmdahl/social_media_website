@@ -2,6 +2,7 @@ $green: #9cdad7;
 $background_btn: #9cdad7;
 $text-color: #373737;
 $blue: #ace7ef;
+$background_btn_hover: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
 
 .wrapper {
   display: flex;
@@ -30,6 +31,7 @@ nav {
     width: 1em;
     height: 1em;
   }
+
   .cta_search {
     color: $text-color;
     background: $background_btn;
@@ -41,6 +43,13 @@ nav {
       100px 100px 80px rgba(0, 0, 0, 0.07);
     border-radius: 0.5rem;
   }
+  .cta_search:hover {
+    background: $background_btn_hover;
+    box-shadow: 16px 16px 10px rgba(0, 0, 0, 0.038),
+      100px 100px 80px rgba(0, 0, 0, 0.07);
+    border-radius: 0.5rem;
+  }
+
   .cta_model {
     color: $text-color;
     background: $blue;
@@ -49,6 +58,13 @@ nav {
     border: none;
     font-size: 1.1rem;
     text-decoration: none;
+    box-shadow: 16px 16px 10px rgba(0, 0, 0, 0.038),
+      100px 100px 80px rgba(0, 0, 0, 0.07);
+    border-radius: 0.5rem;
+    transition: 0.5s ease-in-out;
+  }
+  .cta_model:hover {
+    background: $background_btn_hover;
     box-shadow: 16px 16px 10px rgba(0, 0, 0, 0.038),
       100px 100px 80px rgba(0, 0, 0, 0.07);
     border-radius: 0.5rem;

@@ -40,6 +40,11 @@ nav .cta_search {
   box-shadow: 16px 16px 10px rgba(0, 0, 0, 0.038), 100px 100px 80px rgba(0, 0, 0, 0.07);
   border-radius: 0.5rem;
 }
+nav .cta_search:hover {
+  background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+  box-shadow: 16px 16px 10px rgba(0, 0, 0, 0.038), 100px 100px 80px rgba(0, 0, 0, 0.07);
+  border-radius: 0.5rem;
+}
 nav .cta_model {
   color: #373737;
   background: #ace7ef;
@@ -48,6 +53,12 @@ nav .cta_model {
   border: none;
   font-size: 1.1rem;
   text-decoration: none;
+  box-shadow: 16px 16px 10px rgba(0, 0, 0, 0.038), 100px 100px 80px rgba(0, 0, 0, 0.07);
+  border-radius: 0.5rem;
+  transition: 0.5s ease-in-out;
+}
+nav .cta_model:hover {
+  background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
   box-shadow: 16px 16px 10px rgba(0, 0, 0, 0.038), 100px 100px 80px rgba(0, 0, 0, 0.07);
   border-radius: 0.5rem;
 }
