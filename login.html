@@ -32,10 +32,7 @@
             >
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a
-                    class="nav-link active"
-                    aria-current="page"
-                    href="index.html"
+                  <a class="nav-link" aria-current="page" href="index.html"
                     >Home</a
                   >
                 </li>
@@ -43,9 +40,10 @@
                   <a class="nav-link" href="profile.html">Profile</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="login.html">Log In</a>
+                  <a class="nav-link active" href="login.html">Log In</a>
                 </li>
               </ul>
+
               <!-- Button trigger modal -->
               <button
                 type="button"
@@ -101,6 +99,7 @@
                 </div>
               </div>
               <!-- model finish -->
+
               <form
                 class="d-flex align-items-center justify-content-center"
                 role="search"
@@ -111,7 +110,7 @@
                   placeholder="Search"
                   aria-label="Search"
                 />
-                <button class="cta_submit" type="submit">Search</button>
+                <button class="cta_search" type="submit">Search</button>
               </form>
             </div>
           </div>
@@ -119,47 +118,50 @@
       </div>
     </header>
     <main>
+      <div class="px-4 py-5 my-5 text-center">
+        <img
+          class="login_pic"
+          src="/image/pictures/pic-9.jpg"
+          alt=" two girls are posing to the camera  with there electric bikes"
+        />
+        <div class="col-lg-6 mx-auto">
+          <p class="lead mb-4">
+            we are building bike social media website, this website is only for
+            making contacts and bike ride tours, and be friends. we are newly
+            launched,and working on the design and and want a have a feedback
+            please write to use if there is something we can do better for
+            community bike a social media website and has many good review,
+            please keep standard.
+          </p>
+        </div>
+      </div>
       <div class="container">
         <div class="row">
-          <div class="col">
-            <h1><span class="log_in">Log in</span></h1>
-          </div>
-        </div>
-        <div class="container">
-          <div class="row">
-            <div class="col">
-              <img
-                src="/image/pictures/pic-9.jpg"
-                alt=""
-                class="log_pic log_in"
-              />
-            </div>
-          </div>
-          <div class="col">
+          <div class="col-8">
             <form action="/profile.html">
-              <form>
-                <div class="mb-3">
-                  <label for="email" class="form-label">Email</label>
-                  <input
-                    type="email"
-                    class="form-control"
-                    id="exampleInputEmail1"
-                    aria-describedby="emailHelp"
-                  />
-                </div>
-                <div class="mb-3">
-                  <label for="exampleInputPassword1" class="form-label"
-                    >Password</label
-                  >
-                  <input
-                    type="password"
-                    class="form-control"
-                    id="exampleInputPassword1"
-                  />
-                </div>
+              <div class="form-floating mb-3 item_one">
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="name@example.com"
+                />
+                <label for="floatingInput">Email address</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="password"
+                  class="form-control"
+                  placeholder="Password"
+                />
+                <label for="floatingPassword">Password</label>
+              </div>
 
-                <button type="submit" class="cta_search">Submit</button>
-              </form>
+              <button
+                type="button"
+                class="btn btn-primary btn-lg px-4 gap-3 cta_search"
+              >
+                Log in
+              </button>
             </form>
           </div>
         </div>

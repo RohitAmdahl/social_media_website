@@ -36,7 +36,7 @@ nav {
   .cta_search {
     color: $text-color;
     background: $background_btn;
-    padding: 12px 12px;
+    padding: 10px 6px;
     font-weight: bold;
     border: none;
     text-decoration: none;
@@ -46,8 +46,6 @@ nav {
   }
   .cta_search:hover {
     background: $background_btn_hover;
-    box-shadow: 16px 16px 10px rgba(0, 0, 0, 0.038),
-      100px 100px 80px rgba(0, 0, 0, 0.07);
     border-radius: 0.5rem;
   }
 

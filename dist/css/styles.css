@@ -33,7 +33,7 @@ nav .navbar-toggler-icon {
 nav .cta_search {
   color: #373737;
   background: #9cdad7;
-  padding: 12px 12px;
+  padding: 10px 6px;
   font-weight: bold;
   border: none;
   text-decoration: none;
@@ -42,7 +42,6 @@ nav .cta_search {
 }
 nav .cta_search:hover {
   background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
-  box-shadow: 16px 16px 10px rgba(0, 0, 0, 0.038), 100px 100px 80px rgba(0, 0, 0, 0.07);
   border-radius: 0.5rem;
 }
 nav .cta_model {
@@ -241,48 +240,10 @@ h3,
   margin: 15px;
 }
 
-.log_in {
-  font-weight: bold;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2em;
-  color: #373737;
-  padding: 25px 10px;
-}
-
-.form-label {
-  font-size: 25px;
-  margin: 10px;
-}
-
-form {
+.login_pic {
   width: 100%;
-  max-width: 400px;
-  margin: 0 auto;
-}
-
-.cta_submit {
-  color: #373737;
-  background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
-  padding: 12px 12px;
-  font-weight: bold;
-  border: none;
-  text-decoration: none;
-  box-shadow: 16px 16px 10px rgba(0, 0, 0, 0.038), 100px 100px 80px rgba(0, 0, 0, 0.07);
-  border-radius: 0.5rem;
-}
-
-.cta_submit:hover {
-  background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
-  box-shadow: 16px 16px 10px rgba(0, 0, 0, 0.038), 100px 100px 80px rgba(0, 0, 0, 0.07);
-  border-radius: 0.5rem;
-}
-
-.log_pic {
-  width: 100%;
-  max-width: 600px;
+  max-width: 500px;
+  padding: 25px;
 }
 
 /*!
