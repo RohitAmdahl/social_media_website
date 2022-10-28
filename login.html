@@ -8,22 +8,130 @@
     <title>Homepage</title>
   </head>
   <body>
-    <header>
-      <nav></nav>
+    <header class="header_wrap">
+      <div class="header_section">
+        <nav class="navbar navbar-expand-lg">
+          <div class="container">
+            <a class="navbar-brand" href="index.html"
+              ><img src="/image/logo/logo.png" alt="logo" class="bike_logo"
+            /></a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div
+              class="collapse navbar-collapse main_header"
+              id="navbarSupportedContent"
+            >
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="index.html"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="profile.html">Profile</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="login.html">Log In</a>
+                </li>
+              </ul>
+              <!-- Button trigger modal -->
+              <button
+                type="button"
+                class="cta_model cta-senter"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
+                <img
+                  src="/image/logo/text_logo.png"
+                  alt="button post picture"
+                  class="icons"
+                />
+              </button>
+
+              <!-- Modal -->
+              <div
+                class="modal fade"
+                id="exampleModal"
+                tabindex="-1"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">
+                        Post your Massage
+                      </h1>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body">
+                      <input
+                        placeholder="Write a post and find a partner for bike tour"
+                        aria-label="text"
+                      />
+                    </div>
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="cta_model"
+                        data-bs-dismiss="modal"
+                      >
+                        Close
+                      </button>
+                      <button type="button" class="cta_model">Post</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- model finish -->
+              <form
+                class="d-flex align-items-center justify-content-center"
+                role="search"
+              >
+                <input
+                  class="form-control me-2"
+                  type="search"
+                  placeholder="Search"
+                  aria-label="Search"
+                />
+                <button class="cta_search" type="submit">Search</button>
+              </form>
+            </div>
+          </div>
+        </nav>
+      </div>
     </header>
     <main>
       <div class="conatiner">
         <div class="row">
-          <div class="col">log in</div>
+          <div class="col-12 col-md-12 col-md-6 col-sm-6"></div>
         </div>
       </div>
     </main>
     <footer>
-      <div>
-        <div class="conatiner">
-          <div class="row">
-            <div class="col"></div>
-          </div>
+      <div class="container">
+        <div class="row logo">
+          <img
+            src="/image/logo/footer_logo.png"
+            alt="footer bike website logo"
+          />
         </div>
       </div>
     </footer>
