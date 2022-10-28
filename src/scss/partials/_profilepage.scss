@@ -10,8 +10,8 @@ h3 {
   padding: 10px;
 }
 
-.col-12.col-sm-12.col-md-12 {
-  margin: 20px;
+.details {
+  font-weight: bold;
 }
 
 .cta_search {
@@ -42,7 +42,7 @@ h3 {
     margin-top: 20px;
     .profile_page_img {
       width: 100%;
-      max-width: 120px;
+      max-width: 110px;
       border-radius: 22rem;
     }
   }
@@ -57,22 +57,23 @@ h3 {
   max-width: 70px;
 }
 
-.profile_friends {
-  width: 100%;
-  max-width: 100px;
-  padding: 10px;
-  border-radius: 2rem;
-}
-
 .Stories {
   border: 0.5px solid #e6e6e6;
   padding: 10px;
   border-radius: 39px 29px;
   margin-top: 25px;
+  .profile_friends {
+    width: 100%;
+    max-width: 115px;
+    padding: 10px;
+    border-radius: 2rem;
+  }
 }
 
-.details {
-  font-weight: bold;
+.profile_event {
+  width: 100%;
+  max-width: 120px;
+  padding: 10px;
 }
 
 .post_box {
@@ -89,23 +90,8 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 10px;
   padding: 10px;
+  .d-flex {
+    margin: 15px;
+  }
 }
-
-.d-flex {
-  margin: 15px;
-}
-
-// .item-one {
-//   background: red;
-// }
-// .item-two {
-//   background: rgb(118, 118, 224);
-// }
-// .col {
-//   background: rgb(204, 244, 131);
-// }
-// .item-four {
-//   background: rgb(235, 203, 87);
-// }

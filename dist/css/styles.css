@@ -16,7 +16,7 @@ nav .bike_logo {
   max-width: 80px;
 }
 nav .main_header {
-  align-items: end;
+  align-items: center;
   font-size: 1.3rem;
 }
 nav .form-control {
@@ -48,10 +48,8 @@ nav .cta_search:hover {
 nav .cta_model {
   color: #373737;
   background: #ace7ef;
-  padding: 10px;
   font-weight: bold;
   border: none;
-  font-size: 1.1rem;
   text-decoration: none;
   box-shadow: 16px 16px 10px rgba(0, 0, 0, 0.038), 100px 100px 80px rgba(0, 0, 0, 0.07);
   border-radius: 0.5rem;
@@ -68,8 +66,9 @@ nav .cta_model:hover {
   justify-content: center;
   align-items: center;
   width: 100%;
-  max-width: 100px;
+  max-width: 68px;
   margin: 20 auto;
+  margin-right: 15px;
 }
 
 .logo {
@@ -86,6 +85,11 @@ nav .cta_model:hover {
 .modal-body {
   outline: 1px solid yellowgreen;
   margin: 10px;
+}
+
+.write_post {
+  width: 100%;
+  max-width: 400px;
 }
 
 .hero_section {
@@ -150,8 +154,8 @@ h3,
   padding: 10px;
 }
 
-.col-12.col-sm-12.col-md-12 {
-  margin: 20px;
+.details {
+  font-weight: bold;
 }
 
 .cta_search {
@@ -183,7 +187,7 @@ h3,
 }
 .profile_section .wrap_box .profile_page_img {
   width: 100%;
-  max-width: 120px;
+  max-width: 110px;
   border-radius: 22rem;
 }
 
@@ -196,22 +200,23 @@ h3,
   max-width: 70px;
 }
 
-.profile_friends {
-  width: 100%;
-  max-width: 100px;
-  padding: 10px;
-  border-radius: 2rem;
-}
-
 .Stories {
   border: 0.5px solid #e6e6e6;
   padding: 10px;
   border-radius: 39px 29px;
   margin-top: 25px;
 }
+.Stories .profile_friends {
+  width: 100%;
+  max-width: 115px;
+  padding: 10px;
+  border-radius: 2rem;
+}
 
-.details {
-  font-weight: bold;
+.profile_event {
+  width: 100%;
+  max-width: 120px;
+  padding: 10px;
 }
 
 .post_box {
@@ -228,11 +233,9 @@ h3,
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 10px;
   padding: 10px;
 }
-
-.d-flex {
+.center .d-flex {
   margin: 15px;
 }
 
