@@ -24,11 +24,12 @@ h3 {
   box-shadow: 16px 16px 10px rgba(0, 0, 0, 0.038),
     100px 100px 80px rgba(0, 0, 0, 0.07);
   border-radius: 0.5rem;
+  margin: 25px;
+  width: 100%;
+  max-width: 250px;
 }
 .cta_search:hover {
   background: $background_btn_hover;
-  box-shadow: 16px 16px 10px rgba(0, 0, 0, 0.038),
-    100px 100px 80px rgba(0, 0, 0, 0.07);
   border-radius: 0.5rem;
 }
 
