@@ -150,6 +150,10 @@ h3,
   padding: 10px;
 }
 
+.col-12.col-sm-12.col-md-12 {
+  margin: 20px;
+}
+
 .cta_search {
   color: #373737;
   background: #9cdad7;
@@ -184,7 +188,7 @@ h3,
 }
 
 .post {
-  background-color: #e7e9ea;
+  border: 0.5px solid #e6e6e6;
 }
 
 .profile_stories {
@@ -194,12 +198,13 @@ h3,
 
 .profile_friends {
   width: 100%;
-  max-width: 120px;
+  max-width: 100px;
   padding: 10px;
+  border-radius: 2rem;
 }
 
 .Stories {
-  background: #e7e9ea;
+  border: 0.5px solid #e6e6e6;
   padding: 10px;
   border-radius: 39px 29px;
   margin-top: 25px;
@@ -225,6 +230,10 @@ h3,
   align-items: center;
   margin: 10px;
   padding: 10px;
+}
+
+.d-flex {
+  margin: 15px;
 }
 
 /*!
