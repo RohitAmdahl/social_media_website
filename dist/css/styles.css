@@ -36,13 +36,14 @@ nav .cta_search {
   background: #9cdad7;
   padding: 12px 12px;
   font-weight: bold;
+  font-size: 1rem;
   border: none;
   text-decoration: none;
   box-shadow: 16px 16px 10px rgba(0, 0, 0, 0.038), 100px 100px 80px rgba(0, 0, 0, 0.07);
   border-radius: 0.5rem;
-  margin: 25px;
+  margin: 10px;
   width: 100%;
-  max-width: 150px;
+  max-width: 100px;
 }
 nav .cta_search:hover {
   background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
@@ -98,10 +99,11 @@ nav .cta_model:hover {
 .hero_section {
   background-image: url(/image/logo/background_logo.png);
   background-repeat: no-repeat;
-  margin-top: 25px;
+  margin-top: 15px;
 }
 .hero_section .hero_img {
-  max-width: 410px;
+  width: 100%;
+  max-width: 350px;
   padding-top: 20px;
   border-radius: 246px 54px;
   box-shadow: 2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02), 6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028), 12.5px 12.5px 10px rgba(0, 0, 0, 0.035), 22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042), 41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05), 100px 100px 80px rgba(0, 0, 0, 0.07);
@@ -118,7 +120,7 @@ nav .cta_model:hover {
 
 .profile {
   width: 100%;
-  max-width: 100px;
+  max-width: 90px;
 }
 
 .name {
@@ -150,6 +152,26 @@ nav .cta_model:hover {
   align-items: last baseline;
 }
 
+.cta_btn {
+  color: #373737;
+  background: #9cdad7;
+  padding: 12px;
+  font-weight: bold;
+  font-size: 1rem;
+  border: none;
+  text-decoration: none;
+  box-shadow: 16px 16px 10px rgba(0, 0, 0, 0.038), 100px 100px 80px rgba(0, 0, 0, 0.07);
+  border-radius: 0.5rem;
+  margin: 10px;
+  width: 100%;
+  max-width: 115px;
+}
+
+.cta_btn:hover {
+  background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+  border-radius: 0.5rem;
+}
+
 h2, .h2,
 h3,
 .h3 {
@@ -161,25 +183,6 @@ h3,
   font-weight: bold;
 }
 
-.cta_search {
-  color: #373737;
-  background: #9cdad7;
-  padding: 12px 12px;
-  font-weight: bold;
-  border: none;
-  text-decoration: none;
-  box-shadow: 16px 16px 10px rgba(0, 0, 0, 0.038), 100px 100px 80px rgba(0, 0, 0, 0.07);
-  border-radius: 0.5rem;
-  margin: 25px;
-  width: 100%;
-  max-width: 150px;
-}
-
-.cta_search:hover {
-  background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
-  border-radius: 0.5rem;
-}
-
 .profile_section {
   margin-top: 25px;
 }
@@ -187,7 +190,8 @@ h3,
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 22px;
+  flex-wrap: wrap;
+  gap: 10px;
   margin-top: 20px;
 }
 .profile_section .wrap_box .profile_page_img {
@@ -215,12 +219,11 @@ h3,
   width: 100%;
   max-width: 115px;
   padding: 10px;
-  border-radius: 2rem;
 }
 
 .profile_event {
   width: 100%;
-  max-width: 175px;
+  max-width: 110px;
   padding: 10px;
 }
 
@@ -242,6 +245,18 @@ h3,
 }
 .center .d-flex {
   margin: 15px;
+}
+
+.freinds_names {
+  width: 125px;
+  box-sizing: border-box;
+}
+
+.feature,
+.friends {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .login_pic {
