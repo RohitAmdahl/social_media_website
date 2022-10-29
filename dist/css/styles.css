@@ -1,5 +1,6 @@
 @charset "UTF-8";
-body {
+html {
+  font-family: "Poppins", sans-serif, Arial;
   font-family: "Poppins", sans-serif, Arial;
 }
 
@@ -33,12 +34,15 @@ nav .navbar-toggler-icon {
 nav .cta_search {
   color: #373737;
   background: #9cdad7;
-  padding: 10px 6px;
+  padding: 12px 12px;
   font-weight: bold;
   border: none;
   text-decoration: none;
   box-shadow: 16px 16px 10px rgba(0, 0, 0, 0.038), 100px 100px 80px rgba(0, 0, 0, 0.07);
   border-radius: 0.5rem;
+  margin: 25px;
+  width: 100%;
+  max-width: 150px;
 }
 nav .cta_search:hover {
   background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
@@ -168,7 +172,7 @@ h3,
   border-radius: 0.5rem;
   margin: 25px;
   width: 100%;
-  max-width: 250px;
+  max-width: 150px;
 }
 
 .cta_search:hover {
@@ -216,7 +220,7 @@ h3,
 
 .profile_event {
   width: 100%;
-  max-width: 120px;
+  max-width: 175px;
   padding: 10px;
 }
 
@@ -244,6 +248,10 @@ h3,
   width: 100%;
   max-width: 500px;
   padding: 25px;
+}
+
+nav {
+  font-weight: bold;
 }
 
 /*!
