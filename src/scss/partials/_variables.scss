@@ -6,7 +6,8 @@
 // stylelint-disable value-keyword-case
 
 $font-family: "Poppins", sans-serif, Arial;
-
+$font-family-base: "Poppins", sans-serif, Arial;
+$font-family-code: "Poppins", sans-serif, Arial;
 // stylelint-enable value-keyword-case
 
 // $font-size-root affects the value of `rem`, which is used for as well font sizes, paddings, and margins
@@ -74,7 +75,7 @@ $grays: (
 
 // scss-docs-start color-variables
 // $body: background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
-
+$primary-color: #e4e2e2;
 $blue: #ace7ef;
 $indigo: #6610f2;
 $purple: #6f42c1;
@@ -98,7 +99,7 @@ $colors: (
   "red": $red,
   "orange": $orange,
   "yellow": $yellow,
-  "green": $green,
+  // "green": $green,
   "teal": $teal,
   "cyan": $cyan,
   "black": $black,

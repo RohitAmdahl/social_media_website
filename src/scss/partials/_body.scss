@@ -1,10 +1,10 @@
-$font-family-base: "Poppins", sans-serif, Arial;
-$font-family-code: "Poppins", sans-serif, Arial;
-
 // $background-color-mix: #fdfcfb;
 // $background-color-mix-with: #e2d1c3;
-
 html {
   font-family: $font-family-base;
   font-family: $font-family-code;
+}
+
+body {
+  background: $primary-color;
 }
