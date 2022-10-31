@@ -1,10 +1,14 @@
 // $background-color-mix: #fdfcfb;
 // $background-color-mix-with: #e2d1c3;
-html {
-  font-family: $font-family-base;
-  font-family: $font-family-code;
-}
 
 body {
+  font-family: $font-family;
   background: $primary-color;
+}
+
+footer {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 250px;
+  padding-top: 35px;
 }

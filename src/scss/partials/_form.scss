@@ -4,6 +4,30 @@
   padding: 25px;
 }
 
-nav {
+p {
+  width: 100%;
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.mb-4 {
+  padding: 10px;
+}
+
+#Emailinput {
+  width: 100%;
+  max-width: 450px;
+  padding: 25px;
+  margin: 5px;
   font-weight: bold;
+  font-family: $font-family;
+}
+
+#Passwordinput {
+  width: 100%;
+  max-width: 450px;
+  padding: 25px;
+  margin: 5px;
+  font-weight: bold;
+  font-family: $font-family;
 }
