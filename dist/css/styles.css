@@ -10925,6 +10925,10 @@ nav .cta_model:hover {
   max-width: 400px;
 }
 
+.nav-link.active {
+  font-weight: bold;
+}
+
 .hero_section {
   background-image: url(/image/logo/background_logo.png);
   background-repeat: no-repeat;
