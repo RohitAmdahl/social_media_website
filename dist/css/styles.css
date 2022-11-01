@@ -10823,7 +10823,7 @@ textarea.form-control-lg {
 }
 body {
   font-family: "Poppins", sans-serif, Arial;
-  background: #e4e2e2;
+  background: #f9f7f7;
 }
 
 footer {
@@ -11124,7 +11124,6 @@ p {
 
 #Emailinput {
   width: 100%;
-  max-width: 450px;
   padding: 25px;
   margin: 5px;
   font-weight: bold;
@@ -11133,7 +11132,6 @@ p {
 
 #Passwordinput {
   width: 100%;
-  max-width: 450px;
   padding: 25px;
   margin: 5px;
   font-weight: bold;

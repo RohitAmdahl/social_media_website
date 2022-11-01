@@ -75,7 +75,7 @@ $grays: (
 
 // scss-docs-start color-variables
 // $body: background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
-$primary-color: #e4e2e2;
+$primary-color: #f9f7f7;
 $blue: #025c68;
 $indigo: #6610f2;
 $purple: #6f42c1;
@@ -126,13 +126,6 @@ $border-radius-xl: 1rem;
 $border-radius-2xl: 2rem;
 $border-radius-pill: 50rem;
 // scss-docs-end border-radius-variables
-
-// scss-docs-start box-shadow-variables
-$box-shadow: 0 0.5rem 1rem rgba($black, 0.15);
-$box-shadow-sm: 0 0.125rem 0.25rem rgba($black, 0.075);
-$box-shadow-lg: 0 1rem 3rem rgba($black, 0.175);
-$box-shadow-inset: inset 0 1px 2px rgba($black, 0.075);
-// scss-docs-end box-shadow-variables
 
 // scss-docs-start input-btn-variables
 $input-btn-padding-y: 0rem;
