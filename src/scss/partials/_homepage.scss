@@ -1,36 +1,16 @@
-$text-color: #373737;
-$gray-400: #ced4da;
-$box-shadow: 2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
-  6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
-  12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
-  22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
-  41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05), 100px 100px 80px rgba(0, 0, 0, 0.07);
-
 .hero_section {
   background-image: url(/image/logo/background_logo.png);
   background-repeat: no-repeat;
   margin-top: 15px;
 
   .hero_img {
-    width: 100%;
-    max-width: 350px;
-    padding-top: 20px;
-    border-radius: 246px 54px;
+    max-width: 300px;
+    border-radius: border-radius-lg;
     box-shadow: $box-shadow;
-  }
-  .hero_heading {
-    font-weight: bold;
-    color: $text-color;
-    text-shadow: 1px 1px 0px;
-    line-height: 1.5;
-  }
-  .back {
-    background: $gray-400;
   }
 }
 
 .profile {
-  width: 100%;
   max-width: 90px;
 }
 
@@ -43,26 +23,6 @@ $box-shadow: 2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
   }
 }
 
-.back {
-  border-radius: 14px;
-  text-align: center;
-  padding: 5px;
-  margin: 20px;
-  display: flex;
-  justify-content: center;
-  p {
-    padding: 8px;
-    box-shadow: $box-shadow;
-    border-radius: 15px;
-  }
-}
-
-.side {
-  display: flex;
-  justify-content: center;
-  align-items: last baseline;
-}
-
 .cta_btn {
   color: $text-color;
   background: $background_btn;
@@ -71,8 +31,9 @@ $box-shadow: 2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
   font-size: 1rem;
   border: none;
   text-decoration: none;
-  box-shadow: 16px 16px 10px rgba(0, 0, 0, 0.038),
-    100px 100px 80px rgba(0, 0, 0, 0.07);
+  // box-shadow: 16px 16px 10px rgba(0, 0, 0, 0.038),
+  //   100px 100px 80px rgba(0, 0, 0, 0.07);
+  box-shadow: $box-shadow;
   border-radius: 0.5rem;
   margin: 10px;
   width: 100%;

@@ -1,7 +1,6 @@
 .login_pic {
   width: 100%;
   max-width: 500px;
-  padding: 25px;
 }
 
 p {
@@ -10,22 +9,12 @@ p {
   margin: 0 auto;
 }
 
-.mb-4 {
-  padding: 10px;
-}
-
 #Emailinput {
-  width: 100%;
-  padding: 25px;
-  margin: 5px;
   font-weight: bold;
   font-family: $font-family;
 }
 
 #Passwordinput {
-  width: 100%;
-  padding: 25px;
-  margin: 5px;
   font-weight: bold;
   font-family: $font-family;
 }

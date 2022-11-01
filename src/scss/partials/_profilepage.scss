@@ -4,7 +4,6 @@
 h2,
 h3 {
   text-align: center;
-  padding: 10px;
 }
 
 .details {
@@ -19,9 +18,7 @@ h3 {
     align-items: center;
     flex-wrap: wrap;
     gap: 10px;
-    margin-top: 20px;
     .profile_page_img {
-      width: 100%;
       max-width: 110px;
       border-radius: 22rem;
     }
@@ -33,45 +30,27 @@ h3 {
 }
 
 .profile_stories {
-  width: 100%;
   max-width: 70px;
 }
 
 .Stories {
   border: 0.5px solid #e6e6e6;
-  padding: 10px;
   border-radius: 39px 29px;
-  margin-top: 25px;
   .profile_friends {
-    width: 100%;
     max-width: 115px;
-    padding: 10px;
   }
 }
 
 .profile_event {
-  width: 100%;
   max-width: 110px;
-  padding: 10px;
 }
 
 .post_box {
-  margin-top: 25px;
   max-width: 600px;
   padding: 15px;
   .card_img {
     max-width: 55px;
     border-radius: 80%;
-  }
-}
-
-.center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-  .d-flex {
-    margin: 15px;
   }
 }
 
