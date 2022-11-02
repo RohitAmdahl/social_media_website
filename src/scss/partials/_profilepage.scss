@@ -14,15 +14,16 @@ h3 {
     align-items: center;
     flex-wrap: wrap;
     gap: 10px;
-    .profile_page_img {
-      max-width: 110px;
-      border-radius: 22rem;
-    }
   }
 }
 
+.profile_page_img {
+  max-width: 110px;
+  border-radius: $border-radius-lg;
+}
+
 .post {
-  border: 0.5px solid #e6e6e6;
+  border: $border-radius;
 }
 
 .profile_stories {
@@ -30,9 +31,7 @@ h3 {
 }
 
 .Stories {
-  border: 0.5px solid #e6e6e6;
-  border-radius: 39px 29px;
-  margin: 0 auto;
+  border-radius: $border-radius;
   .profile_friends {
     max-width: 115px;
   }

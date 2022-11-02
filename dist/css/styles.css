@@ -64,9 +64,9 @@
   --bs-border-color-translucent: rgba(55, 55, 55, 0.175);
   --bs-border-radius: 0.5rem;
   --bs-border-radius-sm: 0rem;
-  --bs-border-radius-lg: 5rem;
-  --bs-border-radius-xl: 1rem;
-  --bs-border-radius-2xl: 2rem;
+  --bs-border-radius-lg: 3rem;
+  --bs-border-radius-xl: 4rem;
+  --bs-border-radius-2xl: 6rem;
   --bs-border-radius-pill: 50rem;
   --bs-link-color: #02a0b5;
   --bs-link-hover-color: #028091;
@@ -2105,7 +2105,7 @@ progress {
   min-height: calc(1.5em + 1rem + 2px);
   padding: 0.5rem 1rem;
   font-size: calc(1.2625rem + 0.15vw);
-  border-radius: 5rem;
+  border-radius: 3rem;
 }
 @media (min-width: 1200px) {
   .form-control-lg {
@@ -2204,7 +2204,7 @@ textarea.form-control-lg {
   padding-bottom: 0.5rem;
   padding-left: 1rem;
   font-size: calc(1.2625rem + 0.15vw);
-  border-radius: 5rem;
+  border-radius: 3rem;
 }
 @media (min-width: 1200px) {
   .form-select-lg {
@@ -2533,7 +2533,7 @@ textarea.form-control-lg {
 .input-group-lg > .btn {
   padding: 0.5rem 1rem;
   font-size: calc(1.2625rem + 0.15vw);
-  border-radius: 5rem;
+  border-radius: 3rem;
 }
 @media (min-width: 1200px) {
   .input-group-lg > .form-control,
@@ -3137,7 +3137,7 @@ textarea.form-control-lg {
   --bs-btn-padding-y: 0.5rem;
   --bs-btn-padding-x: 1rem;
   --bs-btn-font-size: calc(1.2625rem + 0.15vw);
-  --bs-btn-border-radius: 5rem;
+  --bs-btn-border-radius: 3rem;
 }
 @media (min-width: 1200px) {
   .btn-lg, .btn-group-lg > .btn {
@@ -4582,7 +4582,7 @@ textarea.form-control-lg {
   --bs-pagination-padding-x: 1.5rem;
   --bs-pagination-padding-y: 0.75rem;
   --bs-pagination-font-size: calc(1.2625rem + 0.15vw);
-  --bs-pagination-border-radius: 5rem;
+  --bs-pagination-border-radius: 3rem;
 }
 @media (min-width: 1200px) {
   .pagination-lg {
@@ -5244,9 +5244,9 @@ textarea.form-control-lg {
   --bs-modal-bg: #fff;
   --bs-modal-border-color: var(--bs-border-color-translucent);
   --bs-modal-border-width: 1px;
-  --bs-modal-border-radius: 5rem;
+  --bs-modal-border-radius: 3rem;
   --bs-modal-box-shadow: 0 0.125rem 0.25rem rgba(55, 55, 55, 0.075);
-  --bs-modal-inner-border-radius: calc(5rem - 1px);
+  --bs-modal-inner-border-radius: calc(3rem - 1px);
   --bs-modal-header-padding-x: 1.2rem;
   --bs-modal-header-padding-y: 1.2rem;
   --bs-modal-header-padding: 1.2rem 1.2rem;
@@ -5637,8 +5637,8 @@ textarea.form-control-lg {
   --bs-popover-bg: #fff;
   --bs-popover-border-width: 1px;
   --bs-popover-border-color: var(--bs-border-color-translucent);
-  --bs-popover-border-radius: 5rem;
-  --bs-popover-inner-border-radius: calc(5rem - 1px);
+  --bs-popover-border-radius: 3rem;
+  --bs-popover-inner-border-radius: calc(3rem - 1px);
   --bs-popover-box-shadow: 2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02), 6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028), 12.5px 12.5px 10px rgba(0, 0, 0, 0.035), 22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042), 41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05), 100px 100px 80px rgba(0, 0, 0, 0.07);
   --bs-popover-header-padding-x: 1.2rem;
   --bs-popover-header-padding-y: 0.5rem;
@@ -10986,13 +10986,14 @@ h3,
   flex-wrap: wrap;
   gap: 10px;
 }
-.profile_section .wrap_box .profile_page_img {
+
+.profile_page_img {
   max-width: 110px;
-  border-radius: 22rem;
+  border-radius: 3rem;
 }
 
 .post {
-  border: 0.5px solid #e6e6e6;
+  border: 0.5rem;
 }
 
 .profile_stories {
@@ -11000,9 +11001,7 @@ h3,
 }
 
 .Stories {
-  border: 0.5px solid #e6e6e6;
-  border-radius: 39px 29px;
-  margin: 0 auto;
+  border-radius: 0.5rem;
 }
 .Stories .profile_friends {
   max-width: 115px;
@@ -11038,17 +11037,14 @@ h3,
 
 p {
   max-width: 750px;
-  margin: 0 auto;
 }
 
 #Emailinput {
   font-weight: bold;
-  font-family: "Poppins", sans-serif, Arial;
 }
 
 #Passwordinput {
   font-weight: bold;
-  font-family: "Poppins", sans-serif, Arial;
 }
 
 /*# sourceMappingURL=styles.css.map */
