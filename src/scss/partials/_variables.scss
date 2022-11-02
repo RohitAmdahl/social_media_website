@@ -55,7 +55,7 @@ $h6-font-size: $font-size-base;
 // Color system
 
 // scss-docs-start gray-color-variables
-$white: #fff;
+$white: rgb(253, 253, 253);
 $gray-100: #f8f9fa;
 $gray-200: #e9ecef;
 $gray-300: #fdfcfb; //--logo background
@@ -131,7 +131,7 @@ $spacers: (
 );
 
 // scss-docs-start border-radius-variables
-$border-radius: 0.5rem;
+$border-radius: 1.2rem;
 $border-radius-sm: 0rem;
 $border-radius-lg: 3rem;
 $border-radius-xl: 4rem;
