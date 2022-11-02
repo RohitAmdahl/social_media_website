@@ -31,8 +31,6 @@
   font-size: 1rem;
   border: none;
   text-decoration: none;
-  // box-shadow: 16px 16px 10px rgba(0, 0, 0, 0.038),
-  //   100px 100px 80px rgba(0, 0, 0, 0.07);
   box-shadow: $box-shadow;
   border-radius: 0.5rem;
   margin: 10px;
@@ -44,16 +42,6 @@
   border-radius: 0.5rem;
 }
 
-.form {
-  padding: 25px;
-}
-
-#PasswordInput {
-  width: 100%;
-  max-width: 480px;
-  padding: 15px 0;
-  margin: 5px;
-  border: $text-color;
-  font-weight: bold;
-  font-family: $font-family;
+.fw-bold {
+  color: $text-color;
 }

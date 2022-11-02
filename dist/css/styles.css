@@ -10966,28 +10966,14 @@ nav .cta_model:hover {
   border-radius: 0.5rem;
 }
 
-.form {
-  padding: 25px;
-}
-
-#PasswordInput {
-  width: 100%;
-  max-width: 480px;
-  padding: 15px 0;
-  margin: 5px;
-  border: #373737;
-  font-weight: bold;
-  font-family: "Poppins", sans-serif, Arial;
+.fw-bold {
+  color: #373737;
 }
 
 h2, .h2,
 h3,
 .h3 {
   text-align: center;
-}
-
-.details {
-  font-weight: bold;
 }
 
 .profile_section {
@@ -11016,6 +11002,7 @@ h3,
 .Stories {
   border: 0.5px solid #e6e6e6;
   border-radius: 39px 29px;
+  margin: 0 auto;
 }
 .Stories .profile_friends {
   max-width: 115px;
@@ -11041,18 +11028,15 @@ h3,
 
 .feature,
 .friends {
-  display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .login_pic {
-  width: 100%;
   max-width: 500px;
 }
 
 p {
-  width: 100%;
   max-width: 750px;
   margin: 0 auto;
 }
