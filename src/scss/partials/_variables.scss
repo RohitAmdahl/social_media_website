@@ -12,7 +12,7 @@ $box-shadow: 2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
 // used in nav
 $background_btn: #9cdad7;
 $text-color: #373737;
-$blue: #ace7ef;
+$blue-2: #ace7ef;
 $background_btn_hover: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
 
 // body fonts
@@ -24,7 +24,7 @@ $font-family-code: "Poppins", sans-serif, Arial;
 // $font-size-root affects the value of `rem`, which is used for as well font sizes, paddings, and margins
 // $font-size-base affects the font size of the body text
 $font-size-root: null;
-$font-size-base: 1.1rem; // Assumes the browser default, typically `16px`
+$font-size-base: 1.3rem; // Assumes the browser default, typically `16px`
 $font-size-sm: $font-size-base * 0.875;
 $font-size-lg: $font-size-base * 1.25;
 
@@ -140,5 +140,5 @@ $border-radius-pill: 50rem;
 // scss-docs-end border-radius-variables
 
 // scss-docs-start input-btn-variables
-$input-btn-padding-y: 0rem;
-$input-btn-padding-x: 0rem;
+$input-btn-padding-y: 0.8rem;
+$input-btn-padding-x: 0.8rem;

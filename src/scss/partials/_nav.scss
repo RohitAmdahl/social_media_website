@@ -1,18 +1,12 @@
-@import "variables";
-
-.d-flex {
-  list-style: none;
-}
+// @import "variables";
 
 nav {
-  font-weight: bold;
   .bike_logo {
-    width: 100%;
     max-width: 80px;
   }
   .main_header {
     align-items: center;
-    font-size: 1.3rem;
+    font-size: $font-size-base;
   }
 
   .form-control {
@@ -30,14 +24,13 @@ nav {
 
   .cta_search {
     color: $text-color;
-    background: $background_btn;
-    padding: 12px 12px;
+    background: $blue-2;
+    padding: 12px;
     font-weight: bold;
     font-size: 1rem;
     border: none;
     text-decoration: none;
-    box-shadow: 16px 16px 10px rgba(0, 0, 0, 0.038),
-      100px 100px 80px rgba(0, 0, 0, 0.07);
+    box-shadow: $box-shadow;
     border-radius: 0.5rem;
     margin: 10px;
     width: 100%;
@@ -47,33 +40,6 @@ nav {
     background: $background_btn_hover;
     border-radius: 0.5rem;
   }
-
-  .cta_model {
-    color: $text-color;
-    background: $background_btn;
-    font-weight: bold;
-    border: none;
-    text-decoration: none;
-    box-shadow: 16px 16px 10px rgba(0, 0, 0, 0.038),
-      100px 100px 80px rgba(0, 0, 0, 0.07);
-    border-radius: 0.5rem;
-  }
-  .cta_model:hover {
-    background: $background_btn_hover;
-    box-shadow: 16px 16px 10px rgba(0, 0, 0, 0.038),
-      100px 100px 80px rgba(0, 0, 0, 0.07);
-    border-radius: 0.5rem;
-  }
-}
-
-.cta-senter {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  max-width: 68px;
-  margin: 20 auto;
-  margin-right: 15px;
 }
 
 .logo {
