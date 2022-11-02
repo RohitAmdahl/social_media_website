@@ -10828,7 +10828,6 @@ body {
 }
 
 .d-flex {
-  display: flex;
   list-style: none;
 }
 
@@ -10856,7 +10855,7 @@ nav .navbar-toggler-icon {
 }
 nav .cta_search {
   color: #373737;
-  background: #9cdad7;
+  background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
   padding: 12px 12px;
   font-weight: bold;
   font-size: 1rem;
@@ -10874,7 +10873,7 @@ nav .cta_search:hover {
 }
 nav .cta_model {
   color: #373737;
-  background: #9cdad7;
+  background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
   font-weight: bold;
   border: none;
   text-decoration: none;
@@ -10948,7 +10947,7 @@ nav .cta_model:hover {
 
 .cta_btn {
   color: #373737;
-  background: #9cdad7;
+  background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
   padding: 12px;
   font-weight: bold;
   font-size: 1rem;
