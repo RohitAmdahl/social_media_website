@@ -51,14 +51,13 @@ nav {
 
   .cta_model {
     color: $text-color;
-    background: $blue;
+    background: $background_btn;
     font-weight: bold;
     border: none;
     text-decoration: none;
     box-shadow: 16px 16px 10px rgba(0, 0, 0, 0.038),
       100px 100px 80px rgba(0, 0, 0, 0.07);
     border-radius: 0.5rem;
-    transition: 0.5s ease-in-out;
   }
   .cta_model:hover {
     background: $background_btn_hover;
