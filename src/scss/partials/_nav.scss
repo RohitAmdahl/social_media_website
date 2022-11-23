@@ -1,0 +1,49 @@
+nav {
+  .bike_logo {
+    max-width: 80px;
+  }
+  .main_header {
+    align-items: center;
+    font-size: $font-size-base;
+  }
+
+  .form-control {
+    width: 100%;
+    max-width: 14rem;
+    height: 3.1rem;
+    margin: 5px;
+    padding: 12px;
+  }
+
+  .navbar-toggler-icon {
+    width: 1em;
+    height: 1em;
+  }
+
+  .cta_search {
+    color: $text-color;
+    background: $blue-2;
+    padding: 12px;
+    font-weight: bold;
+    font-size: 1rem;
+    border: none;
+    text-decoration: none;
+    box-shadow: $box-shadow;
+    border-radius: 0.5rem;
+    margin: 10px;
+    width: 100%;
+    max-width: 100px;
+  }
+  .cta_search:hover {
+    background: $background_btn_hover;
+    border-radius: 0.5rem;
+  }
+}
+
+.logo {
+  width: 120px;
+}
+
+.write_post {
+  max-width: 400px;
+}

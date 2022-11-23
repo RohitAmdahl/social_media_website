@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/dist/css/styles.css" />
+    <title>Login page</title>
+  </head>
+  <body>
+    <header class="header_wrap">
+      <div class="header_section">
+        <nav class="navbar navbar-expand-lg">
+          <div class="container">
+            <a class="navbar-brand" href="index.html"
+              ><img src="/image/logo/logo.png" alt="logo" class="bike_logo"
+            /></a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div
+              class="collapse navbar-collapse main_header"
+              id="navbarSupportedContent"
+            >
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="profile.html">Profile</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="login.html">LogIn</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active fw-bold" href="ragister.html"
+                    >Register</a
+                  >
+                </li>
+              </ul>
+              <form
+                class="d-flex align-items-center justify-content-center"
+                role="search"
+              >
+                <input
+                  class="form-control me-2"
+                  type="search"
+                  placeholder="Search"
+                  aria-label="Search"
+                />
+                <button class="cta_search" type="submit">Search</button>
+              </form>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <div class="row">
+          <div class="col-8 mx-auto">
+            <dir>
+              <h1 class="fw-bold">Register account</h1>
+              <hr />
+            </dir>
+
+            <form action="" method="post">
+              <div class="form-group mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="Emailinput"
+                  name="name"
+                  placeholder="The name value must not contain punctuation symbols apart from underscore."
+                />
+              </div>
+
+              <div class="form-group mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input
+                  name="email"
+                  type="email"
+                  class="form-control"
+                  id="Emailinput"
+                  placeholder="name@noroff.no or first.last@stud.noroff.no"
+                  required
+                />
+              </div>
+
+              <div class="form-group mb-3">
+                <label for="Password" class="form-label">Password</label>
+                <input
+                  type="password"
+                  id="Passwordinput"
+                  class="form-control"
+                  placeholder="The password value must be at least 8 characters."
+                  minlength="8"
+                  required
+                />
+              </div>
+
+              <div class="form-group mb-3">
+                <label for="" class="form-label">Banner</label>
+                <input
+                  type="url"
+                  name="banner"
+                  id="banner"
+                  class="form-control"
+                />
+              </div>
+
+              <div class="form-group mb-3">
+                <label for="" class="form-label">Avatar</label>
+                <input
+                  type="url"
+                  name="avatar"
+                  id="avatar"
+                  class="form-control"
+                />
+              </div>
+
+              <button type="submit" class="cta_btn">Register</button>
+            </form>
+          </div>
+        </div>
+        <hr />
+      </div>
+      <!-- section under login -->
+      <!-- <section class="d-flex flex-column">
+        <div class="px-4 py-5 my-5 text-center">
+          <div class="col-lg-6 mx-auto d-flex justify-content-center">
+            <img
+              class="w-100 login_pic m-5 p-5 max"
+              src="/image/pictures/pic-9.jpg"
+              alt=" two girls are posing to the camera  with there electric bikes"
+            />
+          </div>
+        </div>
+      </section> -->
+    </main>
+    <footer>
+      <div class="container">
+        <div class="row logo">
+          <div class="col">
+            <img
+              src="/image/logo/footer_logo.png"
+              alt="footer bike website logo"
+              class="w-100 p-2"
+            />
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

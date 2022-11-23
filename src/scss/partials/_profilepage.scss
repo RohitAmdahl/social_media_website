@@ -1,0 +1,54 @@
+// $background_btn: #9cdad7;
+// $background_btn_hover: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+
+h2,
+h3 {
+  text-align: center;
+}
+
+.profile_section {
+  margin-top: 25px;
+}
+
+.profile_page_img {
+  max-width: 110px;
+  border-radius: $border-radius-lg;
+}
+
+.post {
+  border: $border-radius;
+}
+
+.profile_stories {
+  max-width: 70px;
+}
+
+.Stories {
+  border-radius: $border-radius;
+  .profile_friends {
+    max-width: 115px;
+  }
+}
+
+.profile_event {
+  max-width: 110px;
+}
+
+.post_box {
+  max-width: 600px;
+  padding: 15px;
+  .card_img {
+    max-width: 55px;
+    border-radius: 80%;
+  }
+}
+
+.freinds_names {
+  width: 125px;
+  box-sizing: border-box;
+}
+.feature,
+.friends {
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,47 @@
+.hero_section {
+  background-image: url(/image/logo/background_logo.png);
+  background-repeat: no-repeat;
+  margin-top: 15px;
+
+  .hero_img {
+    max-width: 300px;
+    border-radius: border-radius-lg;
+    box-shadow: $box-shadow;
+  }
+}
+
+.profile {
+  max-width: 90px;
+}
+
+.name {
+  display: flex;
+  flex-direction: column;
+  span {
+    color: $text-color;
+    font-weight: bold;
+  }
+}
+
+.cta_btn {
+  color: $text-color;
+  background-color: $blue-2;
+  padding: 12px;
+  font-weight: bold;
+  font-size: 1rem;
+  border: none;
+  text-decoration: none;
+  box-shadow: $box-shadow;
+  border-radius: 0.5rem;
+  margin: 10px;
+  width: 100%;
+  max-width: 115px;
+}
+.cta_btn:hover {
+  background: $background_btn_hover;
+  border-radius: 0.5rem;
+}
+
+.fw-bold {
+  color: $text-color;
+}
