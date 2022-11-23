@@ -68,56 +68,84 @@
         <div class="row">
           <div class="col-8 mx-auto">
             <dir>
-              <h1 class="fw-bold">Register Bike partners account</h1>
+              <h1 class="fw-bold">Register account</h1>
               <hr />
             </dir>
-            <form action="/profile.html" method="get">
-              <div class="fw-bold">
-                <label for="email ">Email address</label>
+
+            <form action="" method="post">
+              <div class="form-group mb-3">
+                <label for="name" class="form-label">Name</label>
                 <input
-                  type="email"
-                  class="form-control w-100 m-5 p-5"
+                  type="text"
+                  class="form-control"
                   id="Emailinput"
-                  placeholder="name@example.com"
+                  name="name"
+                  placeholder="The name value must not contain punctuation symbols apart from underscore."
+                />
+              </div>
+
+              <div class="form-group mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input
+                  name="email"
+                  type="email"
+                  class="form-control"
+                  id="Emailinput"
+                  placeholder="name@noroff.no or first.last@stud.noroff.no"
                   required
                 />
               </div>
-              <div class="fw-bold">
-                <label for="floatingPassword">Password</label>
+
+              <div class="form-group mb-3">
+                <label for="Password" class="form-label">Password</label>
                 <input
                   type="password"
                   id="Passwordinput"
-                  class="form-control w-100 m-5 p-5"
-                  placeholder="write your password"
+                  class="form-control"
+                  placeholder="The password value must be at least 8 characters."
                   minlength="8"
                   required
                 />
               </div>
-              <button type="submit" class="cta_btn">Log in</button>
+
+              <div class="form-group mb-3">
+                <label for="" class="form-label">Banner</label>
+                <input
+                  type="url"
+                  name="banner"
+                  id="banner"
+                  class="form-control"
+                />
+              </div>
+
+              <div class="form-group mb-3">
+                <label for="" class="form-label">Avatar</label>
+                <input
+                  type="url"
+                  name="avatar"
+                  id="avatar"
+                  class="form-control"
+                />
+              </div>
+
+              <button type="submit" class="cta_btn">Register</button>
             </form>
           </div>
         </div>
         <hr />
       </div>
       <!-- section under login -->
-      <section class="d-flex flex-column">
+      <!-- <section class="d-flex flex-column">
         <div class="px-4 py-5 my-5 text-center">
-          <img
-            class="w-100 login_pic m-5 p-5 max"
-            src="/image/pictures/pic-9.jpg"
-            alt=" two girls are posing to the camera  with there electric bikes"
-          />
           <div class="col-lg-6 mx-auto d-flex justify-content-center">
-            <!-- <p class="lead mb-4 m-5 p-2 w-100">
-              we are building bike social media website, this website is for
-              making contacts and bike ride tours, and be friends. please write
-              to us, if there is something we can do better for community bike.
-              Bike social media website and has many good review, please keep
-              standards.
-            </p> -->
+            <img
+              class="w-100 login_pic m-5 p-5 max"
+              src="/image/pictures/pic-9.jpg"
+              alt=" two girls are posing to the camera  with there electric bikes"
+            />
           </div>
         </div>
-      </section>
+      </section> -->
     </main>
     <footer>
       <div class="container">

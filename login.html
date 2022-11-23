@@ -40,6 +40,9 @@
                 <li class="nav-item">
                   <a class="nav-link active fw-bold" href="login.html">LogIn</a>
                 </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="ragister.html">Register</a>
+                </li>
               </ul>
               <form
                 class="d-flex align-items-center justify-content-center"
@@ -66,7 +69,7 @@
               <h1 class="fw-bold">LogIN Bike partners</h1>
               <hr />
             </dir>
-            <form action="/profile.html" method="get">
+            <form action="/profile.html" method="post">
               <div class="fw-bold">
                 <label for="email ">Email address</label>
                 <input
@@ -74,25 +77,23 @@
                   type="email"
                   class="form-control w-100 m-5 p-5"
                   id="Emailinput"
-                  placeholder="name@example.com"
+                  placeholder="name@noroff.no or first.last@stud.noroff.no"
                   required
                 />
               </div>
               <div class="fw-bold">
                 <label for="floatingPassword">Password</label>
                 <input
+                  name="password"
                   type="password"
                   id="Passwordinput"
                   class="form-control w-100 m-5 p-5"
-                  placeholder="write your password"
+                  placeholder="The password value must be at least 8 characters."
                   minlength="8"
                   required
                 />
               </div>
               <button type="submit" class="cta_btn">Log in</button>
-              <a href="ragister.html"
-                ><button type="submit" class="cta_btn">Register</button></a
-              >
             </form>
           </div>
         </div>
