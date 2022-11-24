@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/dist/css/styles.css" />
     <title>Login page</title>
+    <script src="/js/handlers/registerform.mjs" defer type="module"></script>
   </head>
   <body>
     <header class="header_wrap">
@@ -72,10 +73,11 @@
               <hr />
             </dir>
 
-            <form action="" method="post">
+            <form action="auth/register" method="post" id="registerForm">
               <div class="form-group mb-3">
                 <label for="name" class="form-label">Name</label>
                 <input
+                  name="name"
                   type="text"
                   class="form-control"
                   id="Emailinput"
