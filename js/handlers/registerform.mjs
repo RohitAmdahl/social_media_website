@@ -18,19 +18,3 @@ form.addEventListener("submit", (e) => {
 
   register(POSTregisterURL, registerForm);
 });
-
-//   if (
-//     checkLength(firstName.value, 4) &&
-//     validateEmail(email.value) &&
-//     checkLength(subject.value, 14) &&
-//     checkLength(message.value, 24)
-//   ) {
-//     firstName.value = "";
-//     email.value = "";
-//     subject.value = "";
-//     message.value = "";
-//     successFullMsg.style.display = "block";
-//   } else {
-//     successFullMsg.style.display = "none";
-//   }
-// }
