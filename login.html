@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/dist/css/styles.css" />
     <title>Login page</title>
+    <script src="/js/handlers/loginform.mjs" defer type="module"></script>
   </head>
   <body>
     <header class="header_wrap">
@@ -69,7 +70,7 @@
               <h1 class="fw-bold">LogIN Bike partners</h1>
               <hr />
             </dir>
-            <form action="/profile.html" method="post">
+            <form action="/auth/register" method="" id="loginForm">
               <div class="fw-bold">
                 <label for="email ">Email address</label>
                 <input

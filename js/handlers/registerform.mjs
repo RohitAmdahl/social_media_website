@@ -11,4 +11,5 @@ form.addEventListener("submit", (e) => {
   const registerForm = { form, name, email, password };
   console.log(registerForm);
   // send it to api
+  register(profile);
 });
