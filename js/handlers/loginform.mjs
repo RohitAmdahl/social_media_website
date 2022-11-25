@@ -1,5 +1,6 @@
 import { LoginAuthUser } from "../api/auth/API_endpoints.mjs";
 console.log(LoginAuthUser);
+import { login } from "../api/auth/login.mjs";
 const form = document.querySelector("#loginForm");
 
 form.addEventListener("submit", (e) => {

@@ -27,8 +27,14 @@ form.addEventListener("submit", (e) => {
     displayMsg.innerHTML = `<p class ="card lead mb-4 m-5 p-2 w-100 text-center">you are successfully registered please log in </p>`;
     form.reset();
   } else {
-    return (displayMsg.innerHTML = "");
+    return Error;
   }
 
   register(POSTregisterURL, registerForm);
 });
+
+// email: "rohit@noroff.no"
+// ​
+// id: 752
+// ​
+// name: "kumar"
