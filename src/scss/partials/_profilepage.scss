@@ -47,8 +47,14 @@ h3 {
   width: 125px;
   box-sizing: border-box;
 }
-.feature,
-.friends {
-  justify-content: center;
-  align-items: center;
+// .feature,
+// .friends {
+//   justify-content: center;
+//   align-items: center;
+// }
+
+.feature:hover {
+  background: $background_btn_hover;
+  border-radius: 0.5rem;
+  cursor: pointer;
 }
