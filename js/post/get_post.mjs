@@ -3,6 +3,7 @@ console.log(getPostURL);
 async function createPost() {
   try {
     const token = localStorage.getItem("Token");
+
     console.log(token);
     const createData = {
       method: "get",
@@ -14,6 +15,7 @@ async function createPost() {
 
     const response = await fetch(getPostURL, createData);
     console.log(response);
+
     const json = await response.json();
     console.log(json);
   } catch (error) {

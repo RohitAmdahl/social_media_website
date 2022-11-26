@@ -14,9 +14,13 @@ export async function login(url, data) {
     };
     const response = await fetch(LoginAuthUser, postData);
     console.log(response);
+
     const results = await response.json();
+
     const accessToken = results.accessToken;
+
     localStorage.setItem("Token", accessToken);
+
     console.log(results);
     //
   } catch (error) {
