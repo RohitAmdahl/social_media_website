@@ -5,4 +5,4 @@ export const LoginAuth = "/api/v1/social/auth/login"; // for register form url
 export const LoginAuthUser = `${BASE_URL}${LoginAuth}`; // login form url
 export const url = `${BASE_URL}/api/v1/social/posts`;
 export const PostURL = `/api/v1/social/posts`;
-export const createPostURL = `${BASE_URL}${PostURL}`;
+export const getPostURL = `${BASE_URL}${PostURL}`;
