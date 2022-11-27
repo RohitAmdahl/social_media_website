@@ -8,11 +8,14 @@ form.addEventListener("submit", (e) => {
   const form = e.target;
   const email = form.email.value;
   const password = form.password.value;
-
   const loginForm = { form, email, password };
-  // form.reset();
-
-  console.log(loginForm);
-  // send it to api
+  form.reset();
+  profilePageData();
   login(LoginAuthUser, loginForm);
 });
+
+const profilePageData = () => {
+  if (form.password.value && form.name.value && form.email.value) {
+  }
+  return window.location.replace("/profile.html");
+};

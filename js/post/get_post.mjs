@@ -13,12 +13,11 @@ async function Post() {
         Authorization: `Bearer ${token}`,
       },
     };
-
     const response = await fetch(getPostURL, createData);
-    console.log(response);
-
+    if (!response.ok) {
+      throw new Error(`HTTP error: ${response.status}`);
+    }
     const json = await response.json();
-    console.log(json);
   } catch (error) {
     console.log(error);
   }

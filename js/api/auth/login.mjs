@@ -13,19 +13,16 @@ export async function login(url, data) {
       body,
     };
     const response = await fetch(LoginAuthUser, postData);
-    console.log(response);
-
+    if (!response.ok) {
+      throw new Error(`HTTP error: ${response.status}`);
+    }
     const results = await response.json();
 
     const accessToken = results.accessToken;
 
     localStorage.setItem("Token", accessToken);
-
     console.log(results);
-    //
   } catch (error) {
     console.log(error);
   }
-
-  //
 }
