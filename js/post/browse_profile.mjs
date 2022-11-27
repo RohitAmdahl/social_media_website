@@ -3,8 +3,6 @@ import { PostOFFeeds } from "../api/auth/API_endpoints.mjs";
 async function profileOFPost() {
   try {
     const token = localStorage.getItem("Token");
-
-    console.log(token);
     const createData = {
       method: "get",
       headers: {
@@ -14,8 +12,6 @@ async function profileOFPost() {
     };
 
     const response = await fetch(PostOFFeeds, createData);
-    console.log(response);
-
     const json = await response.json();
     console.log(json);
   } catch (error) {

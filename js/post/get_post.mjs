@@ -18,6 +18,7 @@ async function Post() {
       throw new Error(`HTTP error: ${response.status}`);
     }
     const json = await response.json();
+    console.log(json);
   } catch (error) {
     console.log(error);
   }
