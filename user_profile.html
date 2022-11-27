@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="social media website for electric bikes"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/dist/css/styles.css" />
+    <title>Homepage</title>
+    <script src="/js/post/feed_od_post.mjs" defer type="module"></script>
+  </head>
+  <body>
+    <!-- header of website  -->
+    <header class="header_wrap">
+      <div class="header_section">
+        <nav class="navbar navbar-expand-lg">
+          <div class="container">
+            <a class="navbar-brand" href="login.html"
+              ><img
+                src="/image/logo/logo.png"
+                alt="logo"
+                class="bike_logo w-100"
+            /></a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div
+              class="collapse navbar-collapse main_header"
+              id="navbarSupportedContent"
+            >
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a
+                    class="nav-link active fw-bold"
+                    aria-current="page"
+                    href="index.html"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="profile.html">Profile</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="login.html">LogIn</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="ragister.html">Register</a>
+                </li>
+              </ul>
+
+              <form
+                class="d-flex align-items-center justify-content-center"
+                role="search"
+              >
+                <input
+                  class="form-control me-2"
+                  type="search"
+                  placeholder="Search"
+                  aria-label="Search"
+                />
+                <button class="cta_search" type="submit">Search</button>
+              </form>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- header finished here main section start from her  -->
+    <main>
+      <div class="hero_section">
+        <div class="container">
+          <div class="row">
+            <div class="col col-lg-6 col-md-12 col-sm-12">
+              <div class="card">
+                <img
+                  src="/image/profile/profile-pic 1.png"
+                  alt=""
+                  class="d-flex img-thumbnail p-2 mb-2 mx-auto"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Name</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                  <p class="card-text">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
+                  <img
+                    src="/image/pictures/pic-6.jpg"
+                    alt=""
+                    class="d-flex img-thumbnail pb-5 mb-2 p-5 mx-auto w-100"
+                  />
+                  <button class="cta_btn">Likes</button>
+                  <button class="cta_btn">Comment</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- main finished here footer section start from her  -->
+    <footer>
+      <div class="container">
+        <div class="row logo">
+          <div class="col">
+            <img
+              src="/image/logo/footer_logo.png"
+              alt="footer bike website logo"
+              class="w-100 m-2 p-2"
+            />
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

@@ -1,5 +1,5 @@
-import { getPostURL } from "../api/auth/API_endpoints.mjs";
-console.log(getPostURL);
+import { PostOFFeeds } from "../api/auth/API_endpoints.mjs";
+console.log(PostOFFeeds);
 async function profileOFPost() {
   try {
     const token = localStorage.getItem("Token");
@@ -13,7 +13,7 @@ async function profileOFPost() {
       },
     };
 
-    const response = await fetch(getPostURL, createData);
+    const response = await fetch(PostOFFeeds, createData);
     console.log(response);
 
     const json = await response.json();
