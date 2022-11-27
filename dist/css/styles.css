@@ -10967,6 +10967,26 @@ nav .cta_search:hover {
   border-radius: 0.5rem;
 }
 
+.cta_btn_profile {
+  color: #373737;
+  background-color: #ace7ef;
+  padding: 12px;
+  font-weight: bold;
+  font-size: 1rem;
+  border: none;
+  text-decoration: none;
+  box-shadow: 2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02), 6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028), 12.5px 12.5px 10px rgba(0, 0, 0, 0.035), 22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042), 41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05), 100px 100px 80px rgba(0, 0, 0, 0.07);
+  border-radius: 0.5rem;
+  margin: 10px;
+  width: 100%;
+  max-width: 200px;
+}
+
+.cta_btn_profile:hover {
+  background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+  border-radius: 0.5rem;
+}
+
 .fw-bold {
   color: #373737;
 }

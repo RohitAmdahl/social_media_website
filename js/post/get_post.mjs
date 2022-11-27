@@ -1,6 +1,7 @@
 import { getPostURL } from "../api/auth/API_endpoints.mjs";
 console.log(getPostURL);
-async function profileOFPost() {
+
+async function Post() {
   try {
     const token = localStorage.getItem("Token");
 
@@ -23,4 +24,4 @@ async function profileOFPost() {
   }
 }
 
-profileOFPost();
+Post();

@@ -1,5 +1,8 @@
 import { PostOFFeeds } from "../api/auth/API_endpoints.mjs";
-console.log(PostOFFeeds);
+
+// const browseProfile = document.querySelector("#profile");
+// console.log(browseProfile);
+
 async function profileOFPost() {
   try {
     const token = localStorage.getItem("Token");
