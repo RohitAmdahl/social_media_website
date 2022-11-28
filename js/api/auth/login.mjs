@@ -1,4 +1,4 @@
-// import { saveItem } from "../../storage/localstorage.mjs";
+import { saveItem } from "../../storage/localstorage.mjs";
 import { LoginAuthUser } from "./API_endpoints.mjs";
 const method = "post";
 
@@ -22,7 +22,7 @@ export async function login(url, data) {
     const accessToken = results.accessToken;
 
     localStorage.setItem("Token", accessToken);
-    localStorage, saveItem("profile", results);
+    saveItem("profile", results);
   } catch (error) {
     console.log(error);
   }

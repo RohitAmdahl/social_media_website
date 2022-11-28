@@ -18,7 +18,7 @@ export async function createPost(url, post) {
         Authorization: `Bearer ${token}`,
       },
       body: JSON.stringify({
-        title: post.tittle.value,
+        title: post.tittle,
         body: post.body,
         tags: post.tags,
         media: post.media,

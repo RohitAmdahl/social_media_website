@@ -1,10 +1,7 @@
 import { getPostURL } from "../api/auth/API_endpoints.mjs";
 console.log(getPostURL);
 //
-const cardsElement = document.getElementById("cards");
-console.log(cardsElement);
 
-//
 async function Post() {
   try {
     const token = localStorage.getItem("Token");
