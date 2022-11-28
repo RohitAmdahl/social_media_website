@@ -1,16 +1,18 @@
 import { createPost } from "../post/create.mjs";
-const form = document.getElementById("create_post");
+const form = document.getElementById("test");
 console.log(form);
+
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   const form = e.target.value;
-  const tittle = form.tittle.value;
+  const title = form.title.value;
   const description = form.description.value;
   const tag = form.tag.value;
   const picture = form.picture.value;
-  const create_POST = { form, tittle, description, tag, picture };
+  const create_POST = { form, title, description, tag, picture };
 
   console.log(create_POST);
+
   createPost(getPostURL, create_POST);
 });
 

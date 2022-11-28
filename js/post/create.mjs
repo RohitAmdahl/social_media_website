@@ -29,6 +29,8 @@ export async function createPost(url, post) {
     console.log(response);
     const json = await response.json();
     console.log(json);
+
+    console.log(result);
   } catch (error) {
     console.log(error);
   }
