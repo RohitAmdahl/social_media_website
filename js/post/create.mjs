@@ -1,6 +1,5 @@
 import { getPostURL } from "../api/auth/API_endpoints.mjs";
 console.log(getPostURL);
-// import { StoredData } from "../storage/localstorage.mjs";
 
 const method = "post";
 
