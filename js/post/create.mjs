@@ -3,21 +3,29 @@ console.log(getPostURL);
 
 const method = "post";
 
-export async function createPost(url, data) {
+export async function createPost(url, post) {
+  // console.log("URL and Data", url);
   try {
     const token = localStorage.getItem("Token");
     console.log(token);
-    const parsed = JSON.parse(localStorage.getItem("token"));
-    console.log(parsed);
-    const createData = {
+
+    // const token = JSON.parse(localStorage.getItem("token"));
+    //
+    const database = {
       method,
       headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${parsed}`,
+        "Content-type": "application/json ",
+        Authorization: `Bearer ${token}`,
       },
-      body: JSON.stringify(data),
+      body: JSON.stringify({
+        title: post.tittle,
+        body: post.body,
+        tags: [post.tags],
+        media: post.media,
+      }),
     };
-    const response = await fetch(url, createData);
+
+    const response = await fetch(getPostURL, database);
     console.log(response);
     const json = await response.json();
     console.log(json);
@@ -26,9 +34,5 @@ export async function createPost(url, data) {
   }
 }
 
-createPost();
-
-// entryPost({
-//   title: "example",
-//   body: "very bad day",
-// });
+// const createDData = createPost(getPostURL);
+// createPost();

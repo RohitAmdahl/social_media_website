@@ -10,12 +10,13 @@ form.addEventListener("submit", (e) => {
   const password = form.password.value;
   const loginForm = { form, email, password };
   form.reset();
-  profilePageData();
+
   login(LoginAuthUser, loginForm);
+  profilePageData();
 });
 
 const profilePageData = () => {
-  if (form.password.value && form.name.value && form.email.value) {
+  if (form.password.value && form.name.value && form.email.value === form) {
   }
-  return window.location.replace("/profile.html");
+  // return window.location.replace("/profile.html");
 };

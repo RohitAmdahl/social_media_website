@@ -1,3 +1,4 @@
+// import { saveItem } from "../../storage/localstorage.mjs";
 import { LoginAuthUser } from "./API_endpoints.mjs";
 const method = "post";
 
@@ -13,15 +14,15 @@ export async function login(url, data) {
       body,
     };
     const response = await fetch(LoginAuthUser, postData);
-    if (!response.ok) {
-      throw new Error(`HTTP error: ${response.status}`);
-    }
+    console.log(response);
+
     const results = await response.json();
+    console.log(results);
 
     const accessToken = results.accessToken;
 
     localStorage.setItem("Token", accessToken);
-    console.log(results);
+    localStorage, saveItem("profile", results);
   } catch (error) {
     console.log(error);
   }

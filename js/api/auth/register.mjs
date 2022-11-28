@@ -9,7 +9,7 @@ export async function register(url, data) {
     const postData = {
       method,
       headers: {
-        "Content-Type": "application/json",
+        "Content-type": "application/json; charset=UTF-8",
       },
       body,
     };
