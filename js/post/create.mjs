@@ -1,5 +1,5 @@
-import { getPostURL } from "../api/auth/API_endpoints.mjs";
-console.log(getPostURL);
+import { makePost } from "../api/auth/API_endpoints.mjs";
+console.log(makePost);
 
 const method = "post";
 
@@ -25,7 +25,7 @@ export async function createPost(url, post) {
       }),
     };
 
-    const response = await fetch(getPostURL, database);
+    const response = await fetch(makePost, database);
     console.log(response);
     const json = await response.json();
     console.log(json);
@@ -36,5 +36,5 @@ export async function createPost(url, post) {
   }
 }
 
-// const createDData = createPost(getPostURL);
+// const createDData = createPost(makePost);
 // createPost();

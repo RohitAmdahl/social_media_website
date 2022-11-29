@@ -33,7 +33,11 @@ async function Post() {
       const image = document.createElement("img"); // image
       image.classList.add("d-flex", "img-thumbnail", "p-2", "mb-2", "mx-auto");
       image.setAttribute("src", items.author.avatar);
-      image.setAttribute("src", "/image/pictures/pic-3.jpg");
+      image.setAttribute(
+        "onerror",
+        'this.onerror=null;this.src="/image/pictures/pic-3.jpg";'
+      );
+
       const newCard = document.createElement("div"); // card-body
       newCard.className = "card-body";
       const NameOfTittle = document.createElement("h5");

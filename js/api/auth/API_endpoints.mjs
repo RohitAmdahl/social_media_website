@@ -10,4 +10,4 @@ export const getPostURL = `${BASE_URL}/api/v1/social/posts?_author=true&_comment
 export const PostURL = `/api/v1/social/profiles`; // browse people profile
 export const PostOFFeeds = `${BASE_URL}${PostURL}`; // browse people profile
 
-// export const creatDate = `${BASE_URL}${PostURL}`;
+export const makePost = `${BASE_URL}/api/v1/social/posts`; // create entry

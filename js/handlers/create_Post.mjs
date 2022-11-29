@@ -1,5 +1,5 @@
 import { createPost } from "../post/create.mjs";
-import { getPostURL } from "../api/auth/API_endpoints.mjs";
+import { makePost } from "../api/auth/API_endpoints.mjs";
 const form = document.querySelector("#test");
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -12,10 +12,10 @@ form.addEventListener("submit", (e) => {
 
   console.log(create_POST);
   testTemplate();
-  createPost(getPostURL, create_POST);
+  createPost(makePost, create_POST);
 
   async function testTemplate() {
-    const result = await createPost(getPostURL, create_POST());
+    const result = await createPost(makePost, create_POST());
     console.log(result);
 
     console.log(form);
