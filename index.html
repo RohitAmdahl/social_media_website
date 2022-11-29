@@ -95,46 +95,43 @@
               <h1 class="m-5 pb-5 fw-bold">EL Bike partner</h1>
             </div>
             <div class="col-12 col-lg-6 col-md-12 col-sm-12">
-              <div class="form card p-3 mb-2">
-                <form id="newPost">
-                  <div>Create post</div>
-                  <div>
-                    <label class="text-muted">Title</label>
-                    <input
-                      name="title"
-                      type="text"
-                      class="form-control"
-                      required
-                    />
-                  </div>
-                  <div>
-                    <label class="text-muted">Description</label>
-                    <textarea
-                      name="Description"
-                      id="text"
-                      cols="30"
-                      rows="2"
-                      class="form-control"
-                    ></textarea>
-                  </div>
-                  <div>
-                    <label for="">Tag</label>
-                    <input name="Tag" type="text" class="form-control" />
-                  </div>
-                  <div>
-                    <label for="">Picture</label>
-                    <input
-                      name="media"
-                      type="url"
-                      id="file"
-                      name="file"
-                      class="form-control"
-                    />
-                  </div>
-
-                  <button class="cta_btn" type="submit">Post</button>
-                </form>
-              </div>
+              <form id="newPost" class="form card p-3 mb-2">
+                <div>Create post</div>
+                <div>
+                  <label class="text-muted">Title</label>
+                  <input
+                    name="title"
+                    type="text"
+                    class="form-control"
+                    required
+                  />
+                </div>
+                <div>
+                  <label class="text-muted">Description</label>
+                  <textarea
+                    name="Description"
+                    id="text"
+                    cols="30"
+                    rows="2"
+                    class="form-control"
+                  ></textarea>
+                </div>
+                <div>
+                  <label for="">Tag</label>
+                  <input name="Tag" type="text" class="form-control" />
+                </div>
+                <div>
+                  <label for="">Picture</label>
+                  <input
+                    name="media"
+                    type="url"
+                    id="file"
+                    name="file"
+                    class="form-control"
+                  />
+                </div>
+                <button class="cta_btn" type="submit">Post</button>
+              </form>
             </div>
             <!-- <div class="col-12 col-lg-5 col-md-12 col-sm-12" id="cards"> -->
             <!-- <div class="" id="cards"> -->
@@ -183,7 +180,7 @@
     </footer>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="/js/post/get_post.mjs" type="module"></script>
+    <script src="js/post/create.mjs"></script>
     <script src="/js/handlers/create_Post.mjs" type="module"></script>
-    <!-- <script src="js/utils/creatElements.mjs" type="module"></script> -->
   </body>
 </html>
