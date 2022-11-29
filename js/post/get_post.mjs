@@ -38,7 +38,7 @@ async function Post() {
       newCard.className = "card-body";
       const NameOfTittle = document.createElement("h5");
       NameOfTittle.className = "card-title";
-      NameOfTittle.innerText = items.name;
+      NameOfTittle.innerText = items.title;
       const subtitle = document.createElement("h6");
       subtitle.innerText = items.created;
       subtitle.classList.add("card-subtitle", "mb-2", "text-muted");
