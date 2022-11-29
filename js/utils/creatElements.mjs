@@ -28,7 +28,7 @@ const button = document.createElement("button");
 button.className = "cta_btn";
 button.innerText = "comment";
 console.log(button);
-
+//
 cardModel.appendChild(image);
 image.appendChild(newCard);
 newCard.appendChild(NameOfTittle);
