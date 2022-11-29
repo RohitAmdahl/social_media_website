@@ -1,6 +1,8 @@
 import { getPostURL } from "../api/auth/API_endpoints.mjs";
 console.log(getPostURL);
 
+const cardModel = document.getElementById("cards");
+
 async function Post() {
   try {
     const token = localStorage.getItem("Token");
@@ -17,9 +19,17 @@ async function Post() {
     const response = await fetch(getPostURL, createData);
     console.log(response);
     const results = await response.json();
-    // console.log(json);
+    console.log(results);
+
+    //
     results.forEach((items) => {
-      const cardModel = document.querySelector(".card"); // card
+      console.log(items);
+      const cardWrapper = document.createElement("div"); // card
+      cardWrapper.classList.add("col-12", "col-lg-5", "col-md-12", "col-sm-12");
+
+      const cardItem = document.createElement("div"); // card
+      cardItem.classList.add("card");
+
       const image = document.createElement("img"); // image
       image.classList.add("d-flex", "img-thumbnail", "p-2", "mb-2", "mx-auto");
       image.setAttribute("src", items.author.avatar);
@@ -37,7 +47,7 @@ async function Post() {
       paraGraph_text.innerText = items.body;
       const img = document.createElement("img");
       img.setAttribute("src", items.media);
-      img.classList.add("d-flex", "img-thumbnail", "p-2", "mb-2 ");
+      img.classList.add("d-flex", "img-thumbnail", "p-2", "mb-2");
       const span = document.createElement("span");
       span.className = "comments" + items.comments.length;
       const button = document.createElement("button");
@@ -45,14 +55,14 @@ async function Post() {
       button.innerText = "comment";
       console.log(button);
       //
-      cardModel.appendChild(image);
-      image.appendChild(newCard);
-      newCard.appendChild(NameOfTittle);
-      newCard.appendChild(subtitle);
-      newCard.appendChild(paraGraph_text);
-      newCard.appendChild(img);
-      newCard.appendChild(span);
-      newCard.appendChild(button);
+      cardModel.appendChild(cardWrapper);
+      cardWrapper.appendChild(cardItem);
+      cardItem.appendChild(NameOfTittle);
+      cardItem.appendChild(subtitle);
+      cardItem.appendChild(paraGraph_text);
+      cardItem.appendChild(img);
+      cardItem.appendChild(span);
+      cardItem.appendChild(button);
     });
 
     //
