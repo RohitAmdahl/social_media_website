@@ -1,4 +1,5 @@
 import { makePost } from "../api/auth/API_endpoints.mjs";
+
 console.log(makePost);
 
 const method = "post";

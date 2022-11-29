@@ -1,12 +1,14 @@
 import { createPost } from "../post/create.mjs";
+
 import { makePost } from "../api/auth/API_endpoints.mjs";
 
+const button = document.querySelector(".cta_btn");
 const form = document.querySelector("#newPost");
 console.log(form);
 
 form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  const form = e.target.value;
+  console.log(e);
+  form = e.target.value;
   const title = form.title.value;
   const description = form.description.value;
   const tag = form.tag.value;
