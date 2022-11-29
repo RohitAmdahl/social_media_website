@@ -2,16 +2,11 @@ import { makePost } from "../api/auth/API_endpoints.mjs";
 console.log(makePost);
 
 const method = "post";
-
 export async function createPost(url, post) {
-  // console.log("URL and Data", url);
   try {
     const token = localStorage.getItem("Token");
     console.log(token);
-
-    // const token = JSON.parse(localStorage.getItem("token"));
-    //
-    const database = {
+    const data = {
       method,
       headers: {
         "Content-type": "application/json ",
@@ -25,7 +20,7 @@ export async function createPost(url, post) {
       }),
     };
 
-    const response = await fetch(makePost, database);
+    const response = await fetch(makePost, data);
     console.log(response);
     const json = await response.json();
     console.log(json);
@@ -35,6 +30,3 @@ export async function createPost(url, post) {
     console.log(error);
   }
 }
-
-// const createDData = createPost(makePost);
-// createPost();

@@ -25,37 +25,43 @@ async function Post() {
     results.forEach((items) => {
       console.log(items);
       const cardWrapper = document.createElement("div"); // card
-      cardWrapper.classList.add("col-12", "col-lg-5", "col-md-12", "col-sm-12");
+      cardWrapper.classList.add(
+        "col-12",
+        "col-lg-12",
+        "col-md-12",
+        "col-sm-12"
+      );
 
       const cardItem = document.createElement("div"); // card
-      cardItem.classList.add("card");
+      cardItem.classList.add("card", "m-5", "p-5");
 
       const image = document.createElement("img"); // image
       image.classList.add("d-flex", "img-thumbnail", "p-2", "mb-2", "mx-auto");
       image.setAttribute("src", items.author.avatar);
-      image.setAttribute(
-        "onerror",
-        'this.onerror=null;this.src="/image/pictures/pic-3.jpg";'
-      );
 
       const newCard = document.createElement("div"); // card-body
       newCard.className = "card-body";
       const NameOfTittle = document.createElement("h5");
-      NameOfTittle.className = "card-title";
+      // NameOfTittle.className = ;
+      NameOfTittle.classList.add("mb-2", "p-5", "m-5", "card-title");
       NameOfTittle.innerText = items.title;
       const subtitle = document.createElement("h6");
-      subtitle.innerText = items.created;
-      subtitle.classList.add("card-subtitle", "mb-2", "text-muted");
+
+      subtitle.classList.add("card-subtitle", "mb-2", "p-2", "text-muted");
       const paraGraph_text = document.createElement("p");
-      paraGraph_text.className = "card-text";
+      // paraGraph_text.className = "card-text";
+      paraGraph_text.classList.add("mb-2", "p-2", "mb-2", "card-text");
       paraGraph_text.innerText = items.body;
       const img = document.createElement("img");
       img.setAttribute("src", items.media);
-      img.classList.add("d-flex", "img-thumbnail", "p-2", "mb-2");
+      img.classList.add("d-flex", "img-thumbnail", "mb-2", "p-2", "mb-2");
       const span = document.createElement("span");
       span.className = "comments" + items.comments.length;
       const button = document.createElement("button");
-      button.className = "cta_btn";
+      const input = document.createElement("input");
+      input.classList.add("form-control", "mb-2");
+
+      button.classList.add("cta_btn", "m-5");
       button.innerText = "comment";
       console.log(button);
       //
@@ -66,7 +72,12 @@ async function Post() {
       cardItem.appendChild(paraGraph_text);
       cardItem.appendChild(img);
       cardItem.appendChild(span);
+      cardItem.appendChild(input);
       cardItem.appendChild(button);
+
+      let date = `${items.created}`;
+      let update = date.substring(0, 10);
+      subtitle.innerText = update;
     });
 
     //
