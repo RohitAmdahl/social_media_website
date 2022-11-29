@@ -1,27 +1,29 @@
-import { getPostURL } from "../api/auth/API_endpoints.mjs";
-console.log(getPostURL);
-//
+const method = "put";
 
-async function Post() {
+async function updatePost() {
   try {
     const token = localStorage.getItem("Token");
     console.log(token);
 
-    console.log(token);
-    const createData = {
-      method: "get",
+    const updateData = {
+      method,
       headers: {
-        "Content-Type": "application/json",
+        "Content-type": "application/json ",
         Authorization: `Bearer ${token}`,
       },
+      body: JSON.stringify(),
     };
-    const response = await fetch(getPostURL, createData);
+
+    const response = await fetch(url, updateData);
+
     console.log(response);
     const json = await response.json();
     console.log(json);
+
+    console.log(result);
   } catch (error) {
     console.log(error);
   }
 }
 
-Post();
+update();

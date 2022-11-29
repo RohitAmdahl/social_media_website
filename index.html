@@ -130,8 +130,8 @@
                   <div>
                     <label for="">Picture</label>
                     <input
-                      name="url"
-                      type="file"
+                      name="media"
+                      type="url"
                       id="file"
                       name="file"
                       class="form-control"
@@ -142,7 +142,7 @@
                 </form>
               </div>
             </div>
-            <div id="cards" class="col-12 col-lg-5 col-md-12 col-sm-12">
+            <div class="col-12 col-lg-5 col-md-12 col-sm-12">
               <div class="card">
                 <img
                   src="/image/profile/profile-pic 1.png"
@@ -159,10 +159,8 @@
                   <img
                     src="/image/pictures/pic-6.jpg"
                     alt=""
-                    class="d-flex img-thumbnail p-2 mb-2 mx"
+                    class="d-flex img-thumbnail p-2 mb-2"
                   />
-                  <button class="cta_btn">Likes</button>
-                  <button class="cta_btn">Comment</button>
                 </div>
               </div>
             </div>
@@ -185,8 +183,8 @@
       </div>
     </footer>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/utils/creatElements.mjs" type="module"></script>
     <script src="/js/post/get_post.mjs" type="module"></script>
     <script src="/js/handlers/create_Post.mjs" type="module"></script>
+    <script src="js/utils/creatElements.mjs" type="module"></script>
   </body>
 </html>
