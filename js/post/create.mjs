@@ -16,7 +16,7 @@ export async function createPost(url, post) {
       body: JSON.stringify({
         title: post.tittle,
         body: post.body,
-        tags: post.tags,
+        tags: split(","),
         media: post.media,
       }),
     };

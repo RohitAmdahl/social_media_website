@@ -8,12 +8,12 @@ console.log(form);
 
 form.addEventListener("submit", (e) => {
   console.log(e);
-  form = e.target.value;
+  // const form = e.target;
   const title = form.title.value;
-  const description = form.description.value;
+  const body = form.body.value;
   const tag = form.tag.value;
   const picture = form.picture.value;
-  const create_POST = { form, title, description, tag, picture };
+  const create_POST = { form, title, body, tag, picture };
 
   console.log(create_POST);
 
