@@ -1,18 +1,19 @@
+import { remove } from "../api/auth/API_endpoints.mjs";
+
 async function remove() {
   try {
     const token = localStorage.getItem("Token");
     console.log(token);
 
     const deleteData = {
-      method,
+      method: "delete",
       headers: {
         "Content-type": "application/json ",
         Authorization: `Bearer ${token}`,
       },
-      body: JSON.stringify(),
     };
 
-    const response = await fetch(url, deleteData);
+    const response = await fetch(remove, deleteData);
     console.log(response);
     const json = await response.json();
     console.log(json);

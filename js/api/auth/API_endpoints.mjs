@@ -13,3 +13,15 @@ export const PostOFFeeds = `${BASE_URL}${PostURL}`; // browse people profile
 export const makePost = `${BASE_URL}/api/v1/social/posts`; // create entry
 
 export const singleProfile = `${BASE_URL}/api/v1/social/posts/?=id`;
+
+export const commentONprofile = `${BASE_URL}/api/v1/social/posts/?=id/comment`;
+
+export const remove = `${BASE_URL}/api/v1/social/posts/?=id`;
+
+export const putUpdate = `${BASE_URL}/api/v1/social/posts/?=id`;
+
+export const followProfile = `${BASE_URL}/api/v1/social/profiles/<name>/follow`;
+
+export const UNfolloWProfile = `${BASE_URL}/api/v1/social/profiles/<name>/follow`;
+
+export const EditBannerIMG = `${BASE_URL}PUT /api/v1/social/profiles/<name>/media`;
