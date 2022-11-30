@@ -4,18 +4,18 @@ console.log(commentONprofile);
 const button = document.querySelector(".cta_btn");
 console.log(button);
 
-// form.addEventListener("submit", (e) => {
-//   console.log(e);
-//   const form = e.target;
+form.addEventListener("submit", (e) => {
+  console.log(e);
+  const form = e.target;
 
-//   const input = form.input.value;
+  const input = form.input.value;
 
-//   const message = { form, input };
+  const message = { form, input };
 
-//   console.log(message);
+  console.log(message);
 
-//   commentPost(commentONprofile, message);
-// });
+  commentPost(commentONprofile, message);
+});
 
 async function commentPost(url, send) {
   try {

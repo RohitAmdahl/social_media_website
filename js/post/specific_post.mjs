@@ -25,10 +25,13 @@ async function singlePost() {
     const link = await response.json();
     console.log({ link });
 
+    const card = document.querySelector("#card");
+
     const img = document.createElement("img");
     img.src = link.media;
 
-    div.appendChild(img);
+    card.appendChild(img);
+
     //----
     //---
   } catch (error) {
