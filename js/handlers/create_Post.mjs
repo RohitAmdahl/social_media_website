@@ -5,16 +5,6 @@ import { makePost } from "../api/auth/API_endpoints.mjs";
 const form = document.querySelector("#newPost");
 console.log(form);
 
-// const title = document.querySelector(".form-title");
-// const titleValue = title.value;
-// const description = document.querySelector(".form-title");
-// description.value;
-// const tag = document.querySelector(".form-title");
-// tag.value;
-// const picture = document.querySelector(".form-title");
-
-// picture.value;
-
 const button = document.querySelector(".cta_btn");
 console.log(button);
 
