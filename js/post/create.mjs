@@ -1,22 +1,22 @@
-import { makePost } from "../api/auth/API_endpoints.mjs";
-
 console.log(makePost);
+import { makePost } from "../api/auth/API_endpoints.mjs";
+import { load } from "../storage/localstorage.mjs";
 
 const method = "post";
 export async function createPost(url, post) {
   try {
-    const token = localStorage.getItem("Token");
+    const token = load("token");
     console.log(token);
     const data = {
       method,
       headers: {
-        "Content-type": "application/json ",
+        "Content-Type": "application/json",
         Authorization: `Bearer ${token}`,
       },
       body: JSON.stringify({
         title: post.tittle,
         body: post.body,
-        tags: split(","),
+        tags: post.tag,
         media: post.media,
       }),
     };
@@ -31,3 +31,4 @@ export async function createPost(url, post) {
     console.log(error);
   }
 }
+//..................................................................
