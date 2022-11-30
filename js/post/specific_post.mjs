@@ -19,10 +19,16 @@ async function singlePost() {
         Authorization: `Bearer ${token}`,
       },
     };
-    const response = await fetch(singleProfile, createData);
+
+    const response = await fetch(`${singleProfile}/${id}`, createData);
     console.log(response);
     const link = await response.json();
-    console.log(link);
+    console.log({ link });
+
+    const img = document.createElement("img");
+    img.src = link.media;
+
+    div.appendChild(img);
     //----
     //---
   } catch (error) {
@@ -40,3 +46,4 @@ singlePost();
 //   }
 // }
 // singlePost();
+// const getSingleProfile = (id) => `${BASE_URL}/api/v1/social/posts/${id};

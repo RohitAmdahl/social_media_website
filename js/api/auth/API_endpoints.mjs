@@ -12,7 +12,7 @@ export const PostOFFeeds = `${BASE_URL}${PostURL}`; // browse people profile
 
 export const makePost = `${BASE_URL}/api/v1/social/posts`; // create entry
 
-export const singleProfile = `${BASE_URL}/api/v1/social/posts/?=id`;
+export const singleProfile = `${BASE_URL}/api/v1/social/posts`;
 
 export const commentONprofile = `${BASE_URL}/api/v1/social/posts/?=id/comment`;
 
@@ -20,8 +20,13 @@ export const remove = `${BASE_URL}/api/v1/social/posts/?=id`;
 
 export const putUpdate = `${BASE_URL}/api/v1/social/posts/?=id`;
 
-export const followProfile = `${BASE_URL}/api/v1/social/profiles/${name}/follow`;
+// export const followProfile = `${BASE_URL}/api/v1/social/profiles/${name}/follow`;
 
-export const UNfolloWProfile = `${BASE_URL}/api/v1/social/profiles/${name}/unfollow`;
+// export const UNfolloWProfile = `${BASE_URL}/api/v1/social/profiles/${name}/unfollow`;
 
-export const EditBannerIMG = `${BASE_URL}/api/v1/social/profiles/${name}/media`;
+// export const EditBannerIMG = `${BASE_URL}/api/v1/social/profiles/${name}/media`;
+
+export const getFollowProfilelink = (name) =>
+  `${BASE_URL}/api/v1/social/profiles/${name}/follow`;
+
+// const url = getFollowProfilelink(name);
