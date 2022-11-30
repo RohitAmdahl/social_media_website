@@ -22,7 +22,7 @@ async function Post() {
     console.log(results);
 
     //
-    results.forEach((items) => {
+    results.map((items) => {
       console.log(items);
       const cardWrapper = document.createElement("div"); // card
       cardWrapper.classList.add(
@@ -63,10 +63,11 @@ async function Post() {
         "media-img"
       );
       const span = document.createElement("span");
-      span.className = "comments" + items.comments.length;
+      span.classList.add("card-subtitle", "mb-2", "p-2", "text-muted");
+      span.innerText = "comments" + items.comments.length;
       const button = document.createElement("button");
-      const input = document.createElement("input");
-      input.classList.add("form-control", "mb-2");
+      // const input = document.createElement("input");
+      // input.classList.add("form-control", "mb-2");
 
       button.classList.add("cta_btn", "m-5");
       button.innerText = "comment";
@@ -85,8 +86,8 @@ async function Post() {
       cardItem.appendChild(paraGraph_text);
       cardItem.appendChild(img);
       cardItem.appendChild(span);
-      cardItem.appendChild(input);
-      cardItem.appendChild(button);
+      // cardItem.appendChild(input);
+      // cardItem.appendChild(button);
       cardItem.appendChild(viewPost);
 
       let date = `${items.created}`;

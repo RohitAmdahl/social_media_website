@@ -64,6 +64,7 @@ async function singlePost() {
     );
     const comments = document.createElement("p");
     // comments.className = "comments" + items.comments.length;
+
     const button = document.createElement("button");
     const input = document.createElement("input");
     input.classList.add("form-control", "mb-2");
@@ -72,8 +73,17 @@ async function singlePost() {
     button.innerText = "comment";
     console.log(button);
 
-    card.appendChild(img);
+    // card.appendChild(img);
     card.appendChild(cardItem);
+    cardModel.appendChild(img);
+
+    cardItem.appendChild(NameOfTittle);
+    cardItem.appendChild(subtitle);
+    cardItem.appendChild(paraGraph_text);
+    cardItem.appendChild(img);
+    cardItem.appendChild(span);
+    cardItem.appendChild(input);
+    cardItem.appendChild(button);
 
     //----
     //---

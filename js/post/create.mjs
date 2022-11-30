@@ -1,5 +1,5 @@
 import { makePost } from "../api/auth/API_endpoints.mjs";
-import { load } from "../storage/localstorage.mjs";
+// import { load } from "../storage/localstorage.mjs";
 
 const method = "post";
 export async function createPost(url, post) {
