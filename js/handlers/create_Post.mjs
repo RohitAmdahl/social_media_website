@@ -2,7 +2,8 @@ import { createPost } from "../post/create.mjs";
 
 import { makePost } from "../api/auth/API_endpoints.mjs";
 
-const form = document.querySelector("#newPost");
+const form = document.getElementById("test");
+console.log(form);
 
 const button = document.querySelector(".cta_btn");
 console.log(button);
