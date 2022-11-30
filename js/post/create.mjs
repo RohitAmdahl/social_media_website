@@ -1,32 +1,28 @@
-console.log(makePost);
 import { makePost } from "../api/auth/API_endpoints.mjs";
 import { load } from "../storage/localstorage.mjs";
 
-const method = "post";
+// const method = "post";
 export async function createPost(url, post) {
   try {
-    const token = load("token");
-    console.log(token);
+    const token = localStorage.getItem("Token");
+    // console.log(token);
     const data = {
-      method,
+      method: "post",
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${token}`,
       },
       body: JSON.stringify({
-        title: post.tittle,
+        title: post.title,
         body: post.body,
-        // tags: post.tag,
-        media: post.media,
+        media: post.image,
       }),
     };
 
     const response = await fetch(makePost, data);
     console.log(response);
-    const json = await response.json();
-    console.log(json);
-
-    console.log(result);
+    const results = await response.json();
+    console.log(results);
   } catch (error) {
     console.log(error);
   }

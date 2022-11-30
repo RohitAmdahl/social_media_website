@@ -72,10 +72,11 @@ async function Post() {
       button.innerText = "comment";
       console.log(button);
 
-      const viewPost = document.createElement("button");
+      const viewPost = document.createElement("a");
       viewPost.innerText = "View Post";
       viewPost.classList.add("cta_btn", "m-5");
       viewPost.setAttribute("id", "view_post");
+      viewPost.href = `user_profile.html?id=${items.id}`;
       //
       cardModel.appendChild(cardWrapper);
       cardWrapper.appendChild(cardItem);
