@@ -16,6 +16,7 @@ export async function createPost(url, post) {
       body: JSON.stringify({
         title: post.title,
         body: post.body,
+        // tags: post.tag,
         media: post.image,
       }),
     };
@@ -28,5 +29,4 @@ export async function createPost(url, post) {
     console.log(error);
   }
 }
-
 //..................................................................
