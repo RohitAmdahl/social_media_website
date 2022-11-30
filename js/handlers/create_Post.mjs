@@ -21,30 +21,3 @@ form.addEventListener("submit", (e) => {
 
   createPost(makePost, create_POST);
 });
-
-// form.addEventListener("submit", (e) => {
-//   console.log(e);
-//   // const form = e.target;
-//   const title = form.title.value;
-//   const body = form.body.value;
-//   // const tag = form.tag.value;
-//   const image = form.media.value;
-//   const create = { form, title, body, image };
-
-//   console.log(create);
-
-//   createPost(makePost, create);
-// });
-
-// const title = document.querySelector(".form-title");
-// const titleValue = title.value;
-// const description = document.querySelector(".form-title");
-// description.value;
-// const tag = document.querySelector(".form-title");
-// tag.value;
-// const picture = document.querySelector(".form-title");
-
-// picture.value;
-
-// const button = document.querySelector(".cta_btn");
-// console.log(button);
