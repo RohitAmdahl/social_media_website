@@ -54,7 +54,14 @@ async function Post() {
       paraGraph_text.innerText = items.body;
       const img = document.createElement("img");
       img.setAttribute("src", items.media);
-      img.classList.add("d-flex", "img-thumbnail", "mb-2", "p-2", "mb-2");
+      img.classList.add(
+        "d-flex",
+        "img-thumbnail",
+        "mb-2",
+        "p-2",
+        "mb-2",
+        "media-img"
+      );
       const span = document.createElement("span");
       span.className = "comments" + items.comments.length;
       const button = document.createElement("button");
@@ -64,6 +71,11 @@ async function Post() {
       button.classList.add("cta_btn", "m-5");
       button.innerText = "comment";
       console.log(button);
+
+      const viewPost = document.createElement("button");
+      viewPost.innerText = "View Post";
+      viewPost.classList.add("cta_btn", "m-5");
+      viewPost.setAttribute("id", "view_post");
       //
       cardModel.appendChild(cardWrapper);
       cardWrapper.appendChild(cardItem);
@@ -74,6 +86,7 @@ async function Post() {
       cardItem.appendChild(span);
       cardItem.appendChild(input);
       cardItem.appendChild(button);
+      cardItem.appendChild(viewPost);
 
       let date = `${items.created}`;
       let update = date.substring(0, 10);
