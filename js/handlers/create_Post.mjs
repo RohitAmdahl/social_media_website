@@ -14,7 +14,6 @@ form.addEventListener("submit", (e) => {
   const form = e.target;
   const title = form[0].value;
   const body = form[1].value;
-  // const tag = form.tag.value;
   const image = form[3].value;
   const create_POST = { form, title, body, image };
 
