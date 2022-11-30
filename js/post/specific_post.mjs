@@ -6,7 +6,8 @@ const params = new URLSearchParams(queryString);
 console.log(params);
 const id = params.get("id");
 console.log(id);
-
+const div = document.querySelector("#card");
+console.log(div);
 async function singlePost() {
   try {
     const token = localStorage.getItem("Token");
@@ -22,8 +23,20 @@ async function singlePost() {
     console.log(response);
     const link = await response.json();
     console.log(link);
+    //----
+    //---
   } catch (error) {
     console.log(error);
   }
 }
 singlePost();
+
+//     const response = await fetch(`${singleProfile}${id}?_author=true&_comments=true&_reactions=true`, createData);
+//     const link = await response.json();
+//     const main = document.querySelector("main");
+//     main.innerHTML +=
+//   } catch (error) {
+//     console.log(error);
+//   }
+// }
+// singlePost();

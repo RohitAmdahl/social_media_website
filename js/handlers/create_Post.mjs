@@ -2,7 +2,7 @@ import { createPost } from "../post/create.mjs";
 
 import { makePost } from "../api/auth/API_endpoints.mjs";
 
-const form = document.getElementById("test");
+const form = document.querySelector("#test");
 console.log(form);
 
 const button = document.querySelector(".cta_btn");
@@ -16,7 +16,7 @@ form.addEventListener("submit", (e) => {
   const body = form[1].value;
   const image = form[3].value;
   const create_POST = { form, title, body, image };
-
+  form.reset();
   console.log(create_POST);
 
   createPost(makePost, create_POST);
