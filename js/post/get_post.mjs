@@ -36,7 +36,11 @@ async function Post() {
       cardItem.classList.add("card", "m-5", "p-5");
 
       const image = document.createElement("img"); // image
-      image.src = "/image/profile/profile icon.png";
+      // image.src = "/image/profile/profile icon.png";
+      // image.setAttribute(
+      //   "onerror",
+      //   (onerror = "this.src='/image/profile/profile icon.png';")
+      // );
       image.classList.add("d-flex", "img-thumbnail", "p-2", "mb-2", "mx-auto");
       image.setAttribute("src", items.author.avatar);
 
@@ -97,6 +101,23 @@ async function Post() {
       subtitle.innerText = update;
     });
 
+    // function setDefaultImage(source) {
+    //   var badImg = new Image();
+    //   badImg.src = "/image/profile/profile icon.png";
+    //   var cpyImg = new Image();
+    //   cpyImg.src = source.src;
+
+    //   if (!cpyImg.width) {
+    //     source.src = badImg.src;
+    //   }
+    // }
+
+    // function onImgError(source) {
+    //   source.src = items.media;
+    //   source.onerror = "/image/profile/profile icon.png";
+    //   return true;
+    // }
+    // onImgError(onImgError(source));
     //
   } catch (error) {
     console.log(error);
