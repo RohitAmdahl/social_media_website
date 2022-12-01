@@ -19,41 +19,37 @@ async function singlePost() {
         Authorization: `Bearer ${token}`,
       },
     };
+    const cardModel = document.getElementById("card");
 
     const response = await fetch(`${singleProfile}/${id}`, createData);
     console.log(response);
     const link = await response.json();
     console.log({ link });
 
-    const card = document.querySelector("#card");
-
-    // const img = document.createElement("img");
-    // img.src =
-
+    const cardWrapper = document.createElement("div"); // card
+    cardWrapper.classList.add("col-12", "col-lg-12", "col-md-12", "col-sm-12");
     const cardItem = document.createElement("div"); // card
     cardItem.classList.add("card", "m-5", "p-5");
 
     const image = document.createElement("img"); // image
     image.classList.add("d-flex", "img-thumbnail", "p-2", "mb-2", "mx-auto");
-    // image.setAttribute("src", link.author.avatar);
+    // image.setAttribute("src", items.author.avatar);
 
     const newCard = document.createElement("div"); // card-body
     newCard.className = "card-body";
     const NameOfTittle = document.createElement("h5");
-    // NameOfTittle.className =  ;
-
+    NameOfTittle.className = link.title;
     NameOfTittle.classList.add("mb-2", "p-5", "m-5", "card-title");
     NameOfTittle.innerText = link.title;
     const subtitle = document.createElement("h6");
 
     subtitle.classList.add("card-subtitle", "mb-2", "p-2", "text-muted");
     const paraGraph_text = document.createElement("p");
-    paraGraph_text.className = "card-text";
+    // paraGraph_text.className = "card-text";
     paraGraph_text.classList.add("mb-2", "p-2", "mb-2", "card-text");
-    // paraGraph_text.innerText = link.body;
-
+    paraGraph_text.innerText = link.body;
     const img = document.createElement("img");
-    // img.setAttribute("src", link.media);
+    img.src = link.media;
     img.classList.add(
       "d-flex",
       "img-thumbnail",
@@ -62,28 +58,35 @@ async function singlePost() {
       "mb-2",
       "media-img"
     );
-    const comments = document.createElement("p");
-    // comments.className = "comments" + items.comments.length;
+    const span = document.createElement("span");
+    const span_span = document.createElement("span");
+    span.classList.add("card-subtitle", "mb-2", "p-2", "text-muted");
+    span_span.classList.add("card-subtitle", "mb-2", "p-2", "text-muted");
+    span.innerText = "comments" + link._count.comment;
+    span_span.innerText = "reaction" + link._count.reaction;
+    // button.classList.add("cta_btn", "m-5");
+    // button.innerText = "comment";
 
-    const button = document.createElement("button");
-    const input = document.createElement("input");
-    input.classList.add("form-control", "mb-2");
-
-    button.classList.add("cta_btn", "m-5");
-    button.innerText = "comment";
-    console.log(button);
-
-    // card.appendChild(img);
-    card.appendChild(cardItem);
-    cardModel.appendChild(img);
-
+    // const divForm = createElement("div");
+    // const FormBody = createElement("form");
+    // const text = createElement("textarea");
+    // const button = document.createElement("button");
+    //
+    cardModel.appendChild(cardWrapper);
+    cardWrapper.appendChild(cardItem);
     cardItem.appendChild(NameOfTittle);
     cardItem.appendChild(subtitle);
     cardItem.appendChild(paraGraph_text);
     cardItem.appendChild(img);
     cardItem.appendChild(span);
-    cardItem.appendChild(input);
-    cardItem.appendChild(button);
+    cardItem.appendChild(span_span);
+    // cardItem.appendChild(input);
+    // cardItem.appendChild(button);
+    // cardItem.appendChild(viewPost);
+
+    let date = `${link.created}`;
+    let update = date.substring(0, 10);
+    subtitle.innerText = update;
 
     //----
     //---

@@ -22,7 +22,7 @@ async function Post() {
     console.log(results);
 
     //
-    results.map((items) => {
+    results.forEach((items) => {
       console.log(items);
       const cardWrapper = document.createElement("div"); // card
       cardWrapper.classList.add(
