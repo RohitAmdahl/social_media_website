@@ -36,20 +36,21 @@ async function Post() {
       cardItem.classList.add("card", "m-5", "p-5");
 
       const image = document.createElement("img"); // image
+      image.src = "/image/profile/profile icon.png";
       image.classList.add("d-flex", "img-thumbnail", "p-2", "mb-2", "mx-auto");
       image.setAttribute("src", items.author.avatar);
 
       const newCard = document.createElement("div"); // card-body
       newCard.className = "card-body";
       const NameOfTittle = document.createElement("h5");
-      // NameOfTittle.className = ;
+      NameOfTittle.className = "text-muted";
       NameOfTittle.classList.add("mb-2", "p-5", "m-5", "card-title");
       NameOfTittle.innerText = items.title;
       const subtitle = document.createElement("h6");
 
       subtitle.classList.add("card-subtitle", "mb-2", "p-2", "text-muted");
       const paraGraph_text = document.createElement("p");
-      // paraGraph_text.className = "card-text";
+      paraGraph_text.className = "card-text";
       paraGraph_text.classList.add("mb-2", "p-2", "mb-2", "card-text");
       paraGraph_text.innerText = items.body;
       const img = document.createElement("img");
@@ -63,11 +64,12 @@ async function Post() {
         "media-img"
       );
       const span = document.createElement("span");
+      const _reactions = document.createElement("span");
+      _reactions.innerText = "reaction" + items._count.reactions;
+      _reactions.classList.add("card-subtitle", "mb-2", "p-2", "text-muted");
       span.classList.add("card-subtitle", "mb-2", "p-2", "text-muted");
       span.innerText = "comments" + items.comments.length;
       const button = document.createElement("button");
-      // const input = document.createElement("input");
-      // input.classList.add("form-control", "mb-2");
 
       button.classList.add("cta_btn", "m-5");
       button.innerText = "comment";
@@ -77,7 +79,7 @@ async function Post() {
       viewPost.innerText = "View Post";
       viewPost.classList.add("cta_btn", "m-5");
       viewPost.setAttribute("id", "view_post");
-      viewPost.href = `user_profile.html?id=${items.id}`;
+      viewPost.href = `specific.html?id=${items.id}`;
       //
       cardModel.appendChild(cardWrapper);
       cardWrapper.appendChild(cardItem);
@@ -86,8 +88,8 @@ async function Post() {
       cardItem.appendChild(paraGraph_text);
       cardItem.appendChild(img);
       cardItem.appendChild(span);
-      // cardItem.appendChild(input);
-      // cardItem.appendChild(button);
+      cardItem.appendChild(_reactions);
+
       cardItem.appendChild(viewPost);
 
       let date = `${items.created}`;

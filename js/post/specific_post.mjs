@@ -68,10 +68,6 @@ async function singlePost() {
     span.innerText = "comments" + link._count.comment;
     span_span.innerText = "reaction" + link._count.reaction;
 
-    // const divForm = createElement("div");
-    // const FormBody = createElement("form");
-    // const input = createElement("input");
-    // const button = document.createElement("button");
     //
     cardModel.appendChild(cardWrapper);
     cardWrapper.appendChild(cardItem);
@@ -81,28 +77,11 @@ async function singlePost() {
     cardItem.appendChild(img);
     cardItem.appendChild(span);
     cardItem.appendChild(span_span);
-    cardItem.append(createForm());
-    // FormBody.appendChild(input);
-    // input.appendChild(button);
-    // cardItem.appendChild(viewPost);
-
-    function createForm() {
-      const divForm = createElement("div");
-      const FormBody = createElement("form");
-      const text = createElement("input");
-      const button = document.createElement("button");
-      button.classList.add("cta_btn", "m-5");
-      button.innerText = "comment";
-
-      FormBody.append(text, button);
-      divForm.append(FormBody);
-      return FormBody;
-    }
 
     let date = `${link.created}`;
     let update = date.substring(0, 10);
     subtitle.innerText = update;
-    //----
+
     //---
   } catch (error) {
     console.log(error);
