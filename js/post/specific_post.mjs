@@ -25,6 +25,9 @@ async function singlePost() {
     console.log(response);
     const link = await response.json();
     console.log({ link });
+    // here start a new cards
+
+    //-------------here start a card
 
     const cardWrapper = document.createElement("div"); // card
     cardWrapper.classList.add("col-12", "col-lg-12", "col-md-12", "col-sm-12");
@@ -64,12 +67,10 @@ async function singlePost() {
     span_span.classList.add("card-subtitle", "mb-2", "p-2", "text-muted");
     span.innerText = "comments" + link._count.comment;
     span_span.innerText = "reaction" + link._count.reaction;
-    // button.classList.add("cta_btn", "m-5");
-    // button.innerText = "comment";
 
     // const divForm = createElement("div");
     // const FormBody = createElement("form");
-    // const text = createElement("textarea");
+    // const input = createElement("input");
     // const button = document.createElement("button");
     //
     cardModel.appendChild(cardWrapper);
@@ -80,14 +81,27 @@ async function singlePost() {
     cardItem.appendChild(img);
     cardItem.appendChild(span);
     cardItem.appendChild(span_span);
-    // cardItem.appendChild(input);
-    // cardItem.appendChild(button);
+    cardItem.append(createForm());
+    // FormBody.appendChild(input);
+    // input.appendChild(button);
     // cardItem.appendChild(viewPost);
+
+    function createForm() {
+      const divForm = createElement("div");
+      const FormBody = createElement("form");
+      const text = createElement("input");
+      const button = document.createElement("button");
+      button.classList.add("cta_btn", "m-5");
+      button.innerText = "comment";
+
+      FormBody.append(text, button);
+      divForm.append(FormBody);
+      return FormBody;
+    }
 
     let date = `${link.created}`;
     let update = date.substring(0, 10);
     subtitle.innerText = update;
-
     //----
     //---
   } catch (error) {
