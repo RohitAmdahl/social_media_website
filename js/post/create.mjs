@@ -18,6 +18,7 @@ export async function createPost(url, post) {
         body: post.body,
         // tags: post.tag,
         media: post.image,
+        id: post.id,
       }),
     };
 
