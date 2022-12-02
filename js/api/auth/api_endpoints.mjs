@@ -18,7 +18,7 @@ export const commentONprofile = `${BASE_URL}/api/v1/social/posts/?=id/comment`;
 
 export const remove = `${BASE_URL}/api/v1/social/posts/?=id`;
 
-export const putUpdate = `${BASE_URL}/api/v1/social/posts/?=id`;
+export const UPDATE_URL = `${BASE_URL}/api/v1/social/posts/?=id`;
 
 export const followProfile = `${BASE_URL}/api/v1/social/profiles/<name>/follow`;
 

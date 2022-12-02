@@ -12,8 +12,9 @@ function setCreatePostListener() {
     const body = form[1].value;
     const image = form[2].value;
     const create_POST = { form, title, body, image };
-    form.reset();
+
     createPost(makePost, create_POST);
+    form.reset();
   });
 }
 setCreatePostListener();
