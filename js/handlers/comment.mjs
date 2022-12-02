@@ -7,7 +7,6 @@ form.addEventListener("submit", (e) => {
   const form = e.target;
   const input = form.input.value;
   const loginForm = { form, input };
-  form.reset();
 
   login(commentONprofile, loginForm);
 });
