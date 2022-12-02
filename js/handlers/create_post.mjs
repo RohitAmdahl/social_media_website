@@ -10,13 +10,12 @@ function setCreatePostListener() {
     const form = e.target;
     const title = form[0].value;
     const body = form[1].value;
-    const image = form[2].value;
+    const image = form[3].value;
     const create_POST = { form, title, body, image };
+
     console.log(create_POST);
 
-    const massage = createPost(makePost, create_POST);
-    console.log(massage);
-    // form.reset();
+    createPost(makePost, create_POST);
   });
 }
 setCreatePostListener();
