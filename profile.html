@@ -233,11 +233,12 @@
         <div class="container hero_section">
           <div class="row">
             <div
-              class="col-12 col-lg-6 col-md-12 col-sm-12 mx-auto p-1 edit_data"
+              class="col-12 col-lg-6 col-md-12 col-sm-12 mx-auto p-1"
+              id="edit"
             >
               <div class="form card p-3 mb-2">
                 <form class="edit">
-                  <div>Edit post</div>
+                  <div>Create Post</div>
                   <div>
                     <label for="title" class="text-muted">Title</label>
                     <input
@@ -259,14 +260,6 @@
                   </div>
 
                   <div>
-                    <input
-                      name="id"
-                      type="hidden"
-                      class="form-control"
-                      required
-                    />
-                  </div>
-                  <div>
                     <label for="picture">Picture</label>
                     <input
                       name="media"
@@ -278,37 +271,16 @@
                   </div>
 
                   <button class="btn btn-primary cta_btn_profile" type="submit">
-                    update Post
+                    Create Post
                   </button>
                   <!-- <button class="cta_btn" type="submit">Comment</button> -->
                 </form>
               </div>
+              <div class="model" id="my model">
+                <div class="model"></div>
+              </div>
             </div>
             <div class="col-12 col-lg-6 col-md-12 col-sm-12" id="cards"></div>
-            <!-- <div class="col-12 col-md-12 col-sm-12">
-              <div class="d-flex justify-content-center align-items-center">
-                <!-- <div class="card post_box m-2">
-                  <div class="name">
-                    <img
-                      src="/image/profile/main-profile.png"
-                      alt="profile picture"
-                      class="card_img"
-                    />
-                    <span class="fw-bold text-muted"></span>
-                    <span class="text-muted"></span>
-                  </div> -->
-            <!-- <div>
-                    <p class="m-2 p-2">
-                      <span class="fw-bold"></span>
-                    </p>
-
-                    <button class="cta_btn">Like</button>
-                    <button class="cta_btn">Comment</button>
-                    <button class="cta_btn">Share</button>
-                  </div> -->
-            <!-- </div> -->
-            <!-- </div> -->
-            <!-- </div>  -->
           </div>
         </div>
       </section>
@@ -329,7 +301,8 @@
     </footer>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/features/myProfile.mjs" type="module"></script>
-    <script src="js/handlers/updateHandeler.mjs" type="module"></script>
+    <script src="js/handlers/postHandelers.mjs" type="module"></script>
+    <!-- <script src="js/handlers/updateHandeler.mjs" type="module"></script> -->
     <!-- <script src="js/handlers/create_Post.mjs" type="module"></script> -->
   </body>
 </html>
