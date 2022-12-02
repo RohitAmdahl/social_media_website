@@ -10,7 +10,7 @@ function setCreatePostListener() {
     const form = e.target;
     const title = form[0].value;
     const body = form[1].value;
-    const image = form[3].value;
+    const image = form[2].value;
     const create_POST = { form, title, body, image };
 
     console.log(create_POST);
