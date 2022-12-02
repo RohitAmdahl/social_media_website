@@ -230,15 +230,14 @@
           </div>
         </div>
         <!-- next section is  post feature -->
-
         <div class="container hero_section">
           <div class="row">
             <div class="col-12 col-lg-6 col-md-12 col-sm-12 mx-auto p-1">
               <div class="form card p-3 mb-2">
-                <form class="post">
+                <form class="post" id="edit">
                   <div>Create post</div>
                   <div>
-                    <label for="" class="text-muted">Title</label>
+                    <label for="title" class="text-muted">Title</label>
                     <input
                       name="title"
                       type="text"
@@ -267,7 +266,7 @@
                     />
                   </div> -->
                   <div>
-                    <label>Picture</label>
+                    <label for="picture">Picture</label>
                     <input
                       name="media"
                       type="url"
@@ -277,8 +276,10 @@
                     />
                   </div>
 
-                  <button class="cta_btn" type="submit">Post</button>
-                  <button class="cta_btn" type="submit">Comment</button>
+                  <button class="cta_btn_profile" type="submit">
+                    update Post
+                  </button>
+                  <!-- <button class="cta_btn" type="submit">Comment</button> -->
                 </form>
               </div>
             </div>

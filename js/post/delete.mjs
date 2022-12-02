@@ -1,4 +1,7 @@
-import { remove } from "../api/auth/API_endpoints.mjs";
+import { removePost } from "../api/auth/API_endpoints.mjs";
+import { withDraw } from "../storage/localstorage.mjs";
+
+const method = "delete";
 
 async function remove() {
   try {
@@ -6,14 +9,14 @@ async function remove() {
     console.log(token);
 
     const deleteData = {
-      method: "delete",
+      method,
       headers: {
         "Content-type": "application/json ",
         Authorization: `Bearer ${token}`,
       },
     };
 
-    const response = await fetch(remove, deleteData);
+    const response = await fetch(`${removePost}/${id}`, deleteData);
     console.log(response);
     const json = await response.json();
     console.log(json);
@@ -25,3 +28,5 @@ async function remove() {
 }
 
 remove();
+
+editPost.setAttribute("href", `/pages/profile/editPost/?id=${postData.id}`);

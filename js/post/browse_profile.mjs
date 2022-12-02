@@ -17,7 +17,6 @@ async function profileOFPost() {
 
     json.forEach((data) => {
       //
-      //
       const Div_container = document.getElementById("follower");
       console.log(Div_container);
 

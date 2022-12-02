@@ -11,6 +11,6 @@ export function load(key) {
   }
 }
 
-export function remove(key) {
+export function withDraw(key) {
   localStorage.removeItem(key);
 }
