@@ -2,13 +2,6 @@ import { makePost } from "../api/auth/API_endpoints.mjs";
 import { updatePost } from "../post/update.mjs";
 import { UPDATE_URL } from "../api/auth/API_endpoints.mjs";
 
-const update_post_data = document.querySelector(".edit_data");
-console.log(form);
-
-// const newForm = document.createElement("div"); // card-body
-// const form = document.createElement("form"); // form
-// const edit_post = document.createElement("div"); // form
-
 function updatePostListener() {
   const form = document.querySelector(".edit");
   console.log(form);
@@ -33,3 +26,10 @@ function updatePostListener() {
   });
 }
 updatePostListener();
+
+// const update_post_data = document.querySelector(".edit_data");
+// console.log(form);
+
+// const newForm = document.createElement("div"); // card-body
+// const form = document.createElement("form"); // form
+// const edit_post = document.createElement("div"); // form
