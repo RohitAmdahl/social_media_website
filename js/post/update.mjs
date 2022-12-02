@@ -1,5 +1,5 @@
 import { putUpdate } from "../api/auth/API_endpoints.mjs";
-console.log(putUpdate);
+// console.log(putUpdate);
 const method = "put";
 
 export async function updatePost(url, post) {
@@ -11,7 +11,6 @@ export async function updatePost(url, post) {
 
     const updateData = {
       method,
-
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${token}`,
@@ -25,7 +24,7 @@ export async function updatePost(url, post) {
       }),
     };
 
-    const response = await fetch(`${putUpdate}${id}`, updateData);
+    const response = await fetch(`${putUpdate}${post.id}`, updateData);
     console.log(response);
     const json = await response.json();
     console.log(json);
