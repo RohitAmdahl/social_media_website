@@ -25,7 +25,6 @@ async function Post(url) {
 
     //
     results.forEach((items) => {
-      console.log(items);
       const cardWrapper = document.createElement("div"); // card
       cardWrapper.classList.add(
         "col-12",

@@ -18,7 +18,7 @@ function updatePostListener() {
     e.preventDefault();
 
     console.log(e);
-    // forn.id.value.id;
+    //  forn.id.value.id;
     const form = e.target;
     const title = form[0].value;
     const body = form[1].value;
@@ -26,7 +26,7 @@ function updatePostListener() {
     const id = form.post.id;
     const update_POST = { form, title, body, image, id };
     form.reset();
-    updatePost(`${putUpdate}${id}`, update_POST);
+    updatePost(putUpdate, update_POST);
   });
 }
 updatePostListener();
