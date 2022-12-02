@@ -21,7 +21,7 @@ async function singlePost() {
     };
     const cardModel = document.getElementById("card");
 
-    const response = await fetch(`${singleProfile}/${id}`, createData);
+    const response = await fetch(`${singleProfile}${id}`, createData);
     console.log(response);
     const link = await response.json();
     console.log({ link });
