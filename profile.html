@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="/dist/css/styles.css" />
     <title>profile page</title>
 
-    <script src="js/post/browse_profile.mjs" defer type="module"></script>
+    <!-- <script src="js/post/browse_profile.mjs" defer type="module"></script> -->
     <!-- <script src="js/post/create.mjs" defer type="module"></script> -->
   </head>
   <body>
@@ -255,16 +255,15 @@
                       class="form-control"
                     ></textarea>
                   </div>
-                  <!--
+
                   <div>
-                    <label>Tag</label>
                     <input
-                      name="tittle"
-                      type="text"
+                      name="id"
+                      type="hidden"
                       class="form-control"
                       required
                     />
-                  </div> -->
+                  </div>
                   <div>
                     <label for="picture">Picture</label>
                     <input
@@ -327,8 +326,8 @@
       </div>
     </footer>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/post/get_post.mjs" type="module"></script>
-    <!-- <script src="js/post/create.mjs" type="module"></script> -->
+    <script src="js/features/myProfile.mjs" type="module"></script>
+    <script src="js/handlers/updateHandeler.mjs" type="module"></script>
     <!-- <script src="js/handlers/create_Post.mjs" type="module"></script> -->
   </body>
 </html>

@@ -20,6 +20,8 @@ export const removePost = `${BASE_URL}/api/v1/social/posts/`;
 
 export const putUpdate = `${BASE_URL}/api/v1/social/posts/`;
 
+// export const aloneProfile = `${BASE_URL}/api/v1/social/posts/`;
+
 // export const followProfile = `${BASE_URL}/api/v1/social/profiles/${name}/follow`;
 
 // export const UNfolloWProfile = `${BASE_URL}/api/v1/social/profiles/${name}/unfollow`;
@@ -27,6 +29,9 @@ export const putUpdate = `${BASE_URL}/api/v1/social/posts/`;
 // export const EditBannerIMG = `${BASE_URL}/api/v1/social/profiles/${name}/media`;
 
 export const getFollowProfilelink = (name) =>
-  `${BASE_URL}/api/v1/social/profiles/${name}/follow`;
+  `${BASE_URL}/api/v1/social/profiles/${name}/posts`;
+
+export const aloneProfile = (name) =>
+  `${BASE_URL}/api/v1/social/profiles/posts${name}`;
 
 //  const url = getFollowProfilelink(name);

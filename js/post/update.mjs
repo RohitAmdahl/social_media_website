@@ -1,5 +1,5 @@
 import { putUpdate } from "../api/auth/API_endpoints.mjs";
-
+console.log(putUpdate);
 const method = "put";
 
 export async function updatePost(url, post) {
@@ -9,7 +9,7 @@ export async function updatePost(url, post) {
     const token = localStorage.getItem("Token");
     console.log(token);
 
-    const data = {
+    const updateData = {
       method,
 
       headers: {
@@ -21,10 +21,11 @@ export async function updatePost(url, post) {
         title: post.title,
         body: post.body,
         media: post.image,
+        id: post.id,
       }),
     };
 
-    const response = await fetch(`${putUpdate}/${id}`, data);
+    const response = await fetch(`${putUpdate}${id}`, updateData);
     console.log(response);
     const json = await response.json();
     console.log(json);
