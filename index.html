@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="social media website for electric bikes"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/dist/css/styles.css" />
+    <title>Homepage</title>
+  </head>
+
+  <body>
+    <header class="header_wrap">
+      <div class="header_section">
+        <nav class="navbar navbar-expand-lg">
+          <div class="container">
+            <a class="navbar-brand" href="login.html"
+              ><img
+                src="/image/logo/logo.png"
+                alt="logo"
+                class="bike_logo w-100"
+            /></a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div
+              class="collapse navbar-collapse main_header"
+              id="navbarSupportedContent"
+            >
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a
+                    class="nav-link active fw-bold"
+                    aria-current="page"
+                    href="index.html"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="profile.html">Profile</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="login.html">LogIn</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="ragister.html">Register</a>
+                </li>
+              </ul>
+
+              <form
+                class="d-flex align-items-center justify-content-center"
+                role="search"
+              >
+                <input
+                  class="form-control me-2"
+                  type="search"
+                  placeholder="Search"
+                  aria-label="Search"
+                />
+                <button class="cta_search" type="submit">Search</button>
+              </form>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-lg-6 col-md-12 col-sm-12">
+            <div class="form card p-3 mb-2">
+              <form id="posting">
+                <div>Create post</div>
+                <div>
+                  <label for="" class="text-muted">Title</label>
+                  <input
+                    name="title"
+                    type="text"
+                    class="form-control"
+                    required
+                  />
+                </div>
+                <div>
+                  <label for="textpost" class="text-muted">Description</label>
+                  <textarea
+                    name="Description"
+                    id="text"
+                    cols="30"
+                    rows="2"
+                    class="form-control"
+                  ></textarea>
+                </div>
+
+                <!-- <div>
+                  <label for="">Tag</label>
+                  <input name="Tag" type="text" class="form-control" required />
+                </div> -->
+                <div>
+                  <label for="">Picture</label>
+                  <input
+                    name="media"
+                    type="url"
+                    id="file"
+                    name="file"
+                    class="form-control"
+                  />
+                </div>
+
+                <button class="cta_btn" type="submit">Post</button>
+              </form>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6 col-md-12 col-sm-12" id="cards"></div>
+        </div>
+      </div>
+    </main>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/post/get_post.mjs" type="module"></script>
+    <script src="/js/handlers/create_Post.mjs" type="module"></script>
+  </body>
+</html>
