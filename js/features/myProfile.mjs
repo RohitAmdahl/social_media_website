@@ -3,27 +3,25 @@ import { BASE_URL } from "../api/auth/API_endpoints.mjs";
 const profile = localStorage.getItem("profile");
 const profileName = JSON.parse(profile).name;
 
+const profile_name = document.querySelector("#profile_name");
+profile_name.innerText = profileName;
+
 const cardModel = document.getElementById("cards");
 
 async function Post(url) {
   try {
     const token = localStorage.getItem("Token");
-    console.log(token);
-
-    console.log(token);
     const createData = {
       method: "get",
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${token}`,
       },
-      // body: JSON.stringify(data),
     };
 
     const response = await fetch(url, createData);
-    console.log(response);
+
     const results = await response.json();
-    console.log(results);
 
     //
     results.forEach((items) => {
@@ -40,11 +38,6 @@ async function Post(url) {
       cardItem.classList.add("card", "m-5", "p-5");
 
       const image = document.createElement("img"); // image
-      // image.src = "/image/profile/profile icon.png";
-      // image.setAttribute(
-      //   "onerror",
-      //   (onerror = "this.src='/image/profile/profile icon.png';")
-      // );
       image.classList.add("d-flex", "img-thumbnail", "p-2", "mb-2", "mx-auto");
       // image.setAttribute("src", items.author.avatar);
 
@@ -76,7 +69,7 @@ async function Post(url) {
       _reactions.innerText = "reaction" + items._count.reactions;
       _reactions.classList.add("card-subtitle", "mb-2", "p-2", "text-muted");
       span.classList.add("card-subtitle", "mb-2", "p-2", "text-muted");
-      // span.innerText = "comments" + items.comments.length;
+      span.innerText = "comments 💬" + items._count.comments;
       const button = document.createElement("button");
 
       button.classList.add("cta_btn", "m-5");
@@ -112,23 +105,3 @@ async function Post(url) {
 }
 
 Post(`${BASE_URL}/api/v1/social/profiles/${JSON.parse(profile).name}/posts`);
-//
-
-// function setDefaultImage(source) {
-//   var badImg = new Image();
-//   badImg.src = "/image/profile/profile icon.png";
-//   var cpyImg = new Image();
-//   cpyImg.src = source.src;
-
-//   if (!cpyImg.width) {
-//     source.src = badImg.src;
-//   }
-// }
-
-// function onImgError(source) {
-//   source.src = items.media;
-//   source.onerror = "/image/profile/profile icon.png";
-//   return true;
-// }
-// onImgError(onImgError(source));
-//

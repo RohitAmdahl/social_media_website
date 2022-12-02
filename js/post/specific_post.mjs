@@ -65,8 +65,8 @@ async function singlePost() {
     const span_span = document.createElement("span");
     span.classList.add("card-subtitle", "mb-2", "p-2", "text-muted");
     span_span.classList.add("card-subtitle", "mb-2", "p-2", "text-muted");
-    span.innerText = "comments" + link._count.comment;
-    span_span.innerText = "reaction" + link._count.reaction;
+    span.innerText = "comments 💬" + link._count.comments;
+    span_span.innerText = "reaction ,  " + link._count.reactions;
 
     //
     cardModel.appendChild(cardWrapper);

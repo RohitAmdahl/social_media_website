@@ -1,4 +1,4 @@
-import { getPostURL } from "../api/auth/API_endpoints.mjs";
+// import { getPostURL } from "../api/auth/API_endpoints.mjs";
 import { updatePost } from "../post/update.mjs";
 
 console.log(updatePost);

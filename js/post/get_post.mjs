@@ -72,7 +72,7 @@ async function Post() {
       _reactions.innerText = "reaction" + items._count.reactions;
       _reactions.classList.add("card-subtitle", "mb-2", "p-2", "text-muted");
       span.classList.add("card-subtitle", "mb-2", "p-2", "text-muted");
-      span.innerText = "comments" + items.comments.length;
+      span.innerText = "comments 💬" + items.comments.length;
       const button = document.createElement("button");
 
       button.classList.add("cta_btn", "m-5");
