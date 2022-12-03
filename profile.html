@@ -237,7 +237,7 @@
               id="edit"
             >
               <div class="form card p-3 mb-2">
-                <form class="edit">
+                <form class="posting">
                   <div>Create Post</div>
                   <div>
                     <label for="title" class="text-muted">Title</label>
@@ -258,7 +258,6 @@
                       class="form-control"
                     ></textarea>
                   </div>
-
                   <div>
                     <label for="picture">Picture</label>
                     <input
@@ -269,18 +268,15 @@
                       class="form-control"
                     />
                   </div>
-
                   <button class="btn btn-primary cta_btn_profile" type="submit">
                     Create Post
                   </button>
-                  <!-- <button class="cta_btn" type="submit">Comment</button> -->
                 </form>
-              </div>
-              <div class="model" id="my model">
-                <div class="model"></div>
+                <form id=""></form>
               </div>
             </div>
-            <div class="col-12 col-lg-6 col-md-12 col-sm-12" id="cards"></div>
+
+            <div class="col-12 col-lg-10 col-md-12 col-sm-12" id="cards"></div>
           </div>
         </div>
       </section>
@@ -300,9 +296,8 @@
       </div>
     </footer>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/handlers/create_post.mjs" type="module"></script>
+    <script src="js/handlers/delet_post.mjs" type="module"></script>
     <script src="js/features/myProfile.mjs" type="module"></script>
-    <script src="js/handlers/postHandelers.mjs" type="module"></script>
-    <!-- <script src="js/handlers/updateHandeler.mjs" type="module"></script> -->
-    <!-- <script src="js/handlers/create_Post.mjs" type="module"></script> -->
   </body>
 </html>

@@ -81,6 +81,10 @@ async function Post(url) {
       viewPost.setAttribute("id", "view_post");
       viewPost.href = `specific.html?id=${items.id}`;
       //
+      const button_d = document.createElement("button");
+      button_d.innerText = "Delete Post";
+      button_d.classList.add("cta_btn_profile", "delete_post", "m-5");
+      button_d.setAttribute("id", "delete");
       cardModel.appendChild(cardWrapper);
       cardWrapper.appendChild(cardItem);
       cardItem.appendChild(NameOfTittle);
@@ -89,8 +93,8 @@ async function Post(url) {
       cardItem.appendChild(img);
       cardItem.appendChild(span);
       cardItem.appendChild(_reactions);
-
       cardItem.appendChild(viewPost);
+      cardItem.appendChild(button_d).addEventListener();
 
       let date = `${items.created}`;
       let update = date.substring(0, 10);
