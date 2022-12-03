@@ -1,5 +1,5 @@
 import { BASE_URL } from "../api/auth/API_endpoints.mjs";
-
+import { removePost } from "../api/auth/API_endpoints.mjs";
 const profile = localStorage.getItem("profile");
 const profileName = JSON.parse(profile).name;
 
