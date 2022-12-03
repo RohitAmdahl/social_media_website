@@ -1,7 +1,12 @@
 import { BASE_URL } from "../api/auth/API_endpoints.mjs";
+
 import { removePost } from "../api/auth/API_endpoints.mjs";
+
 const profile = localStorage.getItem("profile");
 const profileName = JSON.parse(profile).name;
+
+// THis wont work. Because its set down here
+const deleteButton = document.getElementById("delete");
 
 const profile_name = document.querySelector("#profile_name");
 profile_name.innerText = profileName;
@@ -22,6 +27,7 @@ async function Post(url) {
     const response = await fetch(url, createData);
 
     const results = await response.json();
+    console.log(results);
 
     //
     results.forEach((items) => {
@@ -79,14 +85,19 @@ async function Post(url) {
       viewPost.classList.add("cta_btn", "m-5");
       viewPost.setAttribute("id", "view_post");
       viewPost.href = `specific.html?id=${items.id}`;
-
       //
       const button_d = document.createElement("button");
       button_d.innerText = "Delete Post";
       button_d.classList.add("cta_btn_profile", "delete_post", "m-5");
       button_d.setAttribute("id", "delete");
+      // Now we give the button a event, and the correct ID for the delete request
+
+      // This is for ALL the delete buttons. If you have 10 posts, all wil have this, and if you have 1.
       button_d.addEventListener("click", async () => {
         try {
+          const token = localStorage.getItem("Token");
+          console.log(token);
+
           const deleteData = {
             method: "delete",
             headers: {
@@ -94,6 +105,7 @@ async function Post(url) {
               Authorization: `Bearer ${token}`,
             },
           };
+
           const response = await fetch(`${removePost}/${items.id}`, deleteData);
           console.log(response);
           const json = await response.json();
@@ -102,6 +114,7 @@ async function Post(url) {
           console.log(error);
         }
       });
+
       cardModel.appendChild(cardWrapper);
       cardWrapper.appendChild(cardItem);
       cardItem.appendChild(NameOfTittle);
@@ -122,6 +135,28 @@ async function Post(url) {
   } catch (error) {
     console.log(error);
   }
+
+  // const editButton = document.getElementById("editButton");
+
+  // editButton.addEventListener("click", () => {
+  //   location.href = `edit.html?name=${profileName}`;
+  // });
+
+  //     <button class="cta_btn_profile">Edit profile</button>
+
+  // const editButtonContainer = document.getElementById("editButtonContainer")
+  // const editButton = document.createElement("button")
+  // editButton.textContent = "Edit profile"
+  // editButton.className = "cta_btn_profile"
+  // editButtonContainer.appendChild(editButton)
+
+  //   <button
+  //   class="btn btn-primary cta_btn_profile"
+  //   type="submit"
+  //   value=`/pages/profile/editPost/?id=${postData.id}`
+  // >
+  //   Create Post
+  // </button>
 }
 
 Post(`${BASE_URL}/api/v1/social/profiles/${JSON.parse(profile).name}/posts`);

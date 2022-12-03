@@ -18,6 +18,7 @@ function setCreatePostListener() {
     console.log(create_POST);
 
     createPost(makePost, create_POST);
+    form.reset();
   });
 }
 setCreatePostListener();
