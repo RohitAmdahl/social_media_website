@@ -73,7 +73,6 @@ async function Post(url) {
 
       button.classList.add("cta_btn", "m-5");
       button.innerText = "comment";
-      console.log(button);
 
       const viewPost = document.createElement("a");
       viewPost.innerText = "View Post";
@@ -94,9 +93,7 @@ async function Post(url) {
       cardItem.appendChild(span);
       cardItem.appendChild(_reactions);
       cardItem.appendChild(viewPost);
-      cardItem
-        .appendChild(button_d)
-        .addEventListener("submit", remove(`${removePost}`));
+      cardItem.appendChild(button_d);
 
       let date = `${items.created}`;
       let update = date.substring(0, 10);

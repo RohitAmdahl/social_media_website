@@ -1,6 +1,12 @@
 import { singleProfile } from "../api/auth/API_endpoints.mjs";
 console.log(singleProfile);
 
+const queryString = document.location.search;
+const params = new URLSearchParams(queryString);
+console.log(params);
+const id = params.get("id");
+console.log(id);
+
 const div = document.querySelector("#card");
 console.log(div);
 
@@ -17,7 +23,7 @@ async function singlePost() {
     };
     const cardModel = document.getElementById("card");
 
-    const response = await fetch(`${singleProfile}${id}`, createData);
+    const response = await fetch(`${singleProfile}/${id}`, createData);
     console.log(response);
     const link = await response.json();
     console.log({ link });
