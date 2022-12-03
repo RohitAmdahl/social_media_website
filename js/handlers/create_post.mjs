@@ -2,11 +2,6 @@ import { createPost } from "../post/create.mjs";
 
 import { makePost } from "../api/auth/API_endpoints.mjs";
 
-const url = new URL(location.href);
-console.log(url);
-const id = url.searchParams.get("id");
-console.log(id);
-
 function setCreatePostListener() {
   const form = document.querySelector("#create");
 

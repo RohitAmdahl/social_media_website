@@ -79,11 +79,29 @@ async function Post(url) {
       viewPost.classList.add("cta_btn", "m-5");
       viewPost.setAttribute("id", "view_post");
       viewPost.href = `specific.html?id=${items.id}`;
+
       //
       const button_d = document.createElement("button");
       button_d.innerText = "Delete Post";
       button_d.classList.add("cta_btn_profile", "delete_post", "m-5");
       button_d.setAttribute("id", "delete");
+      button_d.addEventListener("click", async () => {
+        try {
+          const deleteData = {
+            method: "delete",
+            headers: {
+              "Content-type": "application/json ",
+              Authorization: `Bearer ${token}`,
+            },
+          };
+          const response = await fetch(`${removePost}/${items.id}`, deleteData);
+          console.log(response);
+          const json = await response.json();
+          console.log(json);
+        } catch (error) {
+          console.log(error);
+        }
+      });
       cardModel.appendChild(cardWrapper);
       cardWrapper.appendChild(cardItem);
       cardItem.appendChild(NameOfTittle);
@@ -107,24 +125,3 @@ async function Post(url) {
 }
 
 Post(`${BASE_URL}/api/v1/social/profiles/${JSON.parse(profile).name}/posts`);
-
-const deletePost = document.getElementById("delete");
-console.log(deletePost);
-
-button_d.addEventListener("click", async () => {
-  try {
-    const deleteData = {
-      method: "delete",
-      headers: {
-        "Content-type": "application/json ",
-        Authorization: `Bearer ${token}`,
-      },
-    };
-    const response = await fetch(`${removePost}/${items.id}`, deleteData);
-    console.log(response);
-    const json = await response.json();
-    console.log(json);
-  } catch (error) {
-    console.log(error);
-  }
-});
