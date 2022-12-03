@@ -1,12 +1,6 @@
 import { removePost } from "../api/auth/API_endpoints.mjs";
 import { withDraw } from "../storage/localstorage.mjs";
 
-// const queryString = document.location.search;
-// const params = new URLSearchParams(queryString);
-// console.log(params);
-// const id = params.get("id");
-// console.log(id);
-
 export async function remove() {
   try {
     const token = localStorage.getItem("Token");
