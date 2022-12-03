@@ -23,7 +23,7 @@ function updatePostListener() {
     console.log(image);
 
     // console.log(id);
-    const update_POST = { form, title, body, image, id };
+    const update_POST = { form, title, body, image };
     console.log(update_Post);
     updatePost(`${UPDATE_URL}${post.id}`, update_POST);
     form.reset();
