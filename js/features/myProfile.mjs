@@ -94,7 +94,9 @@ async function Post(url) {
       cardItem.appendChild(span);
       cardItem.appendChild(_reactions);
       cardItem.appendChild(viewPost);
-      cardItem.appendChild(button_d).addEventListener();
+      cardItem
+        .appendChild(button_d)
+        .addEventListener("submit", remove(`${removePost}`));
 
       let date = `${items.created}`;
       let update = date.substring(0, 10);
