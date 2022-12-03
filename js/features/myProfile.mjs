@@ -84,6 +84,7 @@ async function Post(url) {
       button_d.innerText = "Delete Post";
       button_d.classList.add("cta_btn_profile", "delete_post", "m-5");
       button_d.setAttribute("id", "delete");
+
       cardModel.appendChild(cardWrapper);
       cardWrapper.appendChild(cardItem);
       cardItem.appendChild(NameOfTittle);
@@ -105,5 +106,7 @@ async function Post(url) {
     console.log(error);
   }
 }
+const deletePost = document.getElementById("delete");
+console.log(deletePost);
 
 Post(`${BASE_URL}/api/v1/social/profiles/${JSON.parse(profile).name}/posts`);
