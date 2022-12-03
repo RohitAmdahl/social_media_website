@@ -23,5 +23,3 @@ export async function remove() {
   }
 }
 remove();
-
-// editPost.setAttribute("href", `/pages/profile/editPost/?id=${postData.id}`);
