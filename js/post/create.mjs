@@ -23,9 +23,8 @@ export async function createPost(url, post) {
     };
 
     const response = await fetch(makePost, data);
-    console.log(response);
+
     const json = await response.json();
-    console.log(json);
   } catch (error) {
     console.log(error);
   }

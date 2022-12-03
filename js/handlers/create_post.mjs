@@ -2,6 +2,11 @@ import { createPost } from "../post/create.mjs";
 
 import { makePost } from "../api/auth/API_endpoints.mjs";
 
+const url = new URL(location.href);
+console.log(url);
+const id = url.searchParams.get("id");
+console.log(id);
+
 function setCreatePostListener() {
   const form = document.querySelector("#create");
 
@@ -12,7 +17,8 @@ function setCreatePostListener() {
     const title = form[0].value;
     const body = form[1].value;
     const image = form[2].value;
-    const create_POST = { form, title, body, image };
+    const id = form.id.value;
+    const create_POST = { form, title, body, image, id };
 
     console.log(create_POST);
 

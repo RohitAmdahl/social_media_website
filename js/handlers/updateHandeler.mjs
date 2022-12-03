@@ -22,11 +22,12 @@ function updatePostListener() {
     const image = form[2].value;
     console.log(image);
 
-    const id = form.post.id;
+    const id = form.post.id.value;
     // console.log(id);
     const update_POST = { form, title, body, image, id };
     console.log(update_Post);
     updatePost(`${UPDATE_URL}${post.id}`, update_POST);
+    form.reset();
   });
 }
 updatePostListener();

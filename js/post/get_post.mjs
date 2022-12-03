@@ -6,9 +6,7 @@ const cardModel = document.getElementById("cards");
 async function Post() {
   try {
     const token = localStorage.getItem("Token");
-    console.log(token);
 
-    console.log(token);
     const createData = {
       method: "get",
       headers: {
@@ -17,13 +15,11 @@ async function Post() {
       },
     };
     const response = await fetch(getPostURL, createData);
-    console.log(response);
+
     const results = await response.json();
-    console.log(results);
 
     //
     results.forEach((items) => {
-      console.log(items);
       const cardWrapper = document.createElement("div"); // card
       cardWrapper.classList.add(
         "col-12",
@@ -77,7 +73,6 @@ async function Post() {
 
       button.classList.add("cta_btn", "m-5");
       button.innerText = "comment";
-      console.log(button);
 
       const viewPost = document.createElement("a");
       viewPost.innerText = "View Post";
@@ -100,25 +95,6 @@ async function Post() {
       let update = date.substring(0, 10);
       subtitle.innerText = update;
     });
-
-    // function setDefaultImage(source) {
-    //   var badImg = new Image();
-    //   badImg.src = "/image/profile/profile icon.png";
-    //   var cpyImg = new Image();
-    //   cpyImg.src = source.src;
-
-    //   if (!cpyImg.width) {
-    //     source.src = badImg.src;
-    //   }
-    // }
-
-    // function onImgError(source) {
-    //   source.src = items.media;
-    //   source.onerror = "/image/profile/profile icon.png";
-    //   return true;
-    // }
-    // onImgError(onImgError(source));
-    //
   } catch (error) {
     console.log(error);
   }
