@@ -1,13 +1,9 @@
 import { singleProfile } from "../api/auth/API_endpoints.mjs";
 console.log(singleProfile);
 
-const queryString = document.location.search;
-const params = new URLSearchParams(queryString);
-console.log(params);
-const id = params.get("id");
-console.log(id);
 const div = document.querySelector("#card");
 console.log(div);
+
 async function singlePost() {
   try {
     const token = localStorage.getItem("Token");
