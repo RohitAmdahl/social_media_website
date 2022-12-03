@@ -3,7 +3,7 @@ import { createPost } from "../post/create.mjs";
 import { makePost } from "../api/auth/API_endpoints.mjs";
 
 function setCreatePostListener() {
-  const form = document.querySelector(".posting");
+  const form = document.querySelector("#create");
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();

@@ -1,7 +1,13 @@
 import { removePost } from "../api/auth/API_endpoints.mjs";
 import { withDraw } from "../storage/localstorage.mjs";
 
-export async function remove(id) {
+// const queryString = document.location.search;
+// const params = new URLSearchParams(queryString);
+// console.log(params);
+// const id = params.get("id");
+// console.log(id);
+
+export async function remove() {
   try {
     const token = localStorage.getItem("Token");
     console.log(token);
@@ -22,5 +28,6 @@ export async function remove(id) {
     console.log(error);
   }
 }
+remove();
 
 // editPost.setAttribute("href", `/pages/profile/editPost/?id=${postData.id}`);
