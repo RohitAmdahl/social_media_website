@@ -4,12 +4,12 @@ import { updatePost } from "../post/update.mjs";
 import { UPDATE_URL } from "../api/auth/API_endpoints.mjs";
 
 function updatePostListener() {
-  const form = document.getElementById("posting");
+  const form = document.getElementById("edit");
 
-  // const url = new URL(location.href);
-  // console.log(url);
-  // const id = url.searchParams.get("id");
-  // console.log(id);
+  const url = new URL(location.href);
+  console.log(url);
+  const id = url.searchParams.get("id");
+  console.log(id);
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -24,8 +24,8 @@ function updatePostListener() {
 
     // console.log(id);
     const update_POST = { form, title, body, image };
-    console.log(update_Post);
-    updatePost(`${UPDATE_URL}${post.id}`, update_POST);
+    console.log(update_POST);
+    updatePost(`${UPDATE_URL}/${post.id}`, update_POST);
     form.reset();
   });
 }

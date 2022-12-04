@@ -67,6 +67,7 @@
               <form
                 class="d-flex align-items-center justify-content-center"
                 role="search"
+                id="search"
               >
                 <input
                   class="form-control me-2"
@@ -74,7 +75,9 @@
                   placeholder="Search"
                   aria-label="Search"
                 />
-                <button class="cta_search" type="submit">Search</button>
+                <button class="cta_search" type="submit" id="filterPost">
+                  Search
+                </button>
               </form>
             </div>
           </div>
@@ -129,6 +132,6 @@
     </main>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/post/get_post.mjs" type="module"></script>
-    <script src="js/handlers/create_post.mjs" type="module"></script>
+    <!-- <script src="js/handlers/create_post.mjs" type="module"></script> -->
   </body>
 </html>
