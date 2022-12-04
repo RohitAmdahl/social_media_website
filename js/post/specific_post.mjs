@@ -79,6 +79,19 @@ async function singlePost() {
     cardItem.appendChild(img);
     cardItem.appendChild(span);
     cardItem.appendChild(span_span);
+    // comment append
+    const formDiv = document.createElement("div");
+    const FormBody = document.createElement("form");
+    const text = document.createElement("textarea");
+    const C_button = document.createElement("button");
+    cardItem.appendChild(formDiv);
+    formDiv.appendChild(FormBody);
+    text.classList.add("form-control");
+
+    FormBody.appendChild(text);
+    FormBody.appendChild(C_button);
+    C_button.innerText = "comment";
+    C_button.classList.add("cta_btn_profile", "delete_post", "m-5");
 
     let date = `${link.created}`;
     let update = date.substring(0, 10);

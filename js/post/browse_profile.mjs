@@ -17,7 +17,7 @@ async function profileOFPost() {
 
     json.forEach((data) => {
       //
-      const Div_container = document.getElementById("follower");
+      const Div_container = document.querySelector(".Follow_followerS");
       console.log(Div_container);
 
       const background = document.createElement("div");
