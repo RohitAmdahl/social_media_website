@@ -2,6 +2,8 @@ import { singleProfile } from "../api/auth/API_endpoints.mjs";
 console.log(singleProfile);
 import { commentONprofile } from "../api/auth/API_endpoints.mjs";
 import { commentPost } from "./commentPost.mjs";
+import { likeAPost } from "../features/react.mjs";
+import { react } from "../api/auth/API_endpoints.mjs";
 
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
@@ -106,6 +108,13 @@ async function singlePost() {
     const text = document.createElement("textarea");
     const C_button = document.createElement("button");
     const like_button = document.createElement("button");
+
+    //-like a post -
+    like_button.addEventListener("click", (e) => {
+      console.log("working");
+      likeAPost(`${react}/${id}/react/emoji`);
+    });
+    //--
     like_button.classList.add("cta_btn_profile", "delete_post", "m-5");
     like_button.innerText = "React";
     cardItem.appendChild(formDiv);
@@ -114,7 +123,7 @@ async function singlePost() {
 
     FormBody.appendChild(text);
     FormBody.appendChild(C_button);
-    FormBody.appendChild(like_button);
+    cardItem.appendChild(like_button);
 
     C_button.innerText = "comment";
     C_button.classList.add("cta_btn_profile", "delete_post", "m-5");

@@ -1,24 +1,20 @@
-import { commentONprofile } from "../api/auth/API_endpoints.mjs";
-console.log(commentONprofile);
-export async function commentPost(url, send) {
+import { react } from "../api/auth/API_endpoints.mjs";
+console.log(react);
+
+export async function likeAPost() {
+  const emoji = "👍";
   try {
     const token = localStorage.getItem("Token");
     console.log(token);
     const Data = {
-      method: "post",
+      method: "put",
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${token}`,
       },
-      body: JSON.stringify({
-        title: send.body,
-        body: send.body,
-      }),
+      body: JSON.stringify(),
     };
-    const response = await fetch(
-      `${commentONprofile}/${send.id}/comment`,
-      Data
-    );
+    const response = await fetch(`${react}/${id}/react/emoji`, Data);
     console.log(response);
     const link = await response.json();
     console.log(link);
