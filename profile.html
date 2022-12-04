@@ -125,7 +125,9 @@
                     class="profile_page_img w-100"
                   />
                   <h1 class="fw-bold" id="profile_name">🚵🏻‍♂️</h1>
-                  <button class="cta_btn_profile">Edit profile</button>
+                  <button class="cta_btn_profile" id="edit_profile">
+                    Edit profile
+                  </button>
                 </div>
               </div>
             </div>
@@ -217,7 +219,11 @@
                       class="form-control"
                     />
                   </div>
-                  <button class="btn btn-primary cta_btn_profile" type="submit">
+                  <button
+                    class="btn btn-primary cta_btn_profile"
+                    value="/pages/profile.html/?id=${Post.id}"
+                    type="submit"
+                  >
                     Create Post
                   </button>
                   <!-- edit post button  -->
@@ -271,7 +277,13 @@
                               />
                             </div>
 
-                            <button class="cta_btn" type="submit">Post</button>
+                            <button
+                              class="cta_btn"
+                              type="submit"
+                              value="/pages/profile.html/?id=${Post.id}"
+                            >
+                              Post
+                            </button>
                           </form>
                         </div>
                       </div>

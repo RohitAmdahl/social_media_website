@@ -84,12 +84,18 @@ async function singlePost() {
     const FormBody = document.createElement("form");
     const text = document.createElement("textarea");
     const C_button = document.createElement("button");
+
+    const like_button = document.createElement("button");
+    like_button.classList.add("cta_btn_profile", "delete_post", "m-5");
+    like_button.innerText = "React";
     cardItem.appendChild(formDiv);
     formDiv.appendChild(FormBody);
     text.classList.add("form-control");
 
     FormBody.appendChild(text);
     FormBody.appendChild(C_button);
+    FormBody.appendChild(like_button);
+
     C_button.innerText = "comment";
     C_button.classList.add("cta_btn_profile", "delete_post", "m-5");
 

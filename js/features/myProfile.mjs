@@ -136,27 +136,30 @@ async function Post(url) {
     console.log(error);
   }
 
-  // const editButton = document.getElementById("editButton");
+  // <button class='cta_btn_profile'>Edit profile</button>;
 
-  // editButton.addEventListener("click", () => {
-  //   location.href = `edit.html?name=${profileName}`;
-  // });
+  // const editButtonContainer = document.getElementById("editButtonContainer");
 
-  //     <button class="cta_btn_profile">Edit profile</button>
+  //   const editButton = document.createElement("button")
+  //   editButton.textContent = "Edit profile"
+  //   editButton.className = "cta_btn_profile"
+  //   editButtonContainer.appendChild(editButton)
 
-  // const editButtonContainer = document.getElementById("editButtonContainer")
-  // const editButton = document.createElement("button")
-  // editButton.textContent = "Edit profile"
-  // editButton.className = "cta_btn_profile"
-  // editButtonContainer.appendChild(editButton)
-
-  //   <button
-  //   class="btn btn-primary cta_btn_profile"
-  //   type="submit"
-  //   value=`/pages/profile/editPost/?id=${postData.id}`
-  // >
-  //   Create Post
-  // </button>
+  //     <button
+  //     class="btn btn-primary cta_btn_profile"
+  //     type="submit"
+  //     value=`/pages/profile/editPost/?id=${postData.id}`
+  //   >
+  //     Create Post
+  //   </button>
 }
 
 Post(`${BASE_URL}/api/v1/social/profiles/${JSON.parse(profile).name}/posts`);
+
+const editButton = document.getElementById("edit_profile");
+console.log(editButton);
+
+editButton.addEventListener("click", () => {
+  // location.href = `edit.html?name=${profileName}`;
+  console.log("working");
+});
