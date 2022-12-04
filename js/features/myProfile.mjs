@@ -90,9 +90,7 @@ async function Post(url) {
       button_d.innerText = "Delete Post";
       button_d.classList.add("cta_btn_profile", "delete_post", "m-5");
       button_d.setAttribute("id", "delete");
-      // Now we give the button a event, and the correct ID for the delete request
 
-      // This is for ALL the delete buttons. If you have 10 posts, all wil have this, and if you have 1.
       button_d.addEventListener("click", async () => {
         try {
           const token = localStorage.getItem("Token");
