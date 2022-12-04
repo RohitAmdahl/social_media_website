@@ -36,10 +36,7 @@ async function Post() {
 
         const image = document.createElement("img"); // image
         // image.src = "/image/profile/profile icon.png";
-        // image.setAttribute(
-        //   "onerror",
-        //   (onerror = "this.src='/image/profile/profile icon.png';")
-        // );
+
         image.classList.add(
           "d-flex",
           "img-thumbnail",
