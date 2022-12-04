@@ -1,4 +1,7 @@
 import { PostOFFeeds } from "../api/auth/API_endpoints.mjs";
+import { followProfile } from "../api/auth/API_endpoints.mjs";
+console.log(followProfile);
+import { BASE_URL } from "../api/auth/API_endpoints.mjs";
 
 async function profileOFPost() {
   try {
@@ -18,7 +21,6 @@ async function profileOFPost() {
     json.forEach((data) => {
       //
       const Div_container = document.querySelector(".Follow_followerS");
-      console.log(Div_container);
 
       const background = document.createElement("div");
       background.classList.add(
@@ -100,6 +102,32 @@ async function profileOFPost() {
       const follow = document.createElement("button");
       follow.classList.add("cta_btn_profile");
       follow.innerText = "follow";
+
+      follow.addEventListener("click", async () => {
+        try {
+          const token = localStorage.getItem("Token");
+          console.log(token);
+
+          const followData = {
+            method: "put",
+            headers: {
+              "Content-type": "application/json ",
+              Authorization: `Bearer ${token}`,
+            },
+            body: JSON.stringify(),
+          };
+
+          const response = await fetch(
+            `${followProfile}/${name}/profile`,
+            followData
+          );
+          console.log(response);
+          const json = await response.json();
+          console.log(json);
+        } catch (error) {
+          console.log(error);
+        }
+      });
 
       //
       Div_container.appendChild(background);

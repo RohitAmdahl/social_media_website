@@ -135,31 +135,9 @@ async function Post(url) {
   } catch (error) {
     console.log(error);
   }
-
-  // <button class='cta_btn_profile'>Edit profile</button>;
-
-  // const editButtonContainer = document.getElementById("editButtonContainer");
-
-  //   const editButton = document.createElement("button")
-  //   editButton.textContent = "Edit profile"
-  //   editButton.className = "cta_btn_profile"
-  //   editButtonContainer.appendChild(editButton)
-
-  //     <button
-  //     class="btn btn-primary cta_btn_profile"
-  //     type="submit"
-  //     value=`/pages/profile/editPost/?id=${postData.id}`
-  //   >
-  //     Create Post
-  //   </button>
 }
 
 Post(`${BASE_URL}/api/v1/social/profiles/${JSON.parse(profile).name}/posts`);
 
 const editButton = document.getElementById("edit_profile");
 console.log(editButton);
-
-editButton.addEventListener("click", () => {
-  // location.href = `edit.html?name=${profileName}`;
-  console.log("working");
-});

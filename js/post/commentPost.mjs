@@ -1,23 +1,6 @@
 import { commentONprofile } from "../api/auth/API_endpoints.mjs";
 console.log(commentONprofile);
-
-const button = document.querySelector(".cta_btn");
-console.log(button);
-
-form.addEventListener("submit", (e) => {
-  console.log(e);
-  const form = e.target;
-
-  const input = form.input.value;
-
-  const message = { form, input };
-
-  console.log(message);
-
-  commentPost(commentONprofile, message);
-});
-
-async function commentPost(url, send) {
+export async function commentPost(url, send) {
   try {
     const token = localStorage.getItem("Token");
     console.log(token);
@@ -28,10 +11,14 @@ async function commentPost(url, send) {
         Authorization: `Bearer ${token}`,
       },
       body: JSON.stringify({
+        title: send.title,
         body: send.body,
       }),
     };
-    const response = await fetch(commentONprofile, Data);
+    const response = await fetch(
+      `${commentONprofile}/${send.id}/comment`,
+      Data
+    );
     console.log(response);
     const link = await response.json();
     console.log(link);

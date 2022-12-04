@@ -106,32 +106,66 @@
         </section>
         <div class="container">
           <div class="row">
-            <div class="col-12 col-lg-12 col-md-12 col-sm-12 p-2">
+            <div class="col-12 col-lg-12 col-md-12 col-sm-12 p-2 testing">
               <div>
                 <div
                   class="d-flex flex-column justify-content-center align-items-center"
                 >
-                  <div class="background bg-primary p-5 mw-100 mx-100">
+                  <!-- <div class="background bg-primary p-5 mw-100 mx-100">
                     <img
                       src="/image/profile/profile icon.png"
                       alt=""
                       class="banner"
                     />
                     <button class="cta_btn">Edit banner</button>
-                  </div>
+                  </div> -->
                   <img
                     src="/image/pictures/pic-7.jpg"
                     alt="cyclists is cycling on the road, blue sky nice weather "
                     class="profile_page_img w-100"
                   />
-                  <h1 class="fw-bold" id="profile_name">🚵🏻‍♂️</h1>
-                  <button class="cta_btn_profile" id="edit_profile">
-                    Edit profile
+                  <button
+                    type="button"
+                    class="btn btn-primary btn-lg cta_btn_profile"
+                    data-toggle="modal"
+                    data-target="#ModalLoginForm"
+                  >
+                    Edit Profile
                   </button>
+                  <h1 class="fw-bold" id="profile_name">🚵🏻‍♂️</h1>
+                  <!-- <div id="ModalLoginForm" class="modal fade">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-body">
+                          <form id="update_profile">
+                            <div>Update Profile</div>
+                            <div>
+                              <label for="banner" class="text-muted"
+                                >banner</label
+                              >
+                              <input
+                                name="banner"
+                                type="url"
+                                class="form-control"
+                              />
+                            </div>
+                            <div>
+                              <label for="avatar">Avatar</label>
+                              <input
+                                name="avatar"
+                                type="url"
+                                class="form-control"
+                              />
+                            </div>
+                            <button class="cta_btn" type="submit">Post</button>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div> -->
                 </div>
               </div>
             </div>
-
             <div class="col-12 col-lg-6 col-md-12 col-sm-12 mx-auto p-1">
               <div class="Stories border border-primary mx-auto h-100 p-1">
                 <div class="friends d-flex justify-content-center">
@@ -142,30 +176,7 @@
                     </h3>
                   </div>
                 </div>
-                <div class="d-flex justify-content-center align-items-center">
-                  <img
-                    src="/image/pictures/pic-5.jpg"
-                    alt="profile picture"
-                    class="profile_friends w-100 p-2"
-                  />
 
-                  <img
-                    src="/image/pictures/pic-3.jpg"
-                    alt="profile picture"
-                    class="profile_friends w-100 p-2"
-                  />
-                  <img
-                    src="/image/pictures/pic-9.jpg"
-                    alt="profile picture"
-                    class="profile_friends w-100 p-2"
-                  />
-
-                  <img
-                    src="/image/pictures/pic-6.jpg"
-                    alt="profile picture"
-                    class="profile_friends w-100 p-2"
-                  />
-                </div>
                 <a href="people.html">
                   <div class="d-flex justify-content-center align-items-center">
                     <button
@@ -243,14 +254,17 @@
                     <div class="modal-dialog" role="document">
                       <div class="modal-content">
                         <div class="modal-body">
-                          <form id="edit">
+                          <form id="edit_post">
                             <div>Edit post</div>
                             <div>
-                              <label for="" class="text-muted">Title</label>
+                              <label for="title" class="text-muted"
+                                >Title</label
+                              >
                               <input
                                 name="title"
                                 type="text"
                                 class="form-control"
+                                required
                               />
                             </div>
                             <div>
@@ -258,16 +272,15 @@
                                 >Description</label
                               >
                               <textarea
-                                name="Description"
+                                name="text"
                                 id="text"
                                 cols="30"
                                 rows="2"
                                 class="form-control"
                               ></textarea>
                             </div>
-
                             <div>
-                              <label for="">Picture</label>
+                              <label for="picture">Picture</label>
                               <input
                                 name="media"
                                 type="url"
@@ -330,7 +343,7 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
-    <!-- <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script> -->
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/handlers/create_post.mjs" type="module"></script>
     <script src="js/handlers/updateHandeler.mjs" type="module"></script>
     <script src="js/features/myProfile.mjs" type="module"></script>

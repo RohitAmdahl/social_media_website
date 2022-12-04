@@ -20,7 +20,7 @@ export const removePost = `${BASE_URL}/api/v1/social/posts`;
 
 export const UPDATE_URL = `${BASE_URL}/api/v1/social/posts/`;
 
-export const followProfile = `${BASE_URL}/api/v1/social/profiles/<name>/follow`;
+export const followProfile = `${BASE_URL}/api/v1/social/profiles`;
 
 export const UNfolloWProfile = `${BASE_URL}/api/v1/social/profiles/<name>/follow`;
 

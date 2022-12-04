@@ -1,5 +1,7 @@
 import { singleProfile } from "../api/auth/API_endpoints.mjs";
 console.log(singleProfile);
+import { commentONprofile } from "../api/auth/API_endpoints.mjs";
+import { commentPost } from "./commentPost.mjs";
 
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
@@ -79,12 +81,30 @@ async function singlePost() {
     cardItem.appendChild(img);
     cardItem.appendChild(span);
     cardItem.appendChild(span_span);
-    // comment append
+
     const formDiv = document.createElement("div");
     const FormBody = document.createElement("form");
+    FormBody.setAttribute("id", "CommentTO_post");
+
+    FormBody.addEventListener("submit", (e) => {
+      const id = params.get("id");
+      console.log(id);
+      e.preventDefault();
+      const FormBody = document.createElement("form");
+      const data = FormBody.target.value;
+      console.log(data);
+      console.log(FormBody);
+      const text = document.createElement("textarea");
+      const value = text.value;
+      console.log(text);
+      const message = { data, value };
+
+      console.log(message);
+      commentPost(commentONprofile, message);
+    });
+
     const text = document.createElement("textarea");
     const C_button = document.createElement("button");
-
     const like_button = document.createElement("button");
     like_button.classList.add("cta_btn_profile", "delete_post", "m-5");
     like_button.innerText = "React";
@@ -109,14 +129,3 @@ async function singlePost() {
   }
 }
 singlePost();
-
-//     const response = await fetch(`${singleProfile}${id}?_author=true&_comments=true&_reactions=true`, createData);
-//     const link = await response.json();
-//     const main = document.querySelector("main");
-//     main.innerHTML +=
-//   } catch (error) {
-//     console.log(error);
-//   }
-// }
-// singlePost();
-// const getSingleProfile = (id) => `${BASE_URL}/api/v1/social/posts/${id};
