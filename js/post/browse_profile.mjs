@@ -106,7 +106,7 @@ async function UserOfWebsite() {
 
       follow.addEventListener("click", (e) => {
         console.log("object");
-        followUser(`${followProfile}${profile.data}/follow`);
+        followUser(`${followProfile}${data}/follow`);
       });
 
       //
