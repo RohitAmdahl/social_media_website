@@ -14,7 +14,7 @@ export async function likeAPost() {
       },
       body: JSON.stringify(),
     };
-    const response = await fetch(`${react}/${id}/react/emoji`, Data);
+    const response = await fetch(`${react}/${id}/react/${emoji}`, Data);
     console.log(response);
     const link = await response.json();
     console.log(link);
