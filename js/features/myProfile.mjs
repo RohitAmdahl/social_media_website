@@ -137,5 +137,5 @@ async function Post(url) {
 
 Post(`${BASE_URL}/api/v1/social/profiles/${JSON.parse(profile).name}/posts`);
 
-const editButton = document.getElementById("edit_profile");
-console.log(editButton);
+// const editButton = document.getElementById("edit_profile");
+// console.log(editButton);

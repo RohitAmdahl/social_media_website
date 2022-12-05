@@ -101,7 +101,7 @@ async function singlePost() {
       const body = body.value;
       const value = { body, FormBody };
 
-      commentPost(`${commentONprofile}/${send.id}/comment`, value);
+      commentPost(`${commentONprofile}/${id}/comment`, value);
     });
 
     //------------------------------------------------------------like a post -
