@@ -7,6 +7,7 @@ function updatePostListener() {
   const url = new URL(location.href);
   console.log(url);
   const id = url.searchParams.get("id");
+  console.log(id);
   const form = document.querySelector("#editForm");
   console.log(form);
   form.addEventListener("submit", (e) => {
@@ -20,17 +21,12 @@ function updatePostListener() {
     console.log(body);
     const image = form[2].value;
     console.log(image);
-    const id = id.value;
-    console.log(id);
+    // id = form.id;
+    // console.log(id);
 
-    const update_POST = { form, title, body, image, id };
+    const update_POST = { form, title, body, image };
     console.log(update_POST);
     updatePost(`${UPDATE_URL}/${id}`, update_POST);
-    form.reset();
   });
 }
 updatePostListener();
-
-// const newForm = document.createElement("div"); // card-body
-// const form = document.createElement("form"); // form
-// const edit_post = document.createElement("div"); // form

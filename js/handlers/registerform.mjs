@@ -32,9 +32,3 @@ form.addEventListener("submit", (e) => {
 
   register(POSTregisterURL, registerForm);
 });
-
-// email: "rohit@noroff.no"
-// ​
-// id: 752
-// ​
-// name: "kumar"

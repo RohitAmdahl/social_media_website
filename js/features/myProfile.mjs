@@ -6,7 +6,7 @@ const profile = localStorage.getItem("profile");
 const profileName = JSON.parse(profile).name;
 
 // THis wont work. Because its set down here
-const deleteButton = document.getElementById("delete");
+// const deleteButton = document.getElementById("delete");
 
 const profile_name = document.querySelector("#profile_name");
 profile_name.innerText = profileName;
@@ -136,6 +136,3 @@ async function Post(url) {
 }
 
 Post(`${BASE_URL}/api/v1/social/profiles/${JSON.parse(profile).name}/posts`);
-
-// const editButton = document.getElementById("edit_profile");
-// console.log(editButton);

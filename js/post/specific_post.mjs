@@ -97,7 +97,8 @@ async function singlePost() {
     //----------------------------------------------------------comment to post
     FormBody.addEventListener("submit", (e) => {
       e.preventDefault();
-      const FormBody = FormBody.target.value;
+
+      const FormBody = body.target.value;
       const body = body.value;
       const value = { body, FormBody };
 
