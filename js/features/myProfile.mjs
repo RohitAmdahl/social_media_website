@@ -1,13 +1,11 @@
 import { BASE_URL } from "../api/auth/API_endpoints.mjs";
 import { react } from "../api/auth/API_endpoints.mjs";
-
 import { removePost } from "../api/auth/API_endpoints.mjs";
+// import { deletePost } from "./deletepost.mjs";
+// import { getIDParam } from "../utils/id_prams.mjs";
 
 const profile = localStorage.getItem("profile");
 const profileName = JSON.parse(profile).name;
-
-// THis wont work. Because its set down here
-// const deleteButton = document.getElementById("delete");
 
 const profile_name = document.querySelector("#profile_name");
 profile_name.innerText = profileName;
@@ -91,10 +89,8 @@ async function Post(url) {
       button_d.innerText = "Delete Post";
       button_d.classList.add("cta_btn_profile", "delete_post", "m-5");
       button_d.setAttribute("id", "delete");
-      const likeButton = document.createElement("button");
-      likeButton.classList.add("cta_btn", "m-5");
-      likeButton.innerText = "Like post";
 
+      //---
       button_d.addEventListener("click", async () => {
         try {
           const token = localStorage.getItem("Token");
@@ -117,6 +113,34 @@ async function Post(url) {
         }
       });
 
+      const likeButton = document.createElement("button");
+      likeButton.classList.add("cta_btn", "m-5");
+      likeButton.innerText = "Like post";
+      likeButton.addEventListener("click", async () => {
+        try {
+          const token = localStorage.getItem("Token");
+          console.log(token);
+          const sendData = {
+            symbol: "👍",
+          };
+          const Data = {
+            method: "put",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${token}`,
+            },
+
+            body: JSON.stringify(sendData),
+          };
+          const response = await fetch(`${react}/${items.id}/react/👍`, Data);
+          console.log(response);
+          const link = await response.json();
+          console.log(link);
+        } catch (error) {
+          console.log(error);
+        }
+      });
+
       cardModel.appendChild(cardWrapper);
       cardWrapper.appendChild(cardItem);
       cardItem.appendChild(NameOfTittle);
@@ -126,6 +150,7 @@ async function Post(url) {
       cardItem.appendChild(span);
       cardItem.appendChild(_reactions);
       cardItem.appendChild(viewPost);
+      cardItem.appendChild(button_d);
       cardItem.appendChild(likeButton);
 
       let date = `${items.created}`;

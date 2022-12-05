@@ -1,5 +1,6 @@
 import { getPostURL } from "../api/auth/API_endpoints.mjs";
 console.log(getPostURL);
+import { react } from "../api/auth/API_endpoints.mjs";
 
 const cardModel = document.getElementById("cards");
 
@@ -85,6 +86,10 @@ async function Post() {
         viewPost.classList.add("cta_btn", "m-5");
         viewPost.setAttribute("id", "view_post");
         viewPost.href = `specific.html?id=${items.id}`;
+
+        const likeButton = document.createElement("button");
+        likeButton.classList.add("cta_btn", "m-5");
+        likeButton.innerText = "Like post";
         //
         cardModel.appendChild(cardWrapper);
         cardWrapper.appendChild(cardItem);
@@ -96,6 +101,32 @@ async function Post() {
         cardItem.appendChild(_reactions);
 
         cardItem.appendChild(viewPost);
+        cardItem.appendChild(likeButton);
+
+        likeButton.addEventListener("click", async () => {
+          try {
+            const token = localStorage.getItem("Token");
+            console.log(token);
+            const sendData = {
+              symbol: "👍",
+            };
+            const Data = {
+              method: "put",
+              headers: {
+                "Content-Type": "application/json",
+                Authorization: `Bearer ${token}`,
+              },
+
+              body: JSON.stringify(sendData),
+            };
+            const response = await fetch(`${react}/${items.id}/react/👍`, Data);
+            console.log(response);
+            const link = await response.json();
+            console.log(link);
+          } catch (error) {
+            console.log(error);
+          }
+        });
 
         let date = `${items.created}`;
         let update = date.substring(0, 10);

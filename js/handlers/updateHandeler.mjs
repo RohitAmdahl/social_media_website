@@ -5,8 +5,8 @@ import { UPDATE_URL } from "../api/auth/API_endpoints.mjs";
 import { getIDParam } from "../utils/id_prams.mjs";
 
 function updatePostListener() {
-  const id = getIDParam(id);
-  console.log(id);
+  // const id = getIDParam(id);
+  // console.log(id);
   const form = document.querySelector("#editForm");
   console.log(form);
   form.addEventListener("submit", (e) => {

@@ -2,8 +2,6 @@ import { singleProfile } from "../api/auth/API_endpoints.mjs";
 console.log(singleProfile);
 import { commentONprofile } from "../api/auth/API_endpoints.mjs";
 import { commentPost } from "./commentPost.mjs";
-import { likeAPost } from "../features/react.mjs";
-import { react } from "../api/auth/API_endpoints.mjs";
 
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
@@ -97,29 +95,27 @@ async function singlePost() {
     //----------------------------------------------------------comment to post
     FormBody.addEventListener("submit", (e) => {
       e.preventDefault();
-      const id = FormBody.id;
-      const text = FormBody.title.value;
+      // const id = FormBody.id;
+      // const text = FormBody.title.value;
       const value = { text, id };
 
       commentPost(`${commentONprofile}/${id}/comment`, value);
     });
 
     //------------------------------------------------------------react to the post -
-    like_button.addEventListener("click", (e) => {
-      console.log("working");
+    // like_button.addEventListener("click", (e) => {
+    //   console.log("working");
 
-      likeAPost(`${react}/${id}`);
-    });
+    //   likeAPost(`${react}/${id}`);
+    // });
     //----------------------------------------------------------------------------
-    like_button.classList.add("cta_btn_profile", "delete_post", "m-5");
-    like_button.innerText = "React";
+
     cardItem.appendChild(formDiv);
     formDiv.appendChild(FormBody);
     text.classList.add("form-control");
 
     FormBody.appendChild(text);
     FormBody.appendChild(C_button);
-    cardItem.appendChild(like_button);
 
     C_button.innerText = "comment";
     C_button.classList.add("cta_btn_profile", "delete_post", "m-5");

@@ -104,9 +104,34 @@ async function UserOfWebsite() {
       follow.classList.add("cta_btn_profile");
       follow.innerText = "follow";
 
-      follow.addEventListener("click", (e) => {
-        console.log("object");
-        followUser(`${followProfile}${data}/follow`);
+      follow.addEventListener("click", async () => {
+        try {
+          const token = localStorage.getItem("Token");
+          console.log(token);
+
+          const sendData = {
+            name: data.name,
+          };
+
+          const followData = {
+            method: "put",
+            headers: {
+              "Content-type": "application/json ",
+              Authorization: `Bearer ${token}`,
+            },
+            body: JSON.stringify(sendData),
+          };
+
+          const response = await fetch(
+            `${followProfile}/${data.name}/follow`,
+            followData
+          );
+          console.log(response);
+          const json = await response.json();
+          console.log(json);
+        } catch (error) {
+          console.log(error);
+        }
       });
 
       //
