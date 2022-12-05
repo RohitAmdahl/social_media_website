@@ -4,8 +4,8 @@ import { getIDParam } from "../utils/id_prams.mjs";
 
 export async function likeAPost(id) {
   try {
-    const id = getParam("id");
-    const symbol = "U+1F44D";
+    const id = getIDParam("id");
+    // const symbol = "U+1F44D";
     const emoji = "👍";
     const token = localStorage.getItem("Token");
     console.log(token);
@@ -16,8 +16,12 @@ export async function likeAPost(id) {
         Authorization: `Bearer ${token}`,
       },
     };
-    const response = await fetch(`${react}${id}/react/${emoji}`, Data);
+    const response = await fetch(`${react}/${id}/react/${emoji}`, Data);
+    if (!response.ok) {
+      return response.text("error");
+    }
 
+    throw new Error("Something went wrong.");
     console.log(response);
     const link = await response.json();
     console.log(link);

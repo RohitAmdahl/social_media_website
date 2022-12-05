@@ -1,9 +1,10 @@
-import { PostOFFeeds } from "../api/auth/API_endpoints.mjs";
+import { BASE_URL } from "../api/auth/API_endpoints.mjs";
+import { PostAccount } from "../api/auth/api_endpoints.mjs";
 import { followProfile } from "../api/auth/API_endpoints.mjs";
 console.log(followProfile);
-import { BASE_URL } from "../api/auth/API_endpoints.mjs";
+import { followUser } from "../features/follow.mjs";
 
-async function profileOFPost() {
+async function UserOfWebsite() {
   try {
     const token = localStorage.getItem("Token");
     const createData = {
@@ -14,7 +15,7 @@ async function profileOFPost() {
       },
     };
 
-    const response = await fetch(PostOFFeeds, createData);
+    const response = await fetch(PostAccount, createData);
     const json = await response.json();
     console.log(json);
 
@@ -105,7 +106,7 @@ async function profileOFPost() {
 
       follow.addEventListener("click", (e) => {
         console.log("object");
-        followProfile(`${followProfile}/${name}/profile`);
+        followUser(`${followProfile}${profile.data}/follow`);
       });
 
       //
@@ -138,4 +139,4 @@ async function profileOFPost() {
   }
 }
 
-profileOFPost();
+UserOfWebsite();

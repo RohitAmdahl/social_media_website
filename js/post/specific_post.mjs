@@ -97,18 +97,18 @@ async function singlePost() {
     //----------------------------------------------------------comment to post
     FormBody.addEventListener("submit", (e) => {
       e.preventDefault();
+      const id = FormBody.id;
+      const text = FormBody.title.value;
+      const value = { text, id };
 
-      const text = text.title.value;
-      const value = { text };
-
-      commentPost(`${commentONprofile}${postID}/comment`, value);
+      commentPost(`${commentONprofile}/${id}/comment`, value);
     });
 
     //------------------------------------------------------------react to the post -
     like_button.addEventListener("click", (e) => {
       console.log("working");
 
-      likeAPost();
+      likeAPost(`${react}/${id}`);
     });
     //----------------------------------------------------------------------------
     like_button.classList.add("cta_btn_profile", "delete_post", "m-5");
