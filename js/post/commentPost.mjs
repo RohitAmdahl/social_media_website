@@ -12,7 +12,7 @@ export async function commentPost(url, send) {
       },
       body: JSON.stringify({
         title: send.body,
-        body: send.body,
+        // body: send.body,
       }),
     };
     const response = await fetch(

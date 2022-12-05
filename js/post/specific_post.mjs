@@ -89,19 +89,9 @@ async function singlePost() {
     FormBody.setAttribute("id", "CommentTO_post");
 
     FormBody.addEventListener("submit", (e) => {
-      const id = params.get("id");
-      console.log(id);
       e.preventDefault();
-      const FormBody = document.createElement("form");
-      const data = FormBody.target.value;
-      console.log(data);
-      console.log(FormBody);
-      const text = document.createElement("textarea");
-      const value = text.value;
-      console.log(text);
-      const message = { data, value };
-
-      console.log(message);
+      const title = title.value;
+      (title = send.value), console.log(title);
       commentPost(commentONprofile, message);
     });
 
