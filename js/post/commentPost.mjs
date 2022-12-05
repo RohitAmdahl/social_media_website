@@ -11,8 +11,7 @@ export async function commentPost(url, send) {
         Authorization: `Bearer ${token}`,
       },
       body: JSON.stringify({
-        title: send.body,
-        // body: send.body,
+        body: send.body,
       }),
     };
     const response = await fetch(

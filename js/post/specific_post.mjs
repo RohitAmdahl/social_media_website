@@ -86,25 +86,30 @@ async function singlePost() {
 
     const formDiv = document.createElement("div");
     const FormBody = document.createElement("form");
-    FormBody.setAttribute("id", "CommentTO_post");
+    FormBody.classList.add("form-control");
+    console.log(FormBody);
 
-    FormBody.addEventListener("submit", (e) => {
-      e.preventDefault();
-      const title = title.value;
-      (title = send.value), console.log(title);
-      commentPost(commentONprofile, message);
-    });
+    FormBody.setAttribute("id", "CommentTO_post");
 
     const text = document.createElement("textarea");
     const C_button = document.createElement("button");
     const like_button = document.createElement("button");
+    //----------------------------------------------------------comment to post
+    FormBody.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const FormBody = FormBody.target.value;
+      const body = body.value;
+      const value = { body, FormBody };
 
-    //-like a post -
+      commentPost(`${commentONprofile}/${send.id}/comment`, value);
+    });
+
+    //------------------------------------------------------------like a post -
     like_button.addEventListener("click", (e) => {
       console.log("working");
       likeAPost(`${react}/${id}/react/emoji`);
     });
-    //--
+    //----------------------------------------------------------------------------
     like_button.classList.add("cta_btn_profile", "delete_post", "m-5");
     like_button.innerText = "React";
     cardItem.appendChild(formDiv);
