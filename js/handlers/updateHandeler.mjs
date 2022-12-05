@@ -3,17 +3,13 @@ import { updatePost } from "../post/update.mjs";
 
 import { UPDATE_URL } from "../api/auth/API_endpoints.mjs";
 
-async function updatePostListener() {
-  const form = document.getElementById("edit");
+function updatePostListener() {
   const url = new URL(location.href);
   console.log(url);
   const id = url.searchParams.get("id");
   console.log(id);
-
-  // const post = await makePost(id);
-  // console.log(post);
-  // i was trying to do as the videos says, i was trying to make async function but did not work , i have tried allot
-
+  const form = document.querySelector("#edit_post");
+  console.log(form);
   form.addEventListener("submit", (e) => {
     e.preventDefault();
     console.log(e);
@@ -25,7 +21,7 @@ async function updatePostListener() {
     console.log(body);
     const image = form[2].value;
     console.log(image);
-    const id = post.id.value;
+    const id = id.value;
     console.log(id);
     // console.log(id);
     const update_POST = { form, title, body, image, id };
