@@ -2,7 +2,7 @@ import { BASE_URL } from "../api/auth/API_endpoints.mjs";
 import { PostAccount } from "../api/auth/api_endpoints.mjs";
 import { followProfile } from "../api/auth/API_endpoints.mjs";
 console.log(followProfile);
-import { followUser } from "../features/follow.mjs";
+// import { followUser } from "../features/follow.mjs";
 
 async function UserOfWebsite() {
   try {
@@ -65,7 +65,8 @@ async function UserOfWebsite() {
         "mb-0",
         "d-flex",
         "justify-content-center",
-        "w-100"
+        "w-100",
+        "flex-column"
       );
 
       const list = document.createElement("li");
@@ -101,9 +102,14 @@ async function UserOfWebsite() {
       following.innerText = "following";
 
       const follow = document.createElement("button");
-      follow.classList.add("cta_btn_profile");
+      follow.classList.add(
+        "cta_btn_profile",
+        "d-flex",
+        "justify-content-center",
+        "w-100",
+        "flex-column"
+      );
       follow.innerText = "follow";
-
       follow.addEventListener("click", async () => {
         try {
           const token = localStorage.getItem("Token");
@@ -134,6 +140,39 @@ async function UserOfWebsite() {
         }
       });
 
+      const Un_follow = document.createElement("button");
+      Un_follow.classList.add("cta_btn_profile");
+      Un_follow.innerText = "Un-follow";
+      Un_follow.addEventListener("click", async () => {
+        try {
+          const token = localStorage.getItem("Token");
+          console.log(token);
+
+          const sendData = {
+            name: data.name,
+          };
+
+          const followData = {
+            method: "put",
+            headers: {
+              "Content-type": "application/json ",
+              Authorization: `Bearer ${token}`,
+            },
+            body: JSON.stringify(sendData),
+          };
+
+          const response = await fetch(
+            `${followProfile}/${data.name}/unfollow`,
+            followData
+          );
+          console.log(response);
+          const json = await response.json();
+          console.log(json);
+        } catch (error) {
+          console.log(error);
+        }
+      });
+
       //
       Div_container.appendChild(background);
       background.appendChild(item_center);
@@ -152,6 +191,7 @@ async function UserOfWebsite() {
       ul.appendChild(number_three);
       ul.appendChild(following);
       ul.appendChild(follow);
+      ul.appendChild(Un_follow);
 
       //
 

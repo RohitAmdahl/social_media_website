@@ -33,7 +33,16 @@ async function Post() {
         );
 
         const cardItem = document.createElement("div"); // card
-        cardItem.classList.add("card", "m-5", "p-5");
+        cardItem.classList.add(
+          "card",
+          "m-5",
+          "p-5",
+          "bg-white",
+          "shadow",
+          "rounded",
+          "overflow-hidden",
+          "m-5"
+        );
 
         const image = document.createElement("img"); // image
         // image.src = "/image/profile/profile icon.png";
@@ -72,7 +81,7 @@ async function Post() {
         );
         const span = document.createElement("span");
         const _reactions = document.createElement("span");
-        _reactions.innerText = "reaction" + items._count.reactions;
+        _reactions.innerText = "reaction 👍," + items._count.reactions;
         _reactions.classList.add("card-subtitle", "mb-2", "p-2", "text-muted");
         span.classList.add("card-subtitle", "mb-2", "p-2", "text-muted");
         span.innerText = "comments 💬" + items.comments.length;
@@ -87,10 +96,10 @@ async function Post() {
         viewPost.setAttribute("id", "view_post");
         viewPost.href = `specific.html?id=${items.id}`;
 
-        const likeButton = document.createElement("button");
-        likeButton.classList.add("cta_btn", "m-5");
-        likeButton.innerText = "Like post";
         //
+
+        const cta_div = document.createElement("div");
+
         cardModel.appendChild(cardWrapper);
         cardWrapper.appendChild(cardItem);
         cardItem.appendChild(NameOfTittle);
@@ -100,10 +109,11 @@ async function Post() {
         cardItem.appendChild(span);
         cardItem.appendChild(_reactions);
 
-        cardItem.appendChild(viewPost);
-        cardItem.appendChild(likeButton);
+        const UserReaction = document.createElement("button");
+        UserReaction.classList.add("cta_btn", "m-5");
+        UserReaction.innerText = "Like post";
 
-        likeButton.addEventListener("click", async () => {
+        UserReaction.addEventListener("click", async () => {
           try {
             const token = localStorage.getItem("Token");
             console.log(token);
@@ -131,6 +141,10 @@ async function Post() {
         let date = `${items.created}`;
         let update = date.substring(0, 10);
         subtitle.innerText = update;
+
+        cardItem.appendChild(cta_div);
+        cta_div.appendChild(viewPost);
+        cta_div.appendChild(UserReaction);
       });
     }
     renderPost();
@@ -138,7 +152,7 @@ async function Post() {
 
     function FilterPost(postOfFeeds) {
       const searchPost = document.querySelector("#search");
-      searchPost.addEventListener("click", (e) => {
+      searchPost.addEventListener("keyup", (e) => {
         e.preventDefault();
         const product = e.target.value;
         console.log(product);

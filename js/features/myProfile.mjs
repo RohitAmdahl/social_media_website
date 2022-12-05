@@ -70,10 +70,11 @@ async function Post(url) {
       );
       const span = document.createElement("span");
       const _reactions = document.createElement("span");
-      _reactions.innerText = "reaction" + items._count.reactions;
+      _reactions.innerText = "reaction👍," + items._count.reactions;
       _reactions.classList.add("card-subtitle", "mb-2", "p-2", "text-muted");
       span.classList.add("card-subtitle", "mb-2", "p-2", "text-muted");
       span.innerText = "comments 💬" + items._count.comments;
+      const cta_div = document.createElement("div");
       const button = document.createElement("button");
 
       button.classList.add("cta_btn", "m-5");
@@ -87,7 +88,12 @@ async function Post(url) {
       //
       const button_d = document.createElement("button");
       button_d.innerText = "Delete Post";
-      button_d.classList.add("cta_btn_profile", "delete_post", "m-5");
+      button_d.classList.add(
+        "cta_btn_profile",
+        "delete_post",
+        "btn-warning",
+        "m-5"
+      );
       button_d.setAttribute("id", "delete");
 
       //---
@@ -149,9 +155,10 @@ async function Post(url) {
       cardItem.appendChild(img);
       cardItem.appendChild(span);
       cardItem.appendChild(_reactions);
-      cardItem.appendChild(viewPost);
-      cardItem.appendChild(button_d);
-      cardItem.appendChild(likeButton);
+      cardItem.appendChild(cta_div);
+      cta_div.appendChild(viewPost);
+      cta_div.appendChild(likeButton);
+      cta_div.appendChild(button_d);
 
       let date = `${items.created}`;
       let update = date.substring(0, 10);

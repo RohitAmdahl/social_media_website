@@ -1,12 +1,16 @@
 import { followProfile } from "../api/auth/API_endpoints.mjs";
 import { getIDParam } from "../utils/id_prams.mjs";
-export async function followUser(profile) {
+export async function followUser(url, data) {
   try {
     const data = `${name}`;
     console.log(data);
 
     const token = localStorage.getItem("Token");
     console.log(token);
+
+    const sendData = {
+      name: data.name,
+    };
 
     const followData = {
       method: "put",
@@ -18,7 +22,7 @@ export async function followUser(profile) {
     };
 
     const response = await fetch(
-      `${followProfile}/${profile.data}/follow`,
+      `${followProfile}/${data.name}/follow`,
       followData
     );
     console.log(response);

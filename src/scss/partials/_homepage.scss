@@ -40,25 +40,6 @@
   border-radius: 0.5rem;
 }
 
-.cta_btn_profile {
-  color: $text-color;
-  background-color: $blue-2;
-  padding: 12px;
-  font-weight: bold;
-  font-size: 1rem;
-  border: none;
-  text-decoration: none;
-  box-shadow: $box-shadow;
-  border-radius: 0.5rem;
-  margin: 10px;
-  width: 100%;
-  max-width: 200px;
-}
-.cta_btn_profile:hover {
-  background: $background_btn_hover;
-  border-radius: 0.5rem;
-}
-
 .fw-bold {
   color: $text-color;
 }

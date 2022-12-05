@@ -91,7 +91,7 @@ async function singlePost() {
 
     const text = document.createElement("textarea");
     const C_button = document.createElement("button");
-    const like_button = document.createElement("button");
+
     //----------------------------------------------------------comment to post
     FormBody.addEventListener("submit", (e) => {
       e.preventDefault();
