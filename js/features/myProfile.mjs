@@ -1,4 +1,5 @@
 import { BASE_URL } from "../api/auth/API_endpoints.mjs";
+import { react } from "../api/auth/API_endpoints.mjs";
 
 import { removePost } from "../api/auth/API_endpoints.mjs";
 
@@ -90,6 +91,9 @@ async function Post(url) {
       button_d.innerText = "Delete Post";
       button_d.classList.add("cta_btn_profile", "delete_post", "m-5");
       button_d.setAttribute("id", "delete");
+      const likeButton = document.createElement("button");
+      likeButton.classList.add("cta_btn", "m-5");
+      likeButton.innerText = "Like post";
 
       button_d.addEventListener("click", async () => {
         try {
@@ -122,7 +126,7 @@ async function Post(url) {
       cardItem.appendChild(span);
       cardItem.appendChild(_reactions);
       cardItem.appendChild(viewPost);
-      cardItem.appendChild(button_d);
+      cardItem.appendChild(likeButton);
 
       let date = `${items.created}`;
       let update = date.substring(0, 10);
