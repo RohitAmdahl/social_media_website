@@ -14,11 +14,11 @@ export const makePost = `${BASE_URL}/api/v1/social/posts`; // create entry
 
 export const singleProfile = `${BASE_URL}/api/v1/social/posts`;
 
-export const commentONprofile = `${BASE_URL}/api/v1/social/posts/?=id/comment`;
+export const commentONprofile = `${BASE_URL}/api/v1/social/posts`;
 
 export const removePost = `${BASE_URL}/api/v1/social/posts`;
 
-export const UPDATE_URL = `${BASE_URL}/api/v1/social/posts/`;
+export const UPDATE_URL = `${BASE_URL}/api/v1/social/posts`;
 
 export const followProfile = `${BASE_URL}/api/v1/social/profiles`;
 
@@ -26,4 +26,4 @@ export const UNfolloWProfile = `${BASE_URL}/api/v1/social/profiles/<name>/follow
 
 export const EditBannerIMG = `${BASE_URL}/api/v1/social/profiles/<name>/media`;
 
-export const react = `${BASE_URL}/api/v1/social/posts/`;
+export const react = `${BASE_URL}/api/v1/social/posts`;

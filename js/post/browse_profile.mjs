@@ -103,30 +103,9 @@ async function profileOFPost() {
       follow.classList.add("cta_btn_profile");
       follow.innerText = "follow";
 
-      follow.addEventListener("click", async () => {
-        try {
-          const token = localStorage.getItem("Token");
-          console.log(token);
-
-          const followData = {
-            method: "put",
-            headers: {
-              "Content-type": "application/json ",
-              Authorization: `Bearer ${token}`,
-            },
-            body: JSON.stringify(),
-          };
-
-          const response = await fetch(
-            `${followProfile}/${name}/profile`,
-            followData
-          );
-          console.log(response);
-          const json = await response.json();
-          console.log(json);
-        } catch (error) {
-          console.log(error);
-        }
+      follow.addEventListener("click", (e) => {
+        console.log("object");
+        followProfile(`${followProfile}/${name}/profile`);
       });
 
       //

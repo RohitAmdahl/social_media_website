@@ -2,11 +2,10 @@ import { makePost } from "../api/auth/API_endpoints.mjs";
 import { updatePost } from "../post/update.mjs";
 
 import { UPDATE_URL } from "../api/auth/API_endpoints.mjs";
+import { getIDParam } from "../utils/id_prams.mjs";
 
 function updatePostListener() {
-  const url = new URL(location.href);
-  console.log(url);
-  const id = url.searchParams.get("id");
+  const id = getIDParam(id);
   console.log(id);
   const form = document.querySelector("#editForm");
   console.log(form);

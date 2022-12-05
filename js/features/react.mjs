@@ -1,9 +1,12 @@
 import { react } from "../api/auth/API_endpoints.mjs";
 console.log(react);
+import { getIDParam } from "../utils/id_prams.mjs";
 
-export async function likeAPost() {
-  const emoji = "👍";
+export async function likeAPost(id) {
   try {
+    const id = getParam("id");
+    const symbol = "U+1F44D";
+    const emoji = "👍";
     const token = localStorage.getItem("Token");
     console.log(token);
     const Data = {
@@ -12,9 +15,9 @@ export async function likeAPost() {
         "Content-Type": "application/json",
         Authorization: `Bearer ${token}`,
       },
-      body: JSON.stringify(),
     };
-    const response = await fetch(`${react}/${id}/react/${emoji}`, Data);
+    const response = await fetch(`${react}${id}/react/${emoji}`, Data);
+
     console.log(response);
     const link = await response.json();
     console.log(link);
