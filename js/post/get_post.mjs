@@ -147,20 +147,40 @@ async function Post() {
         cta_div.appendChild(UserReaction);
       });
     }
-    renderPost();
+
     //...
 
-    function FilterPost(postOfFeeds) {
-      const searchPost = document.querySelector("#search");
-      searchPost.addEventListener("keyup", (e) => {
-        e.preventDefault();
-        const product = e.target.value;
-        console.log(product);
-      });
-    }
-    FilterPost();
+    // function renderPost(products) {
+    //   const renderContainer = document.querySelector("renderCards");
+    //   if (!Array.isArray(products) || product.length === 0) {
+    //     return (renderContainer.innerHTML = "Sorry no  post to display");
+    //   }
+    // }
+
+    // function createRender(cardModel, products) {
+    //   // cardModel.innerHTML = "";
+    //   json.forEach((element) => {
+    //     renderPost();
+    //   });
+    // }
+
+    // function FilterPost(postOfFeeds) {
+    //   const searchPost = document.querySelector("#search");
+    //   searchPost.addEventListener("input", (event) => {
+    //     e.preventDefault();
+    //     filterProducts(event.target.value, products);
+    //     console.log(product);
+    //   });
+    // }
+    // FilterPost();
+    // const filterProducts = results.filter((products) => {
+    //   if (products.post <= products.post) {
+    //     renderPost();
+    //   }
+    // });
 
     //--
+    renderPost();
   } catch (error) {
     console.log(error);
   }
