@@ -22,8 +22,8 @@ async function Post() {
 
     //
     function renderPost() {
-      results.map((items, allPost) => {
-        console.log(items, allPost);
+      results.forEach((items) => {
+        // console.log(items, allPost);
         const cardWrapper = document.createElement("div"); // card
         cardWrapper.classList.add(
           "col-12",
@@ -130,9 +130,7 @@ async function Post() {
               body: JSON.stringify(sendData),
             };
             const response = await fetch(`${react}/${items.id}/react/👍`, Data);
-            console.log(response);
             const link = await response.json();
-            console.log(link);
           } catch (error) {
             console.log(error);
           }

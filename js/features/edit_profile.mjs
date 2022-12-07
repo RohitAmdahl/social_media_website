@@ -1,17 +1,15 @@
 import { avatarURL } from "../api/auth/API_endpoints.mjs";
 const profile = localStorage.getItem("profile");
-console.log(profile);
-const profile_name = json.parse(profile).name;
+const profileName = JSON.parse(profile).name;
+console.log(profileName);
 
-console.log(profile_name);
-
-export async function editAvatar(data) {
+export async function editAvatar(avatarImage) {
   try {
     const token = localStorage.getItem("Token");
     console.log(token);
 
     const sendData = {
-      avatar: data,
+      avatar: avatarImage,
     };
 
     const followData = {
@@ -23,7 +21,10 @@ export async function editAvatar(data) {
       body: JSON.stringify(sendData),
     };
 
-    const response = await fetch(`${avatarURL}/${data.name}/media`, followData);
+    const response = await fetch(
+      `${avatarURL}/${profileName}/media`,
+      followData
+    );
     console.log(response);
     const json = await response.json();
     console.log(json);
