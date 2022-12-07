@@ -5,7 +5,7 @@ export async function editAvatar(url, data) {
     console.log(token);
 
     const sendData = {
-      name: data.name,
+      name: user.name,
     };
 
     const followData = {
@@ -20,7 +20,7 @@ export async function editAvatar(url, data) {
     };
 
     const response = await fetch(
-      `${avatarURL}/${data.name}/media`,
+      `${avatarURL}/${user.name}/media`,
       sendData,
       followData
     );
@@ -31,4 +31,4 @@ export async function editAvatar(url, data) {
     console.log(error);
   }
 }
-editAvatar(`${avatarURL}/${data.name}/media`, sendData, followData);
+editAvatar(`${avatarURL}/${user.name}/media`, sendData, followData);
