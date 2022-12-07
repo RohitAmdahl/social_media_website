@@ -31,4 +31,3 @@ export async function editAvatar(url, data) {
     console.log(error);
   }
 }
-editAvatar(`${avatarURL}/${user.name}/media`, sendData, followData);
