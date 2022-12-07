@@ -1,9 +1,13 @@
 import { makePost } from "../api/auth/API_endpoints.mjs";
 import { updatePost } from "../post/update.mjs";
-
 import { UPDATE_URL } from "../api/auth/API_endpoints.mjs";
+// import { editPost } from "../post/edit_post.mjs";
 
 function updatePostListener() {
+  // const titleValue = title.value.trim();
+  // const descriptionValue = description.value.trim();
+  // const linkValue = link.value.trim();
+
   const url = new URL(location.href);
   console.log(url);
   const id = url.searchParams.get("id");

@@ -1,11 +1,17 @@
 import { avatarURL } from "../api/auth/API_endpoints.mjs";
-export async function editAvatar(url, data) {
+const profile = localStorage.getItem("profile");
+console.log(profile);
+const profile_name = json.parse(profile).name;
+
+console.log(profile_name);
+
+export async function editAvatar(data) {
   try {
     const token = localStorage.getItem("Token");
     console.log(token);
 
     const sendData = {
-      name: "${user.name}",
+      avatar: data,
     };
 
     const followData = {
@@ -14,16 +20,10 @@ export async function editAvatar(url, data) {
         "Content-type": "application/json ",
         Authorization: `Bearer ${token}`,
       },
-      body: JSON.stringify({
-        avatar: data.avatar,
-      }),
+      body: JSON.stringify(sendData),
     };
 
-    const response = await fetch(
-      `${avatarURL}/${user.name}/media`,
-      sendData,
-      followData
-    );
+    const response = await fetch(`${avatarURL}/${data.name}/media`, followData);
     console.log(response);
     const json = await response.json();
     console.log(json);

@@ -93,19 +93,22 @@
               <form id="Edit_edit-post">
                 <div>Edit post</div>
                 <div>
-                  <label for="" class="text-muted">Title</label>
+                  <label for="title" class="text-muted">Title</label>
                   <input
                     name="title"
                     type="text"
                     class="form-control"
+                    id="title_post"
                     required
                   />
                 </div>
                 <div>
-                  <label for="textpost" class="text-muted">Description</label>
+                  <label for="description" class="text-muted"
+                    >Description</label
+                  >
                   <textarea
                     name="Description"
-                    id="text"
+                    id="description"
                     cols="30"
                     rows="2"
                     class="form-control"
@@ -113,11 +116,12 @@
                 </div>
 
                 <div>
-                  <label for="">Picture</label>
+                  <label for="picture">Picture</label>
                   <input
                     name="media"
                     type="url"
                     name="file"
+                    id="picture"
                     class="form-control"
                   />
                 </div>
@@ -131,6 +135,7 @@
       </div>
     </main>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/post/edit_post.mjs" type="module"></script>
     <script src="js/handlers/updateHandeler.mjs" type="module"></script>
   </body>
 </html>

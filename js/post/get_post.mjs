@@ -150,7 +150,7 @@ async function Post() {
 
     //...
 
-    // function renderPost(products) {
+    // function renderPost() {
     //   const renderContainer = document.querySelector("renderCards");
     //   if (!Array.isArray(products) || product.length === 0) {
     //     return (renderContainer.innerHTML = "Sorry no  post to display");

@@ -9,16 +9,13 @@ function editPicture() {
     e.preventDefault();
     console.log(e);
     const form = e.target;
-    const avatar = form.value;
-    // console.log(body);
-    const picture_edit = { avatar, form };
+    const data = form.value;
     console.log(avatar);
-    editAvatar(
-      `${avatarURL}/${user.name}/media`,
-      sendData,
-      followData,
-      picture_edit
-    );
+    const picture_edit = { avatar, form };
+
+    console.log(avatar);
+
+    editAvatar(data);
   });
 }
 editPicture();
