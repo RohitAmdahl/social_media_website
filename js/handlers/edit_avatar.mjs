@@ -9,7 +9,7 @@ function editPicture() {
     e.preventDefault();
     console.log(e);
     const form = e.target;
-    const avatar = avatar.value;
+    const avatar = form.value;
     // console.log(body);
     const picture_edit = { avatar, form };
     console.log(avatar);

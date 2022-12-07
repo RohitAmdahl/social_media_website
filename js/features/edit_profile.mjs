@@ -5,7 +5,7 @@ export async function editAvatar(url, data) {
     console.log(token);
 
     const sendData = {
-      name: user.name,
+      name: "${user.name}",
     };
 
     const followData = {
