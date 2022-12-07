@@ -24,6 +24,6 @@ export const followProfile = `${BASE_URL}/api/v1/social/profiles`;
 
 export const UNfolloWProfile = `${BASE_URL}/api/v1/social/profiles/<name>/follow`;
 
-export const EditBannerIMG = `${BASE_URL}/api/v1/social/profiles/<name>/media`;
+export const avatarURL = `${BASE_URL}/api/v1/social/profiles`;
 
 export const react = `${BASE_URL}/api/v1/social/posts`;

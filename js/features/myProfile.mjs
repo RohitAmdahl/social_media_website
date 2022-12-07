@@ -147,6 +147,11 @@ async function Post(url) {
         }
       });
 
+      const edit_post_Cta = document.createElement("a");
+      edit_post_Cta.classList.add("cta_btn", "m-5");
+      edit_post_Cta.innerText = "Edit post";
+      edit_post_Cta.href = `/edit_Post.html?id=${items.id}`;
+
       cardModel.appendChild(cardWrapper);
       cardWrapper.appendChild(cardItem);
       cardItem.appendChild(NameOfTittle);
@@ -159,13 +164,12 @@ async function Post(url) {
       cta_div.appendChild(viewPost);
       cta_div.appendChild(likeButton);
       cta_div.appendChild(button_d);
+      cta_div.appendChild(edit_post_Cta);
 
       let date = `${items.created}`;
       let update = date.substring(0, 10);
       subtitle.innerText = update;
     });
-
-    //
   } catch (error) {
     console.log(error);
   }

@@ -1,10 +1,6 @@
-import { followProfile } from "../api/auth/API_endpoints.mjs";
-import { getIDParam } from "../utils/id_prams.mjs";
-export async function followUser(url, data) {
+import { avatarURL } from "../api/auth/API_endpoints.mjs";
+export async function editAvatar(url, data) {
   try {
-    const data = `${name}`;
-    console.log(data);
-
     const token = localStorage.getItem("Token");
     console.log(token);
 
@@ -18,11 +14,14 @@ export async function followUser(url, data) {
         "Content-type": "application/json ",
         Authorization: `Bearer ${token}`,
       },
-      body: JSON.stringify(),
+      body: JSON.stringify({
+        avatar: data.avatar,
+      }),
     };
 
     const response = await fetch(
-      `${followProfile}/${data.name}/follow`,
+      `${avatarURL}/${data.name}/media`,
+      sendData,
       followData
     );
     console.log(response);
@@ -32,3 +31,4 @@ export async function followUser(url, data) {
     console.log(error);
   }
 }
+editAvatar(`${avatarURL}/${data.name}/media`, sendData, followData);

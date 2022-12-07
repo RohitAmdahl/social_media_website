@@ -24,33 +24,10 @@ async function Post(url) {
     };
 
     const response = await fetch(url, createData);
+    console.log(response);
     const results = await response.json();
+    console.log(results);
     console.log("results", results);
-
-    // form.innerHTML += `
-    // <div>Create post</div>
-    // <div>
-    //   <label for="title" class="text-muted">Title</label>
-    //   <input name="title" type="text" class="form-control" value="${results[0].title}" required />
-    // </div>
-    // <div>
-    //   <label for="textpost" class="text-muted">Description</label>
-    //   <textarea name="text" id="text" cols="30" rows="2" class="form-control">
-    //   ${results[0].body}
-    //   </textarea>
-    // </div>
-
-    // <div>
-    //   <input name="id" type="hidden" class="form-control" required />
-    // </div>
-    // <div>
-    //   <label for="picture">Picture</label>
-    //   <input name="media" type="url" id="file" name="file" class="form-control" />
-    // </div>
-
-    // <button class="cta_btn_profile" type="submit" data-postid=${results[0].id} >
-    //   update Post
-    // </button>`;
   } catch (error) {
     console.log("error", error);
   }

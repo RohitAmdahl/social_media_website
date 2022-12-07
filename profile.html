@@ -20,9 +20,6 @@
     />
     <link rel="stylesheet" href="/dist/css/styles.css" />
     <title>profile page</title>
-
-    <!-- <script src="js/post/browse_profile.mjs" defer type="module"></script> -->
-    <!-- <script src="js/post/create.mjs" defer type="module"></script> -->
   </head>
   <body>
     <!-- header -->
@@ -124,6 +121,8 @@
                     alt="cyclists is cycling on the road, blue sky nice weather "
                     class="profile_page_img w-100"
                   />
+
+                  <h1 class="fw-bold" id="profile_name">🚵🏻‍♂️</h1>
                   <button
                     type="button"
                     class="btn btn-primary btn-lg cta_btn_profile"
@@ -132,14 +131,13 @@
                   >
                     Edit Profile
                   </button>
-                  <h1 class="fw-bold" id="profile_name">🚵🏻‍♂️</h1>
                   <div id="ModalLoginForm" class="modal fade">
                     <div class="modal-dialog" role="document">
                       <div class="modal-content">
                         <div class="modal-body">
                           <form id="update_profile">
                             <div>Update Profile</div>
-                            <div>
+                            <!-- <div>
                               <label for="banner" class="text-muted"
                                 >banner</label
                               >
@@ -148,7 +146,7 @@
                                 type="url"
                                 class="form-control"
                               />
-                            </div>
+                            </div> -->
                             <div>
                               <label for="avatar">Avatar</label>
                               <input
@@ -157,7 +155,7 @@
                                 class="form-control"
                               />
                             </div>
-                            <button class="cta_btn" type="submit">Post</button>
+                            <button class="cta_btn" type="submit">Edit</button>
                           </form>
                         </div>
                       </div>
@@ -179,9 +177,7 @@
 
                 <a href="people.html">
                   <div class="d-flex justify-content-center align-items-center">
-                    <button
-                      class="cta_btn_profile text-center badge badge-primary"
-                    >
+                    <button class="btn btn-primary cta_btn_profile">
                       Browse Profiles
                     </button>
                   </div>
@@ -225,85 +221,18 @@
                     <input
                       name="media"
                       type="url"
-                      id="file"
-                      name="file"
+                      name="url"
                       class="form-control"
                     />
                   </div>
-                  <button
-                    class="btn btn-primary cta_btn_profile"
-                    value="/pages/profile.html/?id=${Post.id}"
-                    type="submit"
-                  >
+                  <button class="btn btn-primary cta_btn_profile" type="submit">
                     Create Post
                   </button>
-                  <!-- edit post button  -->
-                  <button
-                    type="button"
-                    class="btn btn-primary btn-lg cta_btn_profile"
-                    data-toggle="modal"
-                    data-target="#ModalLoginForm"
-                  >
-                    Edit post
-                  </button>
-                  <!-- model for edit post  -->
-                </form>
-                <form id="editForm">
-                  <!-- Modal HTML Markup -->
-                  <div id="ModalLoginForm" class="modal fade">
-                    <div class="modal-dialog" role="document">
-                      <div class="modal-content">
-                        <div class="modal-body">
-                          <form id="edit_post" class="edit">
-                            <div>Edit post</div>
-                            <div>
-                              <label for="title" class="text-muted"
-                                >Title</label
-                              >
-                              <input
-                                name="title"
-                                type="text"
-                                class="form-control"
-                                required
-                              />
-                            </div>
-                            <div>
-                              <label for="textpost" class="text-muted"
-                                >Description</label
-                              >
-                              <textarea
-                                name="text"
-                                id="text"
-                                cols="30"
-                                rows="2"
-                                class="form-control"
-                              ></textarea>
-                            </div>
-                            <div>
-                              <label for="picture">Picture</label>
-                              <input
-                                name="media"
-                                type="url"
-                                id="file"
-                                name="file"
-                                class="form-control"
-                              />
-                            </div>
-
-                            <button class="cta_btn" type="submit">Post</button>
-                          </form>
-                        </div>
-                      </div>
-                      <!-- /.modal-content -->
-                    </div>
-                    <!-- /.modal-dialog -->
-                  </div>
-                  <!-- /.modal -->
                 </form>
               </div>
             </div>
 
-            <div class="col-12 col-lg-10 col-md-12 col-sm-12" id="cards"></div>
+            <div class="col-12 col-lg-12 col-md-12 col-sm-12" id="cards"></div>
           </div>
         </div>
       </section>
@@ -322,9 +251,24 @@
         </div>
       </div>
     </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/handlers/create_post.mjs" type="module"></script>
-    <script src="js/handlers/updateHandeler.mjs" type="module"></script>
     <script src="js/features/myProfile.mjs" type="module"></script>
+    <script src="js/features/edit_profile.mjs" type="module"></script>
   </body>
 </html>

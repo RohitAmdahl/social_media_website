@@ -85,18 +85,15 @@ async function singlePost() {
     const formDiv = document.createElement("div");
     const FormBody = document.createElement("form");
     FormBody.classList.add("form-control");
-    console.log(FormBody);
+    // console.log(FormBody);
 
     FormBody.setAttribute("id", "CommentTO_post");
-
     const text = document.createElement("textarea");
     const C_button = document.createElement("button");
 
     //----------------------------------------------------------comment to post
     FormBody.addEventListener("submit", (e) => {
       e.preventDefault();
-      // const id = FormBody.id;
-      // const text = FormBody.title.value;
       const value = { text, id };
 
       commentPost(`${commentONprofile}/${id}/comment`, value);
@@ -118,7 +115,7 @@ async function singlePost() {
     FormBody.appendChild(C_button);
 
     C_button.innerText = "comment";
-    C_button.classList.add("cta_btn_profile", "delete_post", "m-5");
+    C_button.classList.add("cta_btn", "delete_post", "m-5");
 
     let date = `${link.created}`;
     let update = date.substring(0, 10);
