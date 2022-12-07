@@ -13,7 +13,6 @@ function updatePostListener() {
   console.log(form);
   form.addEventListener("submit", (e) => {
     e.preventDefault();
-    console.log(e);
 
     const form = e.target;
     const title = form[0].value;

@@ -20,7 +20,6 @@ export async function updatePost(url, post) {
         title: post.title,
         body: post.body,
         media: post.image,
-        // id: post.id,
       }),
     };
 
