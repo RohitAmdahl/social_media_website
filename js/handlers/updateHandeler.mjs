@@ -22,14 +22,14 @@ function updatePostListener() {
     console.log(body);
     const image = form[2].value;
     console.log(image);
-    const id = form.id.value;
+    // const id = form.id.value;
 
-    // id = form.id;
-    console.log(id);
+    // const id = form.post.id;
+    // console.log(id);
 
     const update_POST = { form, title, body, image, id };
     console.log(update_POST);
-    updatePost(`${UPDATE_URL}/${post.id}`, update_POST);
+    updatePost(`${UPDATE_URL}/${id}`, update_POST);
   });
 }
 updatePostListener();

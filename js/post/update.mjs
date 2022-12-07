@@ -20,11 +20,11 @@ export async function updatePost(url, post) {
         title: post.title,
         body: post.body,
         media: post.image,
-        id: post.id,
+        // id: post.id,
       }),
     };
 
-    const response = await fetch(`${UPDATE_URL}${post.id}`, updateData);
+    const response = await fetch(`${UPDATE_URL}/${post.id}`, updateData);
     console.log(response);
     const json = await response.json();
     console.log(json);
