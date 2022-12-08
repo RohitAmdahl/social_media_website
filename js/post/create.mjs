@@ -1,8 +1,8 @@
 import { makePost } from "../api/auth/API_endpoints.mjs";
-import { load } from "../storage/localstorage.mjs";
+// import { load } from "../storage/localstorage.mjs";
 
 const method = "post";
-export async function createPost(url, post) {
+export async function createPost(post) {
   console.log(post);
   try {
     const token = localStorage.getItem("Token");
@@ -13,13 +13,7 @@ export async function createPost(url, post) {
         "Content-Type": "application/json",
         Authorization: `Bearer ${token}`,
       },
-      body: JSON.stringify({
-        title: post.title,
-        body: post.body,
-        // tags: post.tag,
-        media: post.image,
-        id: post.id,
-      }),
+      body: JSON.stringify(post),
     };
 
     const response = await fetch(makePost, data);

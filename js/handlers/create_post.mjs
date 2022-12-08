@@ -1,7 +1,5 @@
 import { createPost } from "../post/create.mjs";
 
-import { makePost } from "../api/auth/API_endpoints.mjs";
-
 function setCreatePostListener() {
   const form = document.querySelector("#create");
 
@@ -17,7 +15,7 @@ function setCreatePostListener() {
 
     console.log(create_POST);
 
-    createPost(makePost, create_POST);
+    createPost(create_POST);
     form.reset();
   });
 }

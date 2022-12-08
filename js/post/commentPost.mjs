@@ -1,8 +1,8 @@
 import { commentONprofile } from "../api/auth/API_endpoints.mjs";
 console.log(commentONprofile);
 
-export async function commentPost(url, send) {
-  console.log(send);
+export async function commentPost(url, text) {
+  console.log(text);
   try {
     const token = localStorage.getItem("Token");
     console.log(token);
@@ -13,13 +13,10 @@ export async function commentPost(url, send) {
         Authorization: `Bearer ${token}`,
       },
       body: JSON.stringify({
-        body: send.text.value,
+        body: text.value,
       }),
     };
-    const response = await fetch(
-      `${commentONprofile}/${send.id}/comment`,
-      Data
-    );
+    const response = await fetch(url, Data);
     console.log(response);
     const link = await response.json();
     console.log(link);

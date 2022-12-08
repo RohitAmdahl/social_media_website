@@ -94,9 +94,9 @@ async function singlePost() {
     //----------------------------------------------------------comment to post
     FormBody.addEventListener("submit", (e) => {
       e.preventDefault();
-      const value = { text, id };
+      // const value = { text, id };
 
-      commentPost(`${commentONprofile}/${id}/comment`, value);
+      commentPost(`${commentONprofile}/${id}/comment`, text);
     });
 
     //------------------------------------------------------------react to the post -

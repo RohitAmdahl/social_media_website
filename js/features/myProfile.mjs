@@ -3,17 +3,15 @@ import { react } from "../api/auth/API_endpoints.mjs";
 import { removePost } from "../api/auth/API_endpoints.mjs";
 import { editAvatar } from "./edit_profile.mjs";
 
-const profile = localStorage.getItem("profile");
-const profileName = JSON.parse(profile).name;
+const profile = JSON.parse(localStorage.getItem("profile"));
+const profileName = profile.name;
 // const profileavatar = JSON.parse(profile).avatar;
 
 const profile_name = document.querySelector("#profile_name");
 profile_name.innerText = profileName;
 console.log(profileName);
 
-const picture = document.querySelector(".avatar");
-console.log(picture);
-// picture.src = avatar;
+document.querySelector("#profile_img").src = profile.avatar;
 
 const cardModel = document.getElementById("cards");
 
@@ -188,4 +186,4 @@ async function Post(url) {
   }
 }
 
-Post(`${BASE_URL}/api/v1/social/profiles/${JSON.parse(profile).name}/posts`);
+Post(`${BASE_URL}/api/v1/social/profiles/${profile.name}/posts`);

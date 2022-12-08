@@ -60,24 +60,30 @@ async function Post() {
         newCard.className = "card-body";
         const NameOfTittle = document.createElement("h5");
         NameOfTittle.className = "text-muted";
-        NameOfTittle.classList.add("mb-2", "p-5", "m-5", "card-title");
+        NameOfTittle.classList.add("mb-2", "m-5", "card-title");
         NameOfTittle.innerText = items.title;
         const subtitle = document.createElement("h6");
 
         subtitle.classList.add("card-subtitle", "mb-2", "p-2", "text-muted");
         const paraGraph_text = document.createElement("p");
         paraGraph_text.className = "card-text";
-        paraGraph_text.classList.add("mb-2", "p-2", "mb-2", "card-text");
+        paraGraph_text.classList.add(
+          "mb-2",
+          "p-2",
+          "card-text",
+          "d-flex",
+          "justify-content-center"
+        );
         paraGraph_text.innerText = items.body;
         const img = document.createElement("img");
         img.setAttribute("src", items.media);
         img.classList.add(
           "d-flex",
           "img-thumbnail",
-          "mb-2",
-          "p-2",
-          "mb-2",
-          "media-img"
+          "media-img",
+          "d-flex",
+          "justify-content-center",
+          "align-items-center"
         );
         const span = document.createElement("span");
         const _reactions = document.createElement("span");
