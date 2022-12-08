@@ -1,7 +1,7 @@
 import { saveItem } from "../../storage/localstorage.mjs";
 import { LoginAuthUser } from "./API_endpoints.mjs";
-const method = "post";
 
+const method = "post";
 export async function login(url, data) {
   try {
     const body = JSON.stringify(data);

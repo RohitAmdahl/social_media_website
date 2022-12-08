@@ -131,9 +131,11 @@ async function Post(url) {
         try {
           const token = localStorage.getItem("Token");
           console.log(token);
+
           const sendData = {
             symbol: "👍",
           };
+
           const Data = {
             method: "put",
             headers: {
