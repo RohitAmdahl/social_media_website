@@ -1,14 +1,13 @@
-import { BASE_URL } from "../api/auth/API_endpoints.mjs";
+import { BASE_URL } from "../api/auth/API_endpoints.mjs"; // my profile post
 import { react } from "../api/auth/API_endpoints.mjs";
 import { removePost } from "../api/auth/API_endpoints.mjs";
 import { editAvatar } from "./edit_profile.mjs";
 
 const profile = JSON.parse(localStorage.getItem("profile"));
-const profileName = profile.name;
-// const profileavatar = JSON.parse(profile).avatar;
+const profileName = profile.name; // url
 
 const profile_name = document.querySelector("#profile_name");
-profile_name.innerText = profileName;
+profile_name.innerText = profileName; // name on the page
 console.log(profileName);
 
 document.querySelector("#profile_img").src = profile.avatar;
@@ -19,7 +18,7 @@ async function Post(url) {
   try {
     const token = localStorage.getItem("Token");
     const createData = {
-      method: "get",
+      // method: "get",
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${token}`,
@@ -27,7 +26,7 @@ async function Post(url) {
     };
 
     const response = await fetch(url, createData);
-
+    console.log(response);
     const results = await response.json();
     console.log(results);
 
