@@ -14,6 +14,7 @@ console.log(id);
  * this function calls en api with get method for editing post to get values for the form
  * authorization need to have in order to call the api
  * function edit post helps to get value for the form , and fetch with url and Id
+ * for this function we need to use new URLSearchParams(queryString) and params.get("id").
  *@param {string} url
  *@param {number} id
  *@param {any} createData
@@ -41,17 +42,15 @@ export async function editPost() {
       },
     };
     const response = await fetch(`${singleProfile}/${id}`, createData);
-    console.log(response);
     const edit = await response.json();
-    console.log(edit);
+
     const title = document.querySelector("#title_post");
-    console.log(title);
     title.value = edit.title;
+
     const description = document.querySelector("#description");
-    console.log(description);
     description.value = edit.body;
+
     const link = document.getElementById("picture");
-    console.log(link);
     link.value = edit.media;
   } catch (error) {
     console.log(error);

@@ -49,7 +49,6 @@ async function singlePost() {
     console.log(response);
     const link = await response.json();
     console.log({ link });
-    // here start a new cards
 
     //-------------here start a card
 
@@ -111,21 +110,15 @@ async function singlePost() {
     const text = document.createElement("textarea");
     const C_button = document.createElement("button");
 
-    //----------------------------------------------------------comment to post
+    /**
+     * button that has event when button click that call the api
+     * inside the code block i am calling api  with url and the text property
+     */
     FormBody.addEventListener("submit", (e) => {
       e.preventDefault();
-      // const value = { text, id };
 
       commentPost(`${commentONprofile}/${id}/comment`, text);
     });
-
-    //------------------------------------------------------------react to the post -
-    // like_button.addEventListener("click", (e) => {
-    //   console.log("working");
-
-    //   likeAPost(`${react}/${id}`);
-    // });
-    //----------------------------------------------------------------------------
 
     cardItem.appendChild(formDiv);
     formDiv.appendChild(FormBody);
