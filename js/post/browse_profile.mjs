@@ -3,7 +3,22 @@ import { PostAccount } from "../api/auth/api_endpoints.mjs";
 import { followProfile } from "../api/auth/API_endpoints.mjs";
 console.log(followProfile);
 // import { followUser } from "../features/follow.mjs";
-
+/**
+ * this function calls en api with get method
+ * authorization need to have in order to call the api
+ * function  UserOfWebsite helps to get the profiles of the user.
+ *@param {string} url
+ *@param {any} createData
+ *```js
+ *const createData = {
+ * method: "get",
+ * headers: {
+ *  "Content-Type": "application/json",
+ *  Authorization: `Bearer ${token}`,
+ * },
+ *UserOfWebsite()
+ *```
+ */
 async function UserOfWebsite() {
   try {
     const token = localStorage.getItem("Token");
@@ -110,6 +125,7 @@ async function UserOfWebsite() {
         "flex-column"
       );
       follow.innerText = "follow";
+
       follow.addEventListener("click", async () => {
         try {
           const token = localStorage.getItem("Token");
@@ -143,6 +159,7 @@ async function UserOfWebsite() {
       const Un_follow = document.createElement("button");
       Un_follow.classList.add("cta_btn_profile");
       Un_follow.innerText = "Un-follow";
+
       Un_follow.addEventListener("click", async () => {
         try {
           const token = localStorage.getItem("Token");
@@ -192,12 +209,6 @@ async function UserOfWebsite() {
       ul.appendChild(following);
       ul.appendChild(follow);
       ul.appendChild(Un_follow);
-
-      //
-
-      //
-
-      //
     });
   } catch (error) {
     console.log(error);

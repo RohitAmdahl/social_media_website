@@ -11,6 +11,26 @@ console.log(id);
 
 const div = document.querySelector("#card");
 console.log(div);
+/**
+ * this function calls en api with get method
+ * authorization need to have in order to call the api
+ * function  singlePost helps to get the profiles of the user.
+ *  document.location.search;
+ *  new URLSearchParams(queryString);
+ *  params.get("id");
+ *@param {string} url
+ *@param {number} id
+ *@param {any} createData
+ *```js
+ *const createData = {
+ * method: "get",
+ * headers: {
+ *  "Content-Type": "application/json",
+ *  Authorization: `Bearer ${token}`,
+ * },
+ *singlePost()
+ *```
+ */
 
 async function singlePost() {
   try {

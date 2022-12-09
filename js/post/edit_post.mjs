@@ -10,10 +10,24 @@ console.log(params);
 const id = params.get("id");
 console.log(id);
 
-// const div = document.querySelector("#card");
-// console.log(div);
-// const form = document.getElementById("#Edit_edit-post");
-// console.log(form);
+/**
+ * this function calls en api with get method for editing post to get values for the form
+ * authorization need to have in order to call the api
+ * function edit post helps to get value for the form , and fetch with url and Id
+ *@param {string} url
+ *@param {number} id
+ *@param {any} createData
+ *```js
+ *const createData = {
+ *   method: "get",
+ *  headers: {
+ *    "Content-Type": "application/json",
+ *    Authorization: `Bearer ${token}`,
+ *  },
+ * };
+ *editPost()
+ *```
+ */
 export async function editPost() {
   try {
     const token = localStorage.getItem("Token");
@@ -30,47 +44,6 @@ export async function editPost() {
     console.log(response);
     const edit = await response.json();
     console.log(edit);
-    // edit_work.innerHTML = `<form id="Edit_edit-post">
-    //             <div>Edit post</div>
-    //             <div>
-    //               <label for="title" class="text-muted">Title</label>
-    //               <input
-    //                 name="title"
-    //                 type="text"
-    //                 class="form-control"
-    //                 id="title_post"
-    //                 value = "${edit.title}"
-    //                 required
-    //               />
-    //             </div>
-    //             <div>
-    //               <label for="description" class="text-muted"
-    //                 >Description</label
-    //               >
-    //               <textarea
-    //                 name="Description"
-    //                 id="description"
-    //                 cols="30"
-    //                 rows="2"
-    //                 class="form-control"
-    //                 value = "${edit.body}"
-    //               ></textarea>
-    //             </div>
-
-    //             <div>
-    //               <label for="picture">Picture</label>
-    //               <input
-    //                 name="media"
-    //                 type="url"
-    //                 name="file"
-    //                 id="picture"
-    //                 class="form-control"
-    //                 value = "${edit.media}"
-    //               />
-    //             </div>
-
-    //             <button class="cta_btn" type="submit">Post</button>
-    //           </form>`;
     const title = document.querySelector("#title_post");
     console.log(title);
     title.value = edit.title;

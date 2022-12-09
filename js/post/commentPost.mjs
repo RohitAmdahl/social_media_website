@@ -1,5 +1,19 @@
 import { commentONprofile } from "../api/auth/API_endpoints.mjs";
 console.log(commentONprofile);
+/**
+ * this function calls en api with post method
+ * authorization need to have in order to call the api
+ * function  commentPost helps to comment on post profiles of the user.
+ * i added a button and calling the api with the form
+ *@param {string} url
+ *@param {any} data
+ *```js
+ *body: JSON.stringify({
+        body: text.value,
+      }),
+ *commentPost(url, text)
+ *```
+ */
 
 export async function commentPost(url, text) {
   console.log(text);
