@@ -11,7 +11,7 @@ console.log(commentONprofile);
  *body: JSON.stringify({
         body: text.value,
       }),
- *commentPost(url, text)
+ *commentPost(url, text) sending a url, and text as a perimeter
  *```
  */
 

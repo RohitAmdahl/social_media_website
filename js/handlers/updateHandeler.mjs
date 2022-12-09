@@ -4,10 +4,6 @@ import { UPDATE_URL } from "../api/auth/API_endpoints.mjs";
 // import { editPost } from "../post/edit_post.mjs";
 
 function updatePostListener() {
-  // const titleValue = title.value.trim();
-  // const descriptionValue = description.value.trim();
-  // const linkValue = link.value.trim();
-
   const url = new URL(location.href);
   console.log(url);
   const id = url.searchParams.get("id");
@@ -20,11 +16,10 @@ function updatePostListener() {
 
     const form = e.target;
     const title = form[0].value;
-    console.log(title);
+
     const body = form[1].value;
-    console.log(body);
+
     const image = form[2].value;
-    console.log(image);
 
     const update_POST = { form, title, body, image, id };
     console.log(update_POST);
