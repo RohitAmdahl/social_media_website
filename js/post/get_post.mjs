@@ -1,6 +1,6 @@
 import { getPostURL } from "../api/auth/API_endpoints.mjs";
-console.log(getPostURL);
 import { react } from "../api/auth/API_endpoints.mjs";
+import { ProfileLogOut } from "../handlers/logOut.mjs";
 
 const cardModel = document.getElementById("cards");
 
@@ -191,3 +191,5 @@ async function Post() {
 }
 
 Post();
+
+ProfileLogOut();

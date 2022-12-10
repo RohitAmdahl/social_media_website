@@ -2,6 +2,7 @@ import { BASE_URL } from "../api/auth/API_endpoints.mjs"; // my profile post
 import { react } from "../api/auth/API_endpoints.mjs";
 import { removePost } from "../api/auth/API_endpoints.mjs";
 import { editAvatar } from "./edit_profile.mjs";
+import { ProfileLogOut } from "../handlers/logOut.mjs";
 
 const profile = JSON.parse(localStorage.getItem("profile"));
 const profileName = profile.name; // url
@@ -186,3 +187,4 @@ async function Post(url) {
 }
 
 Post(`${BASE_URL}/api/v1/social/profiles/${profile.name}/posts`);
+ProfileLogOut();

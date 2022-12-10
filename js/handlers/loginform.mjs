@@ -12,5 +12,4 @@ form.addEventListener("submit", (e) => {
   form.reset();
 
   login(LoginAuthUser, loginForm);
-  // window.location.replace("/profile.html");
 });

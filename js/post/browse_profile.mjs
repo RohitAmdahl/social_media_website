@@ -1,7 +1,8 @@
 import { BASE_URL } from "../api/auth/API_endpoints.mjs";
 import { PostAccount } from "../api/auth/api_endpoints.mjs";
 import { followProfile } from "../api/auth/API_endpoints.mjs";
-console.log(followProfile);
+import { ProfileLogOut } from "../handlers/logOut.mjs";
+
 // import { followUser } from "../features/follow.mjs";
 /**
  * this function calls en api with get method
@@ -216,3 +217,5 @@ async function UserOfWebsite() {
 }
 
 UserOfWebsite();
+
+ProfileLogOut();
