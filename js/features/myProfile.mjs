@@ -28,11 +28,11 @@ async function Post(url) {
 
     const response = await fetch(url, createData);
     console.log(response);
-    const results = await response.json();
-    console.log(results);
+    const json = await response.json();
+    console.log(json);
 
     //
-    results.forEach((items) => {
+    json.forEach((items) => {
       const cardWrapper = document.createElement("div"); // card
       cardWrapper.classList.add(
         "col-12",
