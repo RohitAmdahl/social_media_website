@@ -20,15 +20,9 @@ export async function login(url, data) {
     } else {
       throw new Error("Incorrect username and password");
     }
-
     const results = await response.json();
-
-    // window.location.replace("/profile.html");
-
     console.log(results);
-
     const accessToken = results.accessToken;
-
     localStorage.setItem("Token", accessToken);
     saveItem("profile", results);
   } catch (error) {
