@@ -15,11 +15,9 @@ export async function login(url, data) {
     };
     const response = await fetch(LoginAuthUser, postData);
     console.log(response);
-
-    window.location.replace("/profile.html");
-
     const results = await response.json();
     console.log(results);
+    window.location.replace("/profile.html");
     const accessToken = results.accessToken;
     localStorage.setItem("Token", accessToken);
     saveItem("profile", results);
