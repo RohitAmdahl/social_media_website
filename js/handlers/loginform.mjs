@@ -1,4 +1,4 @@
-import { LoginAuthUser } from "../api/auth/API_endpoints.mjs";
+import { LoginAuthUser, singleProfile } from "../api/auth/API_endpoints.mjs";
 console.log(LoginAuthUser);
 import { login } from "../api/auth/login.mjs";
 
@@ -13,6 +13,13 @@ function logINform() {
     form.reset();
 
     login(LoginAuthUser, loginForm);
+
+    // try {
+    //   await LoginAuthUser(singleProfile)
+    //   window.location.replace("/profile.html")
+    // } catch (error) {
+    //   console.log(error);
+    // }
   });
 }
 

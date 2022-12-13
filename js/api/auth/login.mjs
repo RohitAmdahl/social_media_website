@@ -15,11 +15,9 @@ export async function login(url, data) {
     };
     const response = await fetch(LoginAuthUser, postData);
     console.log(response);
-    if (response.ok) {
-      window.location.replace("/profile.html");
-    } else {
-      throw new Error("Incorrect username and password");
-    }
+
+    // window.location.replace("/profile.html");
+
     const results = await response.json();
     console.log(results);
     const accessToken = results.accessToken;
