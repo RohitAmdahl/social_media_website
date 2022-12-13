@@ -6,6 +6,7 @@ const cardModel = document.getElementById("cards");
 let data = [];
 
 const SearchForm = document.querySelector("form#search");
+
 function setUpSearch() {
   SearchForm.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -24,12 +25,9 @@ function setUpSearch() {
     console.log(filterProducts);
     filterProducts.forEach((renderCards) => {
       console.log(renderCards);
-      // display the search post displayPost(renderCards);
+      // displayPost();
     });
   });
-
-  //--
-  // });
 }
 
 console.log(SearchForm);
@@ -50,6 +48,7 @@ async function Post() {
     const results = await response.json();
     console.log(results);
     setUpSearch();
+
     function displayPost() {
       data = results.map((items) => {
         // console.log(items, allPost);
