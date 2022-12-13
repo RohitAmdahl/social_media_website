@@ -12,7 +12,7 @@ function setUpSearch() {
     const form = e.target;
     const searchTerm = form.term.value.trim();
     console.log(searchTerm);
-    console.log(data);
+    // console.log(data);
 
     const filterProducts = searchTerm
       ? data.filter(
@@ -22,13 +22,9 @@ function setUpSearch() {
         )
       : data;
     console.log(filterProducts);
-    // data.forEach((user) => {
-    //   console.log(user);
-    //   const isVisible =
-    // user.title.includes(title) ||
-    //   user.body.includes(body) ||
-    //   user.created.includes(created) ||
-    //   user.media.includes(media);
+    // filterProducts.forEach((renderCards) => {
+    //   console.log(renderCards);
+
     // });
   });
 
