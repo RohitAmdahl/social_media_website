@@ -3,6 +3,40 @@ import { react } from "../api/auth/API_endpoints.mjs";
 import { ProfileLogOut } from "../handlers/logOut.mjs";
 
 const cardModel = document.getElementById("cards");
+let data = [];
+
+const SearchForm = document.querySelector("form#search");
+function setUpSearch() {
+  SearchForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const searchTerm = form.term.value.trim();
+    console.log(searchTerm);
+    console.log(data);
+
+    const filterProducts = searchTerm
+      ? data.filter(
+          (item) =>
+            item.body &&
+            item.body.toLowerCase().includes(searchTerm.toLowerCase())
+        )
+      : data;
+    console.log(filterProducts);
+    // data.forEach((user) => {
+    //   console.log(user);
+    //   const isVisible =
+    // user.title.includes(title) ||
+    //   user.body.includes(body) ||
+    //   user.created.includes(created) ||
+    //   user.media.includes(media);
+    // });
+  });
+
+  //--
+  // });
+}
+
+console.log(SearchForm);
 
 async function Post() {
   try {
@@ -19,7 +53,8 @@ async function Post() {
     console.log(response);
     const results = await response.json();
     console.log(results);
-    const data = results.map((items) => {
+    setUpSearch();
+    data = results.map((items) => {
       // console.log(items, allPost);
       const cardWrapper = document.createElement("div"); // card
       cardWrapper.classList.add(
@@ -54,7 +89,6 @@ async function Post() {
       NameOfTittle.classList.add("mb-2", "m-5", "card-title");
       NameOfTittle.innerText = items.title;
       const subtitle = document.createElement("h6");
-
       subtitle.classList.add("card-subtitle", "mb-2", "p-2", "text-muted");
       const paraGraph_text = document.createElement("p");
       paraGraph_text.className = "card-text";
@@ -83,20 +117,14 @@ async function Post() {
       span.classList.add("card-subtitle", "mb-2", "p-2", "text-muted");
       span.innerText = "comments 💬" + items.comments.length;
       const button = document.createElement("button");
-
       button.classList.add("cta_btn", "m-5");
       button.innerText = "comment";
-
       const viewPost = document.createElement("a");
       viewPost.innerText = "View Post";
       viewPost.classList.add("cta_btn", "m-5");
       viewPost.setAttribute("id", "view_post");
       viewPost.href = `specific.html?id=${items.id}`;
-
-      //
-
       const cta_div = document.createElement("div");
-
       cardModel.appendChild(cardWrapper);
       cardWrapper.appendChild(cardItem);
       cardItem.appendChild(NameOfTittle);
@@ -105,11 +133,9 @@ async function Post() {
       cardItem.appendChild(img);
       cardItem.appendChild(span);
       cardItem.appendChild(_reactions);
-
       const UserReaction = document.createElement("button");
       UserReaction.classList.add("cta_btn", "m-5");
       UserReaction.innerText = "Like post";
-
       UserReaction.addEventListener("click", async () => {
         try {
           const token = localStorage.getItem("Token");
@@ -132,14 +158,18 @@ async function Post() {
           console.log(error);
         }
       });
-
       let date = `${items.created}`;
       let update = date.substring(0, 10);
       subtitle.innerText = update;
-
       cardItem.appendChild(cta_div);
       cta_div.appendChild(viewPost);
       cta_div.appendChild(UserReaction);
+      return {
+        title: items.title,
+        body: items.body,
+        created: items.created,
+        media: items.media,
+      };
     });
   } catch (error) {
     console.log(error);
@@ -174,11 +204,5 @@ ProfileLogOut();
 //     console.log(product);
 //   });
 // }
-// FilterPost();
-// const filterProducts = results.filter((products) => {
-//   if (products.post <= products.post) {
-//     renderPost();
-//   }
-// });
 
 //--
