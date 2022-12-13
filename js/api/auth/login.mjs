@@ -16,7 +16,7 @@ export async function login(url, data) {
     const response = await fetch(LoginAuthUser, postData);
     console.log(response);
 
-    // window.location.replace("/profile.html");
+    window.location.replace("/profile.html");
 
     const results = await response.json();
     console.log(results);
