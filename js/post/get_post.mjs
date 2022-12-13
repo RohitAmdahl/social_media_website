@@ -24,7 +24,7 @@ function setUpSearch() {
     console.log(filterProducts);
     filterProducts.forEach((renderCards) => {
       console.log(renderCards);
-      // displayPost();
+      // display the search post displayPost(renderCards);
     });
   });
 
