@@ -10,6 +10,9 @@ const SearchForm = document.querySelector("form#search");
 function setUpSearch() {
   SearchForm.addEventListener("submit", (e) => {
     e.preventDefault();
+    const container = document.getElementById("cards");
+    container.replaceChildren();
+
     const form = e.target;
     const searchTerm = form.term.value.trim();
     console.log(searchTerm);
