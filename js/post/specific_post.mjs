@@ -43,13 +43,12 @@ async function singlePost() {
         Authorization: `Bearer ${token}`,
       },
     };
-    const cardModel = document.getElementById("card");
 
     const response = await fetch(`${singleProfile}/${id}`, createData);
     const link = await response.json();
 
     //-------------here start a card
-
+    const cardModel = document.getElementById("card");
     const cardWrapper = document.createElement("div"); // card
     cardWrapper.classList.add("col-12", "col-lg-12", "col-md-12", "col-sm-12");
     const cardItem = document.createElement("div"); // card
@@ -114,7 +113,6 @@ async function singlePost() {
      */
     FormBody.addEventListener("submit", (e) => {
       e.preventDefault();
-
       commentPost(`${commentONprofile}/${id}/comment`, text);
     });
 

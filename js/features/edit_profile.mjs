@@ -1,7 +1,6 @@
 import { avatarURL } from "../api/auth/API_endpoints.mjs";
 const profile = JSON.parse(localStorage.getItem("profile"));
 const profileName = profile.name;
-console.log(profileName);
 
 export async function editAvatar(avatarImage) {
   try {

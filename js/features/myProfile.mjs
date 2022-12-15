@@ -5,21 +5,15 @@ import { editAvatar } from "./edit_profile.mjs";
 import { ProfileLogOut } from "../handlers/logOut.mjs";
 
 const profile = JSON.parse(localStorage.getItem("profile"));
-const profileName = profile.name; // url
-
+const profileName = profile.name;
 const profile_name = document.querySelector("#profile_name");
-profile_name.innerText = profileName; // name on the page
-console.log(profileName);
-
+profile_name.innerText = profileName;
 document.querySelector("#profile_img").src = profile.avatar;
-
 const cardModel = document.getElementById("cards");
-
 async function Post(url) {
   try {
     const token = localStorage.getItem("Token");
     const createData = {
-      // method: "get",
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${token}`,
@@ -27,9 +21,7 @@ async function Post(url) {
     };
 
     const response = await fetch(url, createData);
-    console.log(response);
     const json = await response.json();
-    console.log(json);
 
     //
     json.forEach((items) => {
@@ -116,7 +108,6 @@ async function Post(url) {
           };
 
           const response = await fetch(`${removePost}/${items.id}`, deleteData);
-
           const json = await response.json();
         } catch (error) {
           console.log(error);
@@ -145,9 +136,7 @@ async function Post(url) {
             body: JSON.stringify(sendData),
           };
           const response = await fetch(`${react}/${items.id}/react/👍`, Data);
-          console.log(response);
           const link = await response.json();
-          console.log(link);
         } catch (error) {
           console.log(error);
         }
