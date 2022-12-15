@@ -13,24 +13,7 @@ function logINform() {
     form.reset();
 
     login(LoginAuthUser, loginForm);
-
-    // try {
-    //   await LoginAuthUser(singleProfile)
-    //   window.location.replace("/profile.html")
-    // } catch (error) {
-    //   console.log(error);
-    // }
   });
 }
 
 logINform();
-
-// function replacePage() {
-//   const logIn = document.getElementById("logIn");
-//   console.log("object");
-//   logIn.addEventListener("click", (e) => {
-//     window.location.replace("/profile.html");
-//   });
-// }
-
-// replacePage();

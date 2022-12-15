@@ -16,9 +16,7 @@ function updatePostListener() {
 
     const form = e.target;
     const title = form[0].value;
-
     const body = form[1].value;
-
     const image = form[2].value;
 
     const update_POST = { form, title, body, image, id };

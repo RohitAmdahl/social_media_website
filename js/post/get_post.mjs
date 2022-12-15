@@ -15,8 +15,6 @@ function setUpSearch() {
 
     const form = e.target;
     const searchTerm = form.term.value.trim();
-    console.log(searchTerm);
-    // console.log(data);
 
     const filterProducts = searchTerm
       ? data.filter(
@@ -27,8 +25,6 @@ function setUpSearch() {
       : data;
     console.log(filterProducts);
     filterProducts.forEach((renderCards) => {
-      console.log(renderCards);
-
       const cardWrapper = document.createElement("div"); // card
       cardWrapper.classList.add(
         "col-12",
@@ -47,11 +43,11 @@ function setUpSearch() {
         "overflow-hidden",
         "m-5"
       );
-      const image = document.createElement("img"); // image
+      const image = document.createElement("img");
       // image.src = "/image/profile/profile icon.png";
       image.classList.add("d-flex", "img-thumbnail", "p-2", "mb-2", "mx-auto");
       // image.setAttribute("src", renderCards.author.avatar);
-      const newCard = document.createElement("div"); // card-body
+      const newCard = document.createElement("div");
       newCard.className = "card-body";
       const NameOfTittle = document.createElement("h5");
       NameOfTittle.className = "text-muted";

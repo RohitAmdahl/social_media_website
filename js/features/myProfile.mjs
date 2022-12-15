@@ -116,9 +116,8 @@ async function Post(url) {
           };
 
           const response = await fetch(`${removePost}/${items.id}`, deleteData);
-          console.log(response);
+
           const json = await response.json();
-          console.log(json);
         } catch (error) {
           console.log(error);
         }

@@ -12,17 +12,14 @@ form.addEventListener("submit", (e) => {
   const form = e.target;
 
   const name = form.name.value;
-
   const email = form.email.value;
-
   const password = form.password.value;
-
   const registerForm = { form, name, email, password };
 
   setTimeout(() => {
     displayMsg.style.display = "none";
   }, 5000);
-  // form.reset();
+
   if (form.password.value && form.name.value && form.email.value) {
     displayMsg.innerHTML = `<p class ="card lead mb-4 m-5 p-2 w-100 text-center">you are successfully registered please log in </p>`;
     form.reset();

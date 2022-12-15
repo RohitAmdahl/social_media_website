@@ -50,9 +50,8 @@ export async function updatePost(url, post) {
     };
 
     const response = await fetch(`${UPDATE_URL}/${post.id}`, updateData);
-    console.log(response);
+
     const json = await response.json();
-    console.log(json);
   } catch (error) {
     console.log(error);
   }
