@@ -28,7 +28,7 @@ function setUpSearch() {
     console.log(filterProducts);
     filterProducts.forEach((renderCards) => {
       console.log(renderCards);
-      // displayPost();---------------------------
+
       const cardWrapper = document.createElement("div"); // card
       cardWrapper.classList.add(
         "col-12",

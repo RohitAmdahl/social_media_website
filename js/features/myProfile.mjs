@@ -154,16 +154,10 @@ async function Post(url) {
         }
       });
 
-      // const edit_post_Cta = document.createElement("button");
       const edit_post_Cta = document.createElement("a");
       edit_post_Cta.classList.add("cta_btn", "m-5");
       edit_post_Cta.innerText = "Edit post";
-      // edit_post_Cta.href = `/edit_Post.html?id=${items.id}`;
       edit_post_Cta.href = `/edit_Post.html?id=${items.id}`;
-      // edit_post_Cta.addEventListener("click", (e) => {
-
-      //   editPost();
-      // });
 
       cardModel.appendChild(cardWrapper);
       cardWrapper.appendChild(cardItem);
