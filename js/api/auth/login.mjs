@@ -19,7 +19,9 @@ export async function login(url, data) {
       body: JSON.stringify(data),
     };
     const response = await fetch(LoginAuthUser, postData);
-
+    // if (response.ok) {
+    //   window.location.replace("/index.html"); i m trying this but getting erorr
+    // }
     const results = await response.json();
     window.location.replace("/index.html");
     const accessToken = results.accessToken;
