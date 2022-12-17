@@ -149,9 +149,11 @@ async function Post() {
         Authorization: `Bearer ${token}`,
       },
     };
+
     const response = await fetch(getPostURL, createData);
     const results = await response.json();
     console.log(results);
+
     setUpSearch();
     function displayPost() {
       data = results.map((items) => {

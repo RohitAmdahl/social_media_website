@@ -23,6 +23,7 @@ export async function login(url, data) {
       window.location.replace("/index.html");
     }
     const results = await response.json();
+    console.log(results);
     // window.location.replace("/index.html");
     const accessToken = results.accessToken;
     localStorage.setItem("Token", accessToken);
