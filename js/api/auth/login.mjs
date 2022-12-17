@@ -20,7 +20,7 @@ export async function login(url, data) {
     };
     const response = await fetch(LoginAuthUser, postData);
     // if (response.ok) {
-    //   window.location.replace("/index.html"); i m trying this but getting erorr
+    //   window.location.replace("/index.html");
     // }
     const results = await response.json();
     window.location.replace("/index.html");

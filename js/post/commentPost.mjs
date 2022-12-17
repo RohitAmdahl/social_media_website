@@ -19,7 +19,6 @@ export async function commentPost(url, text) {
   console.log(text);
   try {
     const token = localStorage.getItem("Token");
-    console.log(token);
     const Data = {
       method: "post",
       headers: {
@@ -31,9 +30,7 @@ export async function commentPost(url, text) {
       }),
     };
     const response = await fetch(url, Data);
-    console.log(response);
     const link = await response.json();
-    console.log(link);
   } catch (error) {
     console.log(error);
   }

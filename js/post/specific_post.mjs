@@ -5,9 +5,8 @@ import { commentPost } from "./commentPost.mjs";
 
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
-console.log(params);
+
 const id = params.get("id");
-console.log(id);
 
 const div = document.querySelector("#card");
 console.log(div);
@@ -35,7 +34,7 @@ console.log(div);
 async function singlePost() {
   try {
     const token = localStorage.getItem("Token");
-    console.log(token);
+
     const createData = {
       method: "get",
       headers: {

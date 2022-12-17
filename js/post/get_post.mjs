@@ -138,8 +138,6 @@ function setUpSearch() {
   });
 }
 
-console.log(SearchForm);
-
 async function Post() {
   try {
     const token = localStorage.getItem("Token");
@@ -153,18 +151,18 @@ async function Post() {
     };
     const response = await fetch(getPostURL, createData);
     const results = await response.json();
+    // console.log(results);
     setUpSearch();
     function displayPost() {
       data = results.map((items) => {
-        // console.log(items, allPost);
-        const cardWrapper = document.createElement("div"); // card
+        const cardWrapper = document.createElement("div");
         cardWrapper.classList.add(
           "col-12",
           "col-lg-12",
           "col-md-12",
           "col-sm-12"
         );
-        const cardItem = document.createElement("div"); // card
+        const cardItem = document.createElement("div");
         cardItem.classList.add(
           "card",
           "m-5",
