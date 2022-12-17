@@ -2,6 +2,13 @@ import { saveItem } from "../../storage/localstorage.mjs";
 import { LoginAuthUser } from "./API_endpoints.mjs";
 
 const method = "post";
+/**
+ * this function calls en api with post method
+ *  api fetch and getting accessToken
+ *@param {string} url
+ *body: JSON.stringify(data),
+ *
+ */
 export async function login(url, data) {
   try {
     const postData = {

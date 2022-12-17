@@ -1,7 +1,13 @@
 import { POSTregisterURL } from "./API_endpoints.mjs";
 
 const method = "post";
-
+/**
+ * this function calls en api with post method.
+ *  api fetch and and get register profile
+ *@param {string} url
+ *body: JSON.stringify(data),
+ *
+ */
 export async function register(url, data) {
   try {
     const body = JSON.stringify(data);

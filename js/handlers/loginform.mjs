@@ -1,7 +1,11 @@
 import { LoginAuthUser, singleProfile } from "../api/auth/API_endpoints.mjs";
 console.log(LoginAuthUser);
 import { login } from "../api/auth/login.mjs";
-
+/**
+ * this function logINform()
+ *  login in with the form selection form has event Listen submit
+ *
+ */
 function logINform() {
   const form = document.querySelector("#loginForm");
   form.addEventListener("submit", (e) => {
