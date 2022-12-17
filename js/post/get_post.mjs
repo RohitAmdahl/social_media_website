@@ -84,11 +84,7 @@ function setUpSearch() {
       const button = document.createElement("button");
       button.classList.add("cta_btn", "m-5");
       button.innerText = "comment";
-      const viewPost = document.createElement("a");
-      viewPost.innerText = "View Post";
-      viewPost.classList.add("cta_btn", "m-5");
-      viewPost.setAttribute("id", "view_post");
-      viewPost.href = `specific.html?id=${renderCards.id}`;
+
       const cta_div = document.createElement("div");
       cardModel.appendChild(cardWrapper);
       cardWrapper.appendChild(cardItem);
@@ -96,42 +92,11 @@ function setUpSearch() {
       cardItem.appendChild(subtitle);
       cardItem.appendChild(paraGraph_text);
       cardItem.appendChild(img);
-      cardItem.appendChild(span);
-      cardItem.appendChild(_reactions);
-      const UserReaction = document.createElement("button");
-      UserReaction.classList.add("cta_btn", "m-5");
-      UserReaction.innerText = "Like post";
-      UserReaction.addEventListener("click", async () => {
-        try {
-          const token = localStorage.getItem("Token");
-          console.log(token);
-          const sendData = {
-            symbol: "👍",
-          };
-          const Data = {
-            method: "put",
-            headers: {
-              "Content-Type": "application/json",
-              Authorization: `Bearer ${token}`,
-            },
 
-            body: JSON.stringify(sendData),
-          };
-          const response = await fetch(
-            `${react}/${renderCards.id}/react/👍`,
-            Data
-          );
-          const link = await response.json();
-        } catch (error) {
-          console.log(error);
-        }
-      });
       let date = `${renderCards.created}`;
       let update = date.substring(0, 10);
       subtitle.innerText = update;
       cardItem.appendChild(cta_div);
-      cta_div.appendChild(viewPost);
-      cta_div.appendChild(UserReaction);
 
       //--------------------------------------------------
     });
@@ -152,7 +117,7 @@ async function Post() {
 
     const response = await fetch(getPostURL, createData);
     const results = await response.json();
-    // console.log("results", results);
+    console.log("results", results);
     setUpSearch();
 
     function displayPost() {
