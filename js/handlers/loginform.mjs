@@ -3,7 +3,7 @@ console.log(LoginAuthUser);
 import { login } from "../api/auth/login.mjs";
 /**
  * this function logINform()
- *  login in with the form selection form has event Listen submit
+ *  login in with the form selection form has addEventListener for submit submit
  *
  */
 function logINform() {
