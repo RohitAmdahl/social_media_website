@@ -151,7 +151,7 @@ async function Post() {
     };
     const response = await fetch(getPostURL, createData);
     const results = await response.json();
-    // console.log(results);
+    console.log(results);
     setUpSearch();
     function displayPost() {
       data = results.map((items) => {

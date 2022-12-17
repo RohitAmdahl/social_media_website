@@ -9,7 +9,6 @@ const profileName = profile.name;
  * const sendData = {
  *    avatar: avatarImage,
  *  };
- *
  *  const followData = {
  *    method: "put",
  *    headers: {
