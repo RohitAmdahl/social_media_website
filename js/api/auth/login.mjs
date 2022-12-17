@@ -19,12 +19,12 @@ export async function login(url, data) {
       body: JSON.stringify(data),
     };
     const response = await fetch(LoginAuthUser, postData);
-    if (response) {
-      window.location.replace("/index.html");
-    }
+    // if (response) {
+    //   window.location.replace("/index.html");
+    // }
     const results = await response.json();
     console.log(results);
-    // window.location.replace("/index.html");
+    window.location.replace("/index.html");
     const accessToken = results.accessToken;
     localStorage.setItem("Token", accessToken);
     saveItem("profile", results);
