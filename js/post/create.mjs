@@ -49,5 +49,3 @@ export async function createPost(post) {
     console.log(error);
   }
 }
-
-//..................................................................
