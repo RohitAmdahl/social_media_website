@@ -97,8 +97,6 @@ function setUpSearch() {
       let update = date.substring(0, 10);
       subtitle.innerText = update;
       cardItem.appendChild(cta_div);
-
-      //--------------------------------------------------
     });
   });
 }

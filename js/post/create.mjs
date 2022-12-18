@@ -27,10 +27,8 @@ const method = "post";
  *```
  */
 export async function createPost(post) {
-  console.log(post);
   try {
     const token = localStorage.getItem("Token");
-    console.log(token);
     const data = {
       method,
       headers: {
@@ -46,7 +44,6 @@ export async function createPost(post) {
     };
 
     const response = await fetch(makePost, data);
-
     const json = await response.json();
   } catch (error) {
     console.log(error);

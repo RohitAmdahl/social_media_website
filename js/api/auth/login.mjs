@@ -19,13 +19,16 @@ export async function login(url, data) {
       body: JSON.stringify(data),
     };
     const response = await fetch(LoginAuthUser, postData);
-    // if (response.ok) {
-    //   window.location.replace("/index.html");
-    // }
+
     const results = await response.json();
-    console.log(results);
-    window.location.replace("/index.html");
+
     const accessToken = results.accessToken;
+    if (accessToken) {
+      window.location.replace("/index.html");
+      console.log("I got a token, and should be logged in");
+    } else {
+      console.log("I did not get a token, so either a wrong email or password");
+    }
     localStorage.setItem("Token", accessToken);
     saveItem("profile", results);
   } catch (error) {

@@ -16,9 +16,6 @@ function setCreatePostListener() {
     const image = form[2].value;
     const id = form.id.value;
     const create_POST = { form, title, body, image, id };
-
-    console.log(create_POST);
-
     createPost(create_POST);
     form.reset();
   });
